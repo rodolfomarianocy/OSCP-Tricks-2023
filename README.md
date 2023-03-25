@@ -130,6 +130,7 @@ Foreach($obj in $Result)
 Import-Module .\PowerView.ps1
 Get-NetLoggedon -ComputerName <computer_name>
 ```
+https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1
 
 -> Enumerate all active sessions
 ```
@@ -206,3 +207,8 @@ python /usr/share/kerberoast/tgsrepcrack.py wordlist.txt <ticket.kirbi>
 or  
 
 https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1
+
+
+### Password Spraying
+
+https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
