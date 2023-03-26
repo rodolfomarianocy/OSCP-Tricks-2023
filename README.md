@@ -1,5 +1,4 @@
 # OSCP Tricks
-
 ## Privilege Escalation
 ### Crontab
 #### Enumeration  
