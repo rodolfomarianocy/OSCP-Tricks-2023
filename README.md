@@ -255,7 +255,8 @@ or
 runas /user:offsec\allison cmd.exe
 ```
 ### Bypass UAC
-
+https://raw.githubusercontent.com/winscripting/UAC-bypass/master/FodhelperBypass.ps1
+https://raw.githubusercontent.com/CsEnox/EventViewer-UACBypass/main/Invoke-EventViewer.ps1
 
 ### Active Directory Lateral Movement
 #### Pass the Hash
