@@ -57,15 +57,20 @@ https://pentestmonkey.net/tools/audit/unix-privesc-check
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
 
 ### Windows Enumeration Tools
-
 ```
-winpeas.exe
+winPEASany.exe
 ```
 https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
 ```
 windows-privesc-check2.exe --dump -G
 ```
 https://github.com/pentestmonkey/windows-privesc-check
+
+```
+. .\PowerUp.ps1
+Invoke-AllChecks
+```
+https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
 
 ## Client-Side Attacks
 ### HTA Attack in Action
