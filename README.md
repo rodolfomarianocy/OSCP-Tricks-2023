@@ -1,5 +1,7 @@
 # OSCP Tricks
 
+## Topics
+
 - [Recon](recon.md)
 
 - [Privilege Escalation Linux](privilege_escalation_linux.md)
@@ -11,3 +13,7 @@
 - [Client-Side Attacks](client_sides_attacks.md)
 
 - [Active Directory](active_directory.md)
+
+## Machines
+
+## Overview and Articles
