@@ -2,7 +2,7 @@
 
 ## Topics
 
-- [Recon](recon.md)
+- [Reconnaissance](Reconnaissance.md)
 
 - [Privilege Escalation Linux](privilege_escalation_linux.md)
 
