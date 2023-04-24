@@ -4,9 +4,9 @@
 
 - [Reconnaissance](Reconnaissance.md)
 
-- [Privilege Escalation Linux](privilege_escalation_linux.md)
+- [Linux Privilege Escalation](linux_privilege_escalation.md)
 
-- [Privilege Escalation Windows](privilege_escalation_windows.md)
+- [Windows Privilege Escalation](windows_privilege_escalation.md)
 
 - [Abuse MSSQL and SQL Injection](abuse_mssql_and_sql_injection.md)
 
