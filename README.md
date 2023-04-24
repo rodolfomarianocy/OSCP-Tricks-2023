@@ -1,18 +1,13 @@
 # OSCP Tricks
 
-## Topics
-
+## Topics - Tricks
 - [Reconnaissance](Reconnaissance.md)
-
 - [Linux Privilege Escalation](linux_privilege_escalation.md)
-
-- [Windows Privilege Escalation](windows_privilege_escalation.md)
-
+- [Windows Privilege Escalation](privilege_escalation.md)
 - [Abuse MSSQL and SQL Injection](abuse_mssql_and_sql_injection.md)
-
+- [Active Directory](active_directory.md)
 - [Client-Side Attacks](client_sides_attacks.md)
 
-- [Active Directory](active_directory.md)
 
 ## Machines
 -> Platforms
