@@ -16,9 +16,10 @@
 
 ## Machines
 -> Platforms
-- Labs - PEN200
-- PG Practice
-- Hack-The-Box
+- [PEN-200](https://www.offsec.com/courses/pen-200/)
+- [PG Practice](https://www.offsec.com/labs/individual/)
+- [Hack The Box](https://www.hackthebox.com/)
+- [Try Hack Me](https://tryhackme.com/)
 
 -> List  
 https://vulndev.io/machine-list/
@@ -31,7 +32,11 @@ https://infosecwriteups.com/how-i-passed-oscp-with-100-points-in-12-hours-withou
 ## Template Report
 https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx 
 
-## Other Utilities
+## Others
 
 -> Generate Reverse Shell  
 https://www.revshells.com/
+
+-> Encoders
+https://www.urlencoder.org/
+https://www.base64encode.org/
