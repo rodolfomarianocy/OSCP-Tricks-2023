@@ -55,6 +55,7 @@ cat /etc/hosts
 cat /etc/passwd
 cat /etc/shadow
 ```
+--- 
 
 ### Crontab [PrivEsc]
 -> Enumeration  
