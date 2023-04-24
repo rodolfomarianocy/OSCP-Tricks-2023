@@ -74,7 +74,7 @@ echo "chmod +s /bin/bash" >> script.sh
 ```
 find / -perm -u=s -type f 2>/dev/null
 ```
--> Exploitation
+-> Exploitation  
 https://gtfobins.github.io/
 
 ### Capabilities [PrivEsc]
@@ -93,7 +93,7 @@ or
 ```
 cat /etc/sudoers
 ```
--> Exploitation
+-> Exploitation  
 https://gtfobins.github.io/
 
 ### Passwd Writabble [PrivEsc]
