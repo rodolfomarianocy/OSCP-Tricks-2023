@@ -32,16 +32,20 @@ cat ~/.mysql_history
 cat ~/.php_history
 ```
 
--> Services
+-> List running processes
 ```
-ps -aux
-cat /etc/service
+ps aux
 ```
 
--> View network interfaces and connections
+-> View interfaces and network information 
 ```
 ifconfig
 ip addr
+```
+
+-> View all active TCP connections and the TCP and UDP ports the host is listening on.
+```
+netstat -ant
 ```
 
 -> Get DNS resolver and hosts mapped to an IP
@@ -55,6 +59,7 @@ cat /etc/hosts
 cat /etc/passwd
 cat /etc/shadow
 ```
+
 --- 
 
 ### Crontab [PrivEsc]
@@ -74,6 +79,7 @@ echo "chmod +s /bin/bash" >> script.sh
 ```
 find / -perm -u=s -type f 2>/dev/null
 ```
+
 -> Exploitation  
 https://gtfobins.github.io/
 
