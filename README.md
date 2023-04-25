@@ -1,7 +1,7 @@
 # OSCP Tricks
 
 ## Topics - Tricks
-- [Information Gathering](Reconnaissance.md)
+- [Information Gathering](information_gathering.md)
 - [Linux Privilege Escalation](linux_privilege_escalation.md)
 - [Windows Privilege Escalation](windows_privilege_escalation.md)
 - [Abuse MSSQL and SQL Injection](abuse_mssql_and_sql_injection.md)
