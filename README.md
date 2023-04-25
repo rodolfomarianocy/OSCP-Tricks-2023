@@ -28,7 +28,7 @@
 - Active Directory
   - [Try Hack Me - Active Directory Basics](https://tryhackme.com/room/winadbasics)
   - [Try Hack Me - Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
-  - [Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
+  - [Try Hack Me - ttacking Kerberos](https://tryhackme.com/room/attackingkerberos)
   - [Try Hack Me - Breaching Active Directory](https://tryhackme.com/room/breachingad)
   - [Try Hack Me - AD Enumeration](https://tryhackme.com/room/adenumeration)
   - [Try Hack Me - Lateral Movement and Pivoting](https://tryhackme.com/jr/lateralmovementandpivoting)
