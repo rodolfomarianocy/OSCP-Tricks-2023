@@ -22,6 +22,7 @@
   - [Hack The Box - Attacking Common Services](https://academy.hackthebox.com/course/preview/attacking-common-services)
   - [Hack The Box - Information Gathering Web Edition](https://academy.hackthebox.com/course/preview/information-gathering---web-edition)
   - [Try Hack Me - Walking An Application](https://tryhackme.com/room/walkinganapplication)
+  - [Try Hack Me - Web Enumeration](https://tryhackme.com/room/webenumerationv2)
   
 - Pentest Web
   - [PortSwigger - Web Security Academy](https://portswigger.net/web-security/all-labs)
@@ -64,11 +65,14 @@
   - [Try Hack Me - Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
   - [Try Hack Me - Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)  
   - [Hack The Box - Linux Privilege Escalation](https://academy.hackthebox.com/course/preview/linux-privilege-escalation) 
+  - [Try Hack Me - Enumeration](https://tryhackme.com/room/enumerationpe)
+  - [Try Hack Me - Linux: Local Enumeration(https://tryhackme.com/room/lle)
   
 - Windows Enumeration and Privilege Escalation
   - [Try Hack Me - Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
   - [Try Hack Me - Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
   - [Hack The Box - Windows Privilege Escalation](https://academy.hackthebox.com/course/preview/windows-privilege-escalation)
+  - [Try Hack Me - Enumeration](https://tryhackme.com/room/enumerationpe)
   
 - File Transfers
   - [Hack The Box - File Transfers](https://academy.hackthebox.com/course/preview/file-transfers)
