@@ -66,7 +66,7 @@
   - [Try Hack Me - Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)  
   - [Hack The Box - Linux Privilege Escalation](https://academy.hackthebox.com/course/preview/linux-privilege-escalation) 
   - [Try Hack Me - Enumeration](https://tryhackme.com/room/enumerationpe)
-  - [Try Hack Me - Linux: Local Enumeration(https://tryhackme.com/room/lle)
+  - [Try Hack Me - Linux: Local Enumeration](https://tryhackme.com/room/lle)
   
 - Windows Enumeration and Privilege Escalation
   - [Try Hack Me - Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
