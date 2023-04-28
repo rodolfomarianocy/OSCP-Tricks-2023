@@ -1,4 +1,4 @@
-# Local Privilege Escalation Windows
+# Windows Enumeration and Local Privilege Escalation 
 ## Enumeration
 -> Enumerates all local accounts
 ```
