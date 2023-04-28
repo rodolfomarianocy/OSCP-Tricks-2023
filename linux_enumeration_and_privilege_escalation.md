@@ -1,4 +1,4 @@
-## Linux Privilege Escalation
+## Linux Enumeration and Privilege Escalation
 ### Enumeration
 -> Get system distribution and version
 ```
@@ -62,6 +62,7 @@ cat /etc/shadow
 
 --- 
 
+## Privilege Escalation
 ### Crontab [PrivEsc]
 -> Enumeration  
 ```
