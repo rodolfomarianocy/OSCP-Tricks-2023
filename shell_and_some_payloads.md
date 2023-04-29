@@ -1,7 +1,7 @@
 # Shell and Some Payloads
 ## Payload Structure - msfvenom
 -> A staged payload is usually shipped in two parts. The first part contains a small primary payload that will establish a connection, transferring a larger secondary payload with the rest of the shellcode.
--> e.g.
+-> e.g.  
 ```
 windows/shell_reverse_tcp (stageless)
 windows/shell/reverse_tcp (staged)
