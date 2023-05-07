@@ -294,7 +294,6 @@ impacket-psexec '<domain>/<user>'@<IP>
 -> Remote Access + evil-winrm  
 ```
 evil-winrm -i <IP> -u <user> -H <hash>
-evil-winrm -i <IP> -u <user> -p <password>
 ```
 
 #### Over Pass the Hash
