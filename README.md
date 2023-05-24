@@ -5,7 +5,7 @@
 - [Web Application Attacks](web_application_attacks.md)
 - [Client-Side Attacks](client_side_attacks.md)
 - [File Transfers](file_transfers.md)
-- [Linux Enumeration and Privilege Escalation](linux_and_privilege_escalation.md)
+- [Linux Enumeration and Privilege Escalation](linux_enumeration_and_privilege_escalation.md)
 - [Windows Enumeration and Privilege Escalation](windows_enumeration_and_privilege_escalation.md)
 - [Shell and some Payloads](shell_and_some_payloads.md)
 - [Port Forwarding and Tunneling](port_forwarding_and_tunneling.md)
