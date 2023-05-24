@@ -3,7 +3,7 @@
 ## Topics - Tricks
 - [Information Gathering](information_gathering.md)
 - [Web Application Attacks](web_application_attacks.md)
-- [Client-Side Attacks](client_sides_attacks.md)
+- [Client-Side Attacks](client_side_attacks.md)
 - [File Transfers](file_transfers.md)
 - [Linux Enumeration and Privilege Escalation](linux_and_privilege_escalation.md)
 - [Windows Enumeration and Privilege Escalation](windows_enumeration_and_privilege_escalation.md)
