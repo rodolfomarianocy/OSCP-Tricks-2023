@@ -1,19 +1,28 @@
 # OSCP Tricks
 
-## Topics - Tricks
+## Trigger Tips
 - [Information Gathering](information_gathering.md)
 - [Web Application Attacks](web_application_attacks.md)
 - [Client-Side Attacks](client_side_attacks.md)
 - [File Transfers](file_transfers.md)
 - [Linux Enumeration and Privilege Escalation](linux_enumeration_and_privilege_escalation.md)
 - [Windows Enumeration and Privilege Escalation](windows_enumeration_and_privilege_escalation.md)
-- [Shell and some Payloads](shell_and_some_payloads.md)
+- [Shell and Some Payloads](shell_and_some_payloads.md)
 - [Port Forwarding and Tunneling](port_forwarding_and_tunneling.md)
 - [Active Directory](active_directory.md)
 - [Pentest Report](pentest_report.md)
+  
+## Other Tips
+- [Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+- [Windows Local Privilege Escalation](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
+- [Active Directory](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology)
+- [Wordpress](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/wordpress)
+- [Drupal](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/drupal)
+- [Joomla](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/joomla)
+- [Tomcat](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/tomcat)
+- [Jenkins](https://cloud.hacktricks.xyz/pentesting-ci-cd/jenkins-security)
 
-## Topics - Study
-### Tutorials
+## Tutorials
 - Information Gathering
   - [Hack The Box - Network Enumeration with Nmap](https://academy.hackthebox.com/course/preview/network-enumeration-with-nmap)
   - [Hack The Box - FootPrinting](https://academy.hackthebox.com/course/preview/footprinting)
@@ -106,16 +115,13 @@
   
 - Pentest Report
   - [Hack The Box - Documentation & Reporting](https://academy.hackthebox.com/course/preview/documentation--reporting)
-  
-### Others
-- [Wordpress](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/wordpress)
-- [Tomcat](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/tomcat)
-- [Jenkins](https://cloud.hacktricks.xyz/pentesting-ci-cd/jenkins-security)
 
-### Machines
--> Machine List
+### Machines List
 - [vulndev - Machine List](https://vulndev.io/machine-list/)
-- [Beco do Exploit - Hack 30 machines in 30 days!](https://www.youtube.com/watch?v=xnCS8fYfrjs&list=PLHBDBcFA_l_WBcUJWf8cp5BaPsUkquRQU)
+- [TJ_Null's OSCP Prep - Youtube](https://www.youtube.com/watch?v=2DqdPcbYcy8&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)
+- [HackTheBox - Active Directory machines(OSCP) - Youtube](https://www.youtube.com/watch?v=jUc1J31DNdw&list=PLIU37Kps3dWApq77TnChQ52clmau8DfZA)
+- [Hack the Box - Active Directory - Youtube](https://www.youtube.com/watch?v=H9FcE_FMZio&list=PLrmSJpHp5WGg4sUndkYBg8B5qO2COSxS4)
+- [Beco do Exploit - Hack 30 machines in 30 days! - Youtube](https://www.youtube.com/watch?v=xnCS8fYfrjs&list=PLHBDBcFA_l_WBcUJWf8cp5BaPsUkquRQU)
 
 -> Platforms
 - [PEN-200](https://www.offsec.com/courses/pen-200/)
@@ -125,9 +131,21 @@
 - [Vulnhub](https://www.vulnhub.com/)
 
 ## Overview and Articles
+https://rodolfomarianocy.medium.com/overview-oscp-9bb7c6609cb5  
 https://ranakhalil101.medium.com/my-oscp-journey-a-review-fa779b4339d9  
 https://medium.themayor.tech/the-long-awaited-oscp-review-5a377f103a39  
-https://infosecwriteups.com/how-i-passed-oscp-with-100-points-in-12-hours-without-metasploit-in-my-first-attempt-dc8d03366f33  
+https://infosecwriteups.com/oscp-cracking-the-new-pattern-6c4f1c9e2409  
+https://infosecwriteups.com/how-i-passed-oscp-with-100-points-in-12-hours-without-metasploit-in-my-first-attempt-dc8d03366f33    
+https://joasantonio108.medium.com/certifica%C3%A7%C3%A3o-oscp-do-zero-ao-h3r0-pt-1-9f18cf13f2bc  
+https://medium.com/@akashgupta1496/my-oscp-journey-june-2020-d4512155d289  
+https://diesec.home.blog/2020/10/11/oscp-journey/  
+https://www.noobsec.net/oscp-journey/  
+https://alex-labs.com/my-oscp-journey/  
+https://www.linkedin.com/pulse/concluding-my-oscp-journey-dennis-perto/?trk=read_related_article-card_title  
+https://esseum.com/the-oscp-journey-my-personal-experience-of-passing-the-exam/  
+https://bohansec.com/2020/08/08/My-Journey-to-OSCP/  
+https://bksecurity.org/my-oscp-journey/  
+https://www.helviojunior.com.br/it/security/minha-experiencia-no-oscp/  
 
 ## Template Report
 https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx 
