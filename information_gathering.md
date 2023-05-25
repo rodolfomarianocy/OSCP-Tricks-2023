@@ -91,6 +91,15 @@ mkdir /tmp/ok
 sudo mount -o nolock <ip>:/home /tmp/ok
 ```
 
+## LDAP Enumeration
+```
+nmap -n -sV --script "ldap* and not brute" <IP>
+```
+
+```
+ldapsearch -h <IP> -bx "DC=domain,DC=com"
+```
+
 ## SNMP Enumeration
 ```
 sudo nmap -sU --open -p 161 10.11.1.1-254 -oG open-snmp.txt
@@ -138,6 +147,9 @@ snmpwalk -c public -v1 <ip> 1.3.6.1.2.1.25.6.3.1.2
 ```
 
 ## Recon Web
+### Wappalyzer
+https://www.wappalyzer.com/
+
 ### What is that Website
 ```
  ./whatweb site.com
