@@ -155,7 +155,11 @@ I decided to put only recent overviews, due to the changes that occurred in the 
 
 ## Exam Guide
 - [OSCP Exam Guide - OffSec](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
+
+
 ---
-<a href="">
+
+<h1 align="center">Good preparation ;)</h1>
+<p align="center">
   <img src="https://media.tenor.com/ArV6RGIhAGkAAAAC/edgerunners-cyberpunk.gif"/>
-</a>
+</p>
