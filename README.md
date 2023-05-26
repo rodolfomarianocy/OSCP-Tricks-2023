@@ -114,13 +114,14 @@
 - Pentest Report
   - [Hack The Box - Documentation & Reporting](https://academy.hackthebox.com/course/preview/documentation--reporting)
 
-### Machines List
-- [vulndev - Machine List](https://vulndev.io/machine-list/)
-- [TJ_Null's OSCP Prep - Youtube](https://www.youtube.com/watch?v=2DqdPcbYcy8&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)
-- [HackTheBox - Active Directory machines(OSCP) - Youtube](https://www.youtube.com/watch?v=jUc1J31DNdw&list=PLIU37Kps3dWApq77TnChQ52clmau8DfZA)
-- [Hack the Box - Active Directory - Youtube](https://www.youtube.com/watch?v=H9FcE_FMZio&list=PLrmSJpHp5WGg4sUndkYBg8B5qO2COSxS4)
-- [Vulnhub OSCP pathway training - Youtube](https://www.youtube.com/watch?v=LRO9KIDv_DQ&list=PLV_npv_S1L938Gal4XNiUfmHjUFNLq4rc)
-- [Beco do Exploit - Hack 30 machines in 30 days! - Youtube](https://www.youtube.com/watch?v=xnCS8fYfrjs&list=PLHBDBcFA_l_WBcUJWf8cp5BaPsUkquRQU)
+## Machines List
+As you go through the list of machines, keep in mind the changes that occurred in the exam and disregard what came out of the exam recently. [PEN-200 (PWK): Updated for 2023](https://www.offsec.com/offsec/pen-200-2023/)  
+- [Machine List - vulndev](https://vulndev.io/machine-list/)  
+- [TJ_Null's OSCP Prep - Youtube](https://www.youtube.com/watch?v=2DqdPcbYcy8&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)  
+- [HackTheBox - Active Directory machines(OSCP) - Youtube](https://www.youtube.com/watch?v=jUc1J31DNdw&list=PLIU37Kps3dWApq77TnChQ52clmau8DfZA)  
+- [Hack the Box - Active Directory - Youtube](https://www.youtube.com/watch?v=H9FcE_FMZio&list=PLrmSJpHp5WGg4sUndkYBg8B5qO2COSxS4)  
+- [Vulnhub OSCP pathway training - Youtube](https://www.youtube.com/watch?v=LRO9KIDv_DQ&list=PLV_npv_S1L938Gal4XNiUfmHjUFNLq4rc)  
+- [Beco do Exploit - Hack 30 machines in 30 days! - Youtube](https://www.youtube.com/watch?v=xnCS8fYfrjs&list=PLHBDBcFA_l_WBcUJWf8cp5BaPsUkquRQU)  
 
 -> Platforms
 - [PEN-200 (PWK)](https://www.offsec.com/courses/pen-200/)
@@ -130,6 +131,8 @@
 - [Vulnhub](https://www.vulnhub.com/)
 
 ## Overview and Articles
+I decided to put only recent overviews, due to the changes that occurred in the exam.  
+"Since Buffer Overflows will no longer be a part of the course material, they will also be removed from the exam body of knowledge and no longer part of the exam." [PEN-200 (PWK): Updated for 2023](https://www.offsec.com/offsec/pen-200-2023/)  
 - [Overview OSCP - rodolfomarianocy](https://rodolfomarianocy.medium.com/overview-oscp-9bb7c6609cb5)  
 - [Beginner's To OSCP 2023- Daniel Kula](https://infosecwriteups.com/guide-to-oscp-2023-37c0aea0dec0)  
 - [OSCP Reborn - 2023 Exam Preparation Guide - johnjhacking](https://johnjhacking.com/blog/oscp-reborn-2023/)  
@@ -140,5 +143,8 @@
 - [OSCP — Cracking The New Pattern - Jai Gupta](https://infosecwriteups.com/oscp-cracking-the-new-pattern-6c4f1c9e2409)  
 
 ## Template Report
-https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx  
-https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
+- [OSCP Exam Report - OffSec](https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx  )
+- [OSCP Exam Report Template Markdown - noraj](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown)
+
+## Exam Guide
+- [OSCP Exam Guide - OffSec](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
