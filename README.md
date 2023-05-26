@@ -140,5 +140,5 @@
 - [OSCP — Cracking The New Pattern - Jai Gupta](https://infosecwriteups.com/oscp-cracking-the-new-pattern-6c4f1c9e2409)  
 
 ## Template Report
-https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx
+https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx  
 https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
