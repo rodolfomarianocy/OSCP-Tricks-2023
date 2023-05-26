@@ -1,5 +1,4 @@
-# OSCP Tricks
-
+# OSCP Tricks 2023
 ## Trigger Tips
 - [Information Gathering](information_gathering.md)
 - [Web Application Attacks](web_application_attacks.md)
@@ -10,7 +9,6 @@
 - [Shell and Some Payloads](shell_and_some_payloads.md)
 - [Port Forwarding and Tunneling](port_forwarding_and_tunneling.md)
 - [Active Directory](active_directory.md)
-- [Pentest Report](pentest_report.md)
   
 ## Other Tips
 - [Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
@@ -121,31 +119,26 @@
 - [TJ_Null's OSCP Prep - Youtube](https://www.youtube.com/watch?v=2DqdPcbYcy8&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)
 - [HackTheBox - Active Directory machines(OSCP) - Youtube](https://www.youtube.com/watch?v=jUc1J31DNdw&list=PLIU37Kps3dWApq77TnChQ52clmau8DfZA)
 - [Hack the Box - Active Directory - Youtube](https://www.youtube.com/watch?v=H9FcE_FMZio&list=PLrmSJpHp5WGg4sUndkYBg8B5qO2COSxS4)
+- [Vulnhub OSCP pathway training - Youtube](https://www.youtube.com/watch?v=LRO9KIDv_DQ&list=PLV_npv_S1L938Gal4XNiUfmHjUFNLq4rc)
 - [Beco do Exploit - Hack 30 machines in 30 days! - Youtube](https://www.youtube.com/watch?v=xnCS8fYfrjs&list=PLHBDBcFA_l_WBcUJWf8cp5BaPsUkquRQU)
 
 -> Platforms
-- [PEN-200](https://www.offsec.com/courses/pen-200/)
+- [PEN-200 (PWK)](https://www.offsec.com/courses/pen-200/)
 - [PG Practice](https://www.offsec.com/labs/individual/)
 - [Hack The Box](https://www.hackthebox.com/)
 - [Try Hack Me](https://tryhackme.com/)
 - [Vulnhub](https://www.vulnhub.com/)
 
 ## Overview and Articles
-https://rodolfomarianocy.medium.com/overview-oscp-9bb7c6609cb5  
-https://ranakhalil101.medium.com/my-oscp-journey-a-review-fa779b4339d9  
-https://medium.themayor.tech/the-long-awaited-oscp-review-5a377f103a39  
-https://infosecwriteups.com/oscp-cracking-the-new-pattern-6c4f1c9e2409  
-https://infosecwriteups.com/how-i-passed-oscp-with-100-points-in-12-hours-without-metasploit-in-my-first-attempt-dc8d03366f33    
-https://joasantonio108.medium.com/certifica%C3%A7%C3%A3o-oscp-do-zero-ao-h3r0-pt-1-9f18cf13f2bc  
-https://medium.com/@akashgupta1496/my-oscp-journey-june-2020-d4512155d289  
-https://diesec.home.blog/2020/10/11/oscp-journey/  
-https://www.noobsec.net/oscp-journey/  
-https://alex-labs.com/my-oscp-journey/  
-https://www.linkedin.com/pulse/concluding-my-oscp-journey-dennis-perto/?trk=read_related_article-card_title  
-https://esseum.com/the-oscp-journey-my-personal-experience-of-passing-the-exam/  
-https://bohansec.com/2020/08/08/My-Journey-to-OSCP/  
-https://bksecurity.org/my-oscp-journey/  
-https://www.helviojunior.com.br/it/security/minha-experiencia-no-oscp/  
+- [Overview OSCP - rodolfomarianocy](https://rodolfomarianocy.medium.com/overview-oscp-9bb7c6609cb5)  
+- [Beginner's To OSCP 2023- Daniel Kula](https://infosecwriteups.com/guide-to-oscp-2023-37c0aea0dec0)  
+- [OSCP Reborn - 2023 Exam Preparation Guide - johnjhacking](https://johnjhacking.com/blog/oscp-reborn-2023/)  
+- [OffSec OSCP Review & Tips (2023)- James Billingsley](https://www.linkedin.com/pulse/offsec-oscp-review-tips-2023-james-billingsley/)  
+- [2023 OSCP STUDY GUIDE (NEW EXAM FORMAT) - JOHN STAWINSKI IV](https://johnstawinski.com/2022/10/09/oscp-2023-study-guide-new-exam-format/)  
+- [The Journey to Becoming an OSCP - 0xBEN](https://benheater.com/journey-to-oscp/)  
+- [Exame OSCP - Jornada e Dicas - Jonatas Villa Flor](https://decriptosec.com/oscp-review/)  
+- [OSCP — Cracking The New Pattern - Jai Gupta](https://infosecwriteups.com/oscp-cracking-the-new-pattern-6c4f1c9e2409)  
 
 ## Template Report
-https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx 
+https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx
+https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
