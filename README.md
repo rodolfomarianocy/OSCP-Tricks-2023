@@ -1,4 +1,11 @@
 # OSCP Tricks 2023
+---
+<p align="center">
+  <img src="https://github.com/rodolfomarianocy/OSCP-Tricks-2023/assets/54555784/fba0780c-28a7-425b-b86a-3f0aaea6e7fa" />
+</p>
+
+---
+
 ## Trigger Tips
 - [Information Gathering](information_gathering.md)
 - [Web Application Attacks](web_application_attacks.md)
@@ -148,3 +155,7 @@ I decided to put only recent overviews, due to the changes that occurred in the 
 
 ## Exam Guide
 - [OSCP Exam Guide - OffSec](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
+---
+<a href="">
+  <img src="https://media.tenor.com/ArV6RGIhAGkAAAAC/edgerunners-cyberpunk.gif"/>
+</a>
