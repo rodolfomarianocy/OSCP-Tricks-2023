@@ -46,7 +46,7 @@ sudo chown -R ftpuser:ftpgroup /ftphome/
 sudo systemctl restart pure-ftpd
 ```
 
--> transferring
+-> Transfer
 ```
 echo open 192.168.0.20 21> ftp.txt
 echo USER user>> ftp.txt
@@ -68,7 +68,7 @@ sudo chown nobody: /tftp
 sudo atftpd --daemon --port 69 /tftp
 ```
 
--> transferring
+-> Transfer
 ```
 tftp -i <IP> get file
 ```
