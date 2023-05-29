@@ -18,6 +18,12 @@ nmap -sC -sV -A -Pn -T5 -p- <ip>
 ```
 
 ### rustscan
+-> install
+```
+sudo docker pull rustscan/rustscan:2.1.1
+alias rustscan='sudo docker run -it --rm --name rustscan rustscan/rustscan:2.1.1'
+```
+-> scan
 ```
 rustscan -a <ip> -- -A -Pn
 ```
@@ -152,13 +158,17 @@ https://www.wappalyzer.com/
 
 ### What is that Website
 ```
- ./whatweb site.com
+./whatweb site.com
 ```
 
 ### ffuf
 -> fuzzing
 ```
 ffuf -u http://site.com/FUZZ -w /usr/share/wordlists/dirb/big.txt
+```
+or
+```
+gobuster dir -u <IP> -w /usr/share/wordlists/dirb/common.txt -t 5
 ```
 
 -> Fuzzing File Extension
@@ -180,6 +190,11 @@ https://github.com/danielmiessler/SecLists
 ### Nikto - Web Server Scanner 
 ```
 nikto -h http://site.com
+```
+
+### HTTP Enum Nmap
+```
+nmap -p80 --script=http-enum <IP>
 ```
 
 ### CMS
@@ -210,3 +225,10 @@ https://github.com/SamJoan/droopescan
 php magescan.phar scan:all www.example.com
 ```
 https://github.com/steverobbins/magescan
+
+### Shellshock
+```
+```
+### Webdav
+http://www.hackingarticles.in/5-ways-to-exploiting-put-vulnerability/
+
