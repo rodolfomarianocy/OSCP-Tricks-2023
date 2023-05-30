@@ -1,5 +1,5 @@
-## Linux Enumeration and Privilege Escalation
-### Enumeration
+# Linux Enumeration and Privilege Escalation
+## Enumeration
 -> Get system distribution and version
 ```
 cat /etc/*-release
@@ -59,6 +59,83 @@ cat /etc/hosts
 cat /etc/passwd
 cat /etc/shadow
 ```
+
+### Extracting database information
+#### PostgreSQL
+-> psql terminal as postgres user
+```
+su postgres
+psql
+```
+-> list the databases
+```
+\list
+``` 
+
+-> select the database
+```
+\c <database>
+```
+
+-> list the tables
+```
+\d
+```
+
+-> dump
+```
+select * from <table>;
+```
+
+-> read files
+```
+CREATE TABLE demo(t text);
+COPY demo from '<filename>';
+SELECT * FROM demo;
+```
+
+### sqlite
+-> access database
+```
+sqlite3 <database.db>
+```
+
+-> list the tables
+```
+.tables
+```
+
+-> dump
+```
+select * from <table>;
+```
+
+### MySQL
+```
+mysql -u root -h localhost -p
+```
+-> list the databases
+```
+show databases;
+```
+-> select the database
+```
+use <database>;
+```
+
+-> list the tables
+```
+show tables;
+```
+
+-> dump
+```
+SELECT * FROM <table>;
+```
+
+### Other Tips
+-> Perform code review on web server files (/var/www/html);
+-> Check log files for credentials;
 
 --- 
 
@@ -183,10 +260,6 @@ docker images
 ```
 docker run -it -v /:/host/ <image>:<tag> chroot /host/ bash
 ```
-
-### Other Tips
--> Perform code review on web server files (/var/www/html);
--> Check log files for credentials;
 
 ### Linux Enumeration Tools [PrivEsc]
 -> Linpeas
