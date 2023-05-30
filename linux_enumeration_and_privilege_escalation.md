@@ -94,7 +94,7 @@ COPY demo from '<filename>';
 SELECT * FROM demo;
 ```
 
-### SQLite
+#### SQLite
 -> access database
 ```
 sqlite3 <database.db>
@@ -110,7 +110,7 @@ sqlite3 <database.db>
 select * from <table>;
 ```
 
-### MySQL
+#### MySQL
 ```
 mysql -u root -h localhost -p
 ```
