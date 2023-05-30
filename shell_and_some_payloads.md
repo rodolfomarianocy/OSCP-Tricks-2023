@@ -158,9 +158,26 @@ https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester
 locate perl-reverse-shell.pl
 ```
 
-#### (+) revshell generator + urlencoder
--> revshells  
+### Spawn tty via Python
+```
+python -c 'import pty;pty.spawn("/bin/bash")';
+```
+
+### Spawn an upgraded shell
+```
+export TERM=xterm && /usr/bin/script -qc /bin/bash /dev/null 
+```
+`ctrl + z`
+```
+stty raw -echo; fg 
+```
+
+### tools to make life easier
+-> revshell generator
 https://www.revshells.com/
 
--> urlencoder  
+-> CyberChef 
+https://gchq.github.io/CyberChef/
+
+-> urlencoder
 https://www.urlencoder.org/
