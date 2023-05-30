@@ -94,7 +94,7 @@ COPY demo from '<filename>';
 SELECT * FROM demo;
 ```
 
-### sqlite
+### SQLite
 -> access database
 ```
 sqlite3 <database.db>
