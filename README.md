@@ -1,5 +1,8 @@
 # OSCP Tricks 2023
+<h2 align=center>Welcome and good journey!</h2>
+
 ---
+
 <p align="center">
   <img src="https://github.com/rodolfomarianocy/OSCP-Tricks-2023/assets/54555784/fba0780c-28a7-425b-b86a-3f0aaea6e7fa" />
 </p>
@@ -9,6 +12,7 @@
 ## Trigger Tips
 - [Information Gathering](information_gathering.md)
 - [Web Application Attacks](web_application_attacks.md)
+- [Passwords Attacks](password_attacks.md)
 - [Client-Side Attacks](client_side_attacks.md)
 - [File Transfers](file_transfers.md)
 - [Linux Enumeration and Privilege Escalation](linux_enumeration_and_privilege_escalation.md)
@@ -36,7 +40,7 @@
   - [Try Hack Me - Walking An Application](https://tryhackme.com/room/walkinganapplication)
   - [Try Hack Me - Web Enumeration](https://tryhackme.com/room/webenumerationv2)
   
-- Pentest Web
+- Web Application Attacks
   - [Portswigger - Web Security Academy](https://portswigger.net/web-security/all-labs)
   - [Hack The Box AcademyFile Inclusion](https://academy.hackthebox.com/course/preview/file-inclusion)
   - [Hack The Box Academy - Web Attacks](https://academy.hackthebox.com/course/preview/web-attacks)
