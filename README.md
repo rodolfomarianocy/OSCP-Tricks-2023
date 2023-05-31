@@ -21,14 +21,14 @@
 - [Active Directory](active_directory.md)
   
 ## Other Tips
-- [Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
-- [Windows Local Privilege Escalation](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
-- [Active Directory](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology)
-- [Wordpress](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/wordpress)
-- [Drupal](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/drupal)
-- [Joomla](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/joomla)
-- [Tomcat](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/tomcat)
-- [Jenkins](https://cloud.hacktricks.xyz/pentesting-ci-cd/jenkins-security)
+- [Linux Privilege Escalation - Hacktricks](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+- [Windows Local Privilege Escalation - HackTricks](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
+- [Active Directory - HackTricks](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology)
+- [Wordpress - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/wordpress)
+- [Drupal - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/drupal)
+- [Joomla - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/joomla)
+- [Tomcat - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/tomcat)
+- [Jenkins - HackTricks](https://cloud.hacktricks.xyz/pentesting-ci-cd/jenkins-security)
 
 ## Tutorials
 - Information Gathering
