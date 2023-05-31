@@ -120,6 +120,8 @@
   - [Try Hack Me - Lateral Movement and Pivoting](https://tryhackme.com/jr/lateralmovementandpivoting)
   - [Try Hack Me - Exploiting Active Directory](https://tryhackme.com/room/exploitingad)
   - [Try Hack Me - Post-Exploitation Basics](https://tryhackme.com/room/postexploit)
+  - [Try Hack Me - HoloLive](https://tryhackme.com/room/hololive)
+  - [Try Hack Me - Throwback Network Labs Attacking Windows Active Directory](https://tryhackme.com/network/throwback)
   
 - Pentest Report
   - [Hack The Box Academy - Documentation & Reporting](https://academy.hackthebox.com/course/preview/documentation--reporting)
