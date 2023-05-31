@@ -1,5 +1,4 @@
-# OSCP Tricks 2023
-<h2 align=center>Welcome and good journey!</h2>
+<h1 align=center> OSCP Tricks 2023 - Welcome and good journey!</h2>
 
 ---
 
