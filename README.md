@@ -4,7 +4,7 @@
 ---
 
 <p align="center">
-  <img src="https://github.com/rodolfomarianocy/OSCP-Tricks-2023/assets/54555784/fba0780c-28a7-425b-b86a-3f0aaea6e7fa" />
+  <img height=300 src="https://c4.wallpaperflare.com/wallpaper/288/722/467/cyberpunk-edgerunners-lucy-edgerunners-anime-girls-cyberpunk-2077-cyberpunk-hd-wallpaper-preview.jpg" />
 </p>
 
 ---
