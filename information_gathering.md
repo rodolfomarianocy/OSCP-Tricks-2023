@@ -225,10 +225,3 @@ https://github.com/SamJoan/droopescan
 php magescan.phar scan:all www.example.com
 ```
 https://github.com/steverobbins/magescan
-
-### Shellshock
-```
-```
-### Webdav
-http://www.hackingarticles.in/5-ways-to-exploiting-put-vulnerability/
-
