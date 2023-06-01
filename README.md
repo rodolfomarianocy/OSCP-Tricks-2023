@@ -72,6 +72,16 @@
   - [Try Hack Me - Command Injection](https://tryhackme.com/room/oscommandinjection)
   - [Try Hack Me - Upload Vulnerabilities](https://tryhackme.com/jr/uploadvulns)
   - [Try Hack Me - Bypass Disable Functions](https://tryhackme.com/room/bypassdisablefunctions)
+  - https://pentesterlab.com/exercises/from_sqli_to_shell/course
+  - https://pentesterlab.com/exercises/from_sqli_to_shell_II/attachments
+  - https://pentesterlab.com/exercises/from_sqli_to_shell_III/course
+  - https://pentesterlab.com/exercises/sqli_01/course
+  - https://pentesterlab.com/exercises/sqli_02/course
+  - https://pentesterlab.com/exercises/sqli_03/course
+  - https://pentesterlab.com/exercises/sqli_04/course
+  - https://pentesterlab.com/exercises/sqli_05/course
+  - https://pentesterlab.com/exercises/sqli_06/course
+  - https://pentesterlab.com/exercises/xss_and_mysql_file/course
 
 - Shells & Payloads
   - [Hack The Box - Shells & Payloads](https://academy.hackthebox.com/course/preview/shells--payloads)
