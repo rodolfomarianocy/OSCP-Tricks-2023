@@ -40,7 +40,6 @@
   - [Try Hack Me - Web Enumeration](https://tryhackme.com/room/webenumerationv2)
   
 - Web Application Attacks
-  - [Portswigger - Web Security Academy](https://portswigger.net/web-security/all-labs)
   - [Hack The Box AcademyFile Inclusion](https://academy.hackthebox.com/course/preview/file-inclusion)
   - [Hack The Box Academy - Web Attacks](https://academy.hackthebox.com/course/preview/web-attacks)
   - [Hack The Box Academy - Introduction to Web Applications](https://academy.hackthebox.com/course/preview/introduction-to-web-applications)
@@ -72,16 +71,42 @@
   - [Try Hack Me - Command Injection](https://tryhackme.com/room/oscommandinjection)
   - [Try Hack Me - Upload Vulnerabilities](https://tryhackme.com/jr/uploadvulns)
   - [Try Hack Me - Bypass Disable Functions](https://tryhackme.com/room/bypassdisablefunctions)
-  - https://pentesterlab.com/exercises/from_sqli_to_shell/course
-  - https://pentesterlab.com/exercises/from_sqli_to_shell_II/attachments
-  - https://pentesterlab.com/exercises/from_sqli_to_shell_III/course
-  - https://pentesterlab.com/exercises/sqli_01/course
-  - https://pentesterlab.com/exercises/sqli_02/course
-  - https://pentesterlab.com/exercises/sqli_03/course
-  - https://pentesterlab.com/exercises/sqli_04/course
-  - https://pentesterlab.com/exercises/sqli_05/course
-  - https://pentesterlab.com/exercises/sqli_06/course
-  - https://pentesterlab.com/exercises/xss_and_mysql_file/course
+  - [Portswigger Web Security Academy](https://portswigger.net/web-security/all-labs)
+  - [PortSwigger Web Security Academy - SQL Injection](https://portswigger.net/web-security/sql-injection)
+  - [PortSwigger Web Security Academy - Cross-Site Scripting](https://portswigger.net/web-security/cross-site-scripting)
+  - [PortSwigger Web Security Academy - XML external entity (XXE) injection](https://portswigger.net/web-security/xxe)
+  - [PortSwigger Web Security Academy - OS command injection](https://portswigger.net/web-security/os-command-injection)
+  - [PortSwigger Web Security Academy - Server-side template injection](https://portswigger.net/web-security/all-labs#server-side-template-injection)
+  - [PortSwigger Web Security Academy - Directory traversal](https://portswigger.net/web-security/file-path-traversal)
+  - [PortSwigger Web Security Academy - Access control vulnerabilities](https://portswigger.net/web-security/access-control)
+  - [PortSwigger Web Security Academy - Information Disclosure](https://portswigger.net/web-security/all-labs#information-disclosure)
+  - [PortSwigger Web Security Academy - File upload vulnerabilities](https://portswigger.net/web-security/file-upload)
+  - [PortSwigger Web Security Academy - Authentication](https://portswigger.net/web-security/authentication)
+  - [PortSwigger Web Security Academy - JWT attacks](https://portswigger.net/web-security/jwt)
+  - [PortSwigger Web Security Academy - CSRF](https://portswigger.net/web-security/csrf)
+  - [PortSwigger Web Security Academy - SSRF](https://portswigger.net/web-security/ssrf)
+  - [PortSwigger Web Security Academy - Business logic vulnerabilities](https://portswigger.net/web-security/logic-flaws)
+  - [PentesterLab - From SQL Injection to Shell](https://pentesterlab.com/exercises/from_sqli_to_shell/course)
+  - [PentesterLab - From SQL injection to Shell II](https://pentesterlab.com/exercises/from_sqli_to_shell_II/attachments)
+  - [PentesterLab - From SQL injection to Shell III](https://pentesterlab.com/exercises/from_sqli_to_shell_III/course)
+  - [PentesterLab - SQL Injection 01](https://pentesterlab.com/exercises/sqli_01/course)
+  - [PentesterLab - SQL Injection 02](https://pentesterlab.com/exercises/sqli_02/course)
+  - [PentesterLab - SQL Injection 03](https://pentesterlab.com/exercises/sqli_03/course)  
+  - [PentesterLab - SQL Injection 04](https://pentesterlab.com/exercises/sqli_04/course)  
+  - [PentesterLab - SQL Injection 05](https://pentesterlab.com/exercises/sqli_05/course)  
+  - [PentesterLab - SQL Injection 06](https://pentesterlab.com/exercises/sqli_06/course)  
+  - [PentesterLab - XSS and MySQL FILE](https://pentesterlab.com/exercises/xss_and_mysql_file/course)
+  - [PentesterLab - RCE via argument injection - PentesterLab](https://pentesterlab.com/exercises/virusfatal/course)
+  - [PentesterLab - Server Side Template Injection 01](https://pentesterlab.com/exercises/ssti_01/course)
+  - [PentesterLab - Server Side Template Injection 02](https://pentesterlab.com/exercises/ssti_02/course)
+  - [PentesterLab - Express Local File Read](https://pentesterlab.com/exercises/express_lfr/course)
+  - [PentesterLab - PHP Include And Post Exploitation](https://pentesterlab.com/exercises/php_include_and_post_exploitation/course)
+  - [PentesterLab - File Include 01](https://pentesterlab.com/exercises/fileinc_01/course)
+  - [PentesterLab - File Include 02](https://pentesterlab.com/exercises/fileinc_02/course)
+  - [PentesterLab - File Upload 01](https://pentesterlab.com/exercises/upload_01/course)
+  - [PentesterLab - File Upload 02](https://pentesterlab.com/exercises/upload_02/course)
+  - [PentesterLab - CVE-2021-33564 Argument Injection in Ruby DragonflY](https://pentesterlab.com/exercises/cve-2021-33564/course)
+  - [PentesterLab - CVE-2014-6271/Shellshock](https://pentesterlab.com/exercises/cve-2014-6271/course)
 
 - Shells & Payloads
   - [Hack The Box - Shells & Payloads](https://academy.hackthebox.com/course/preview/shells--payloads)
