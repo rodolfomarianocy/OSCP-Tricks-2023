@@ -105,7 +105,7 @@
   - [PentesterLab - File Include 02](https://pentesterlab.com/exercises/fileinc_02/course)
   - [PentesterLab - File Upload 01](https://pentesterlab.com/exercises/upload_01/course)
   - [PentesterLab - File Upload 02](https://pentesterlab.com/exercises/upload_02/course)
-  - [PentesterLab - CVE-2021-33564 Argument Injection in Ruby DragonflY](https://pentesterlab.com/exercises/cve-2021-33564/course)
+  - [PentesterLab - CVE-2021-33564 Argument Injection in Ruby Dragonfly](https://pentesterlab.com/exercises/cve-2021-33564/course)
   - [PentesterLab - CVE-2014-6271/Shellshock](https://pentesterlab.com/exercises/cve-2014-6271/course)
 
 - Shells & Payloads
