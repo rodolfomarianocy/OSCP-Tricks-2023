@@ -3,7 +3,9 @@
 ---
 
 <p align="center">
-  <img height=300 src="https://c4.wallpaperflare.com/wallpaper/288/722/467/cyberpunk-edgerunners-lucy-edgerunners-anime-girls-cyberpunk-2077-cyberpunk-hd-wallpaper-preview.jpg" />
+  <a href="https://c4.wallpaperflare.com/wallpaper/288/722/467/cyberpunk-edgerunners-lucy-edgerunners-anime-girls-cyberpunk-2077-cyberpunk-hd-wallpaper-preview.jpg">
+    <img height=300 src="https://c4.wallpaperflare.com/wallpaper/288/722/467/cyberpunk-edgerunners-lucy-edgerunners-anime-girls-cyberpunk-2077-cyberpunk-hd-wallpaper-preview.jpg" />
+  </a>
 </p>
 
 ---
@@ -201,5 +203,7 @@ I decided to put only recent overviews, due to the changes that occurred in the 
 
 <h1 align="center">Good preparation ;)</h1>
 <p align="center">
-  <img src="https://media.tenor.com/ArV6RGIhAGkAAAAC/edgerunners-cyberpunk.gif"/>
+  <a href="https://media.tenor.com/ArV6RGIhAGkAAAAC/edgerunners-cyberpunk.gif">
+    <img src="https://media.tenor.com/ArV6RGIhAGkAAAAC/edgerunners-cyberpunk.gif"/>
+  </a>
 </p>
