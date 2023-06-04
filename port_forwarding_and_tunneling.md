@@ -61,7 +61,7 @@ ssh -N -D 127.0.0.1:8080 <user>@<ip> -p 2222
 ```
 -> Compromised Host  
 ```
-./chisel client <TARGET_IP>:<LISTEN_PORT> <PROXY_PORT>:socks
+./chisel client <TARGET_IP>:<LISTEN_PORT> R:socks &
 ```
 
 ### chisel - Forward Proxy  
