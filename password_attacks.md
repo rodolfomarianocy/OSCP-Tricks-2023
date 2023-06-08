@@ -106,5 +106,5 @@ hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> http-post-form "/login.
 
 ### HTTP GET Login Form Brute Force - Hydra
 ```
-hydra -l username -P password_file.txt -s port -f ip_address request_method /path
+hydra -l <username> -P /usr/share/wordlists/rockyou.txt -f <IP> http-get /login
 ```
