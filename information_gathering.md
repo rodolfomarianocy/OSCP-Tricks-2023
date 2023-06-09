@@ -76,25 +76,35 @@ enum4linux -a -u "" -p "" <ip> && enum4linux -a -u "guest" -p "" <ip>
 ``` 
 
 ## NFS Enumeration
-```
-nmap -v -p 111 10.11.1.1-254
-```
+
+-> see nfs version  
 ```
 nmap -sV -p 111 --script=rpcinfo 10.11.1.1-254
+```
+or  
+```
+rpcinfo <IP> | grep nfs
 ```
 
 -> View NFS shared directories
 ```
-nmap -p 111 --script nfs* <ip>
+nmap -p 111 --script nfs* <IP>
 ```
 or  
 ```
 showmount -e <ip>
 ```
+
 -> mount
 ```
 mkdir /tmp/ok
-sudo mount -o nolock <ip>:/home /tmp/ok
+sudo mount -t nfs -o vers=4 <IP>:/folder /tmp/ok -o nolock
+```
+
+-> Config files
+```
+/etc/exports
+/etc/lib/nfs/etab
 ```
 
 ## LDAP Enumeration
