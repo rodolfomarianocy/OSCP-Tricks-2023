@@ -142,11 +142,11 @@ https://raw.githubusercontent.com/payloadbox/xss-payload-list/master/Intruder/xs
 https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/XSS/XSS-Cheat-Sheet-PortSwigger.txt
 
 ### XSS Auditor and XSS Filter
-https://github.com/EdOverflow/bugbounty-cheatsheet/blob/master/cheatsheets/xss.md
-https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
-https://www.chromium.org/developers/design-documents/xss-auditor/
-https://portswigger.net/daily-swig/xss-protection-disappears-from-microsoft-edge
-https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/X-XSS-Protection
+https://github.com/EdOverflow/bugbounty-cheatsheet/blob/master/cheatsheets/xss.md  
+https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html  
+https://www.chromium.org/developers/design-documents/xss-auditor/  
+https://portswigger.net/daily-swig/xss-protection-disappears-from-microsoft-edge  
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/X-XSS-Protection  
 
 ### XSS Keylogger
 https://rapid7.com/blog/post/2012/02/21/metasploit-javascript-keylogger/
