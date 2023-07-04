@@ -73,7 +73,6 @@
   - [Try Hack Me - Command Injection](https://tryhackme.com/room/oscommandinjection)
   - [Try Hack Me - Upload Vulnerabilities](https://tryhackme.com/jr/uploadvulns)
   - [Try Hack Me - Bypass Disable Functions](https://tryhackme.com/room/bypassdisablefunctions)
-  - [Portswigger Web Security Academy](https://portswigger.net/web-security/all-labs)
   - [PortSwigger Web Security Academy - SQL Injection](https://portswigger.net/web-security/sql-injection)
   - [PortSwigger Web Security Academy - Cross-Site Scripting](https://portswigger.net/web-security/cross-site-scripting)
   - [PortSwigger Web Security Academy - XML external entity (XXE) injection](https://portswigger.net/web-security/xxe)
