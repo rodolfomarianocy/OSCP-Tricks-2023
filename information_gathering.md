@@ -1,15 +1,35 @@
 # Reconnaissance
 ## Host Discovery
-### nmap
+-> nmap
 ```
-nmap -sn 10.10.0.0./16
+nmap -sn 10.10.0.0/16
 ```
 https://github.com/andrew-d/static-binaries/tree/master/binaries  
 
-### crackmapexec  
+-> crackmapexec  
 ```
 crackmapexec smb 192.168.0.20/24
 ```
+
+-> Ping Sweep - PowerShell
+```
+for ($i=1;$i -lt 255;$i++) { ping -n 1 192.168.0.$i| findstr "TTL"}
+```
+
+-> Ping Sweep - Bash
+```
+for i in {1..255};do (ping -c 1 192.168.0.$i | grep "bytes from" &); done
+```
+
+-> Port Scanning - Bash
+```
+for i in {1..65535}; do (echo > /dev/tcp/192.168.1.1/$i) >/dev/null 2>&1 && echo $i is open; done
+```
+-> Port Scanning - NetCat
+```
+nc -zvn <ip> 1-1000
+```
+https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/ncat
 
 ## Port Scanning
 ### nmap  
@@ -160,6 +180,99 @@ snmpwalk -c public -v1 <ip> 1.3.6.1.2.1.6.13.1.3
 -> Enumerate installed software
 ```
 snmpwalk -c public -v1 <ip> 1.3.6.1.2.1.25.6.3.1.2
+```
+
+## FTP
+-> credentials default  
+anonymous : anonymous  
+-> get version
+```
+nc <IP> <PORT>
+```
+
+-> scan ftp service
+```
+nmap --script ftp-* -p 21 <ip>
+```
+
+-> binary transfer
+```
+ftp user@port
+binary
+```
+
+-> ascii transfer
+```
+ftp user@port
+ascii
+```
+
+## RDP
+-> RDP enumeration
+```
+nmap --script rdp-ntlm-info,rdp-enum-encryption,rdp-vuln-ms12-020 -p 3389 -T4 <IP>
+```
+
+-> Connect to RDP
+```
+rdesktop -u <username> <IP>
+xfreerdp /d:<domain> /u:<username> /p:<password> /v:<IP>
+```
+
+-> Check valid credentials in RDP
+```
+rdp_check <domain>/<name>:<password>@<IP>
+```
+
+## POP 
+-> POP enumeration
+```
+nmap --script pop3-capabilities,pop3-ntlm-info -sV -port <IP>
+```
+
+-> login
+```
+telnet <IP> 110
+USER user1
+PASS password
+```
+
+-> list messages 
+```
+list
+```
+
+->  Show message number 1
+```
+retr 1
+```
+
+## SMTP
+-> SMTP enumeration
+```
+nmap -p25 --script smtp-commands,smtp-open-relay 10.10.10.10
+```
+-> send email via SMTP
+```
+nc -C <IP> 25
+HELO
+MAIL FROM:user@local
+RCPT TO:user2@local
+DATA
+Subject: approved in the job
+
+http://<IP>/malware.exe
+
+.
+QUIT
+```
+
+hydra smtp-enum://192.168.0.1/vrfy -l john -p localhost
+-> username enumeration
+```
+telnet 10.0.0.1 25
+HELO
+hydra smtp-enum://<IP>/vrfy -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" 
 ```
 
 ## Recon Web
