@@ -42,9 +42,9 @@
   - [Try Hack Me - Web Enumeration](https://tryhackme.com/room/webenumerationv2)
   
 - Web Application Attacks
-  - [Hack The Box AcademyFile Inclusion](https://academy.hackthebox.com/course/preview/file-inclusion)
-  - [Hack The Box Academy - Web Attacks](https://academy.hackthebox.com/course/preview/web-attacks)
   - [Hack The Box Academy - Introduction to Web Applications](https://academy.hackthebox.com/course/preview/introduction-to-web-applications)
+  - [Hack The Box Academy - Web Attacks](https://academy.hackthebox.com/course/preview/web-attacks)
+  - [Hack The Box Academy - File Inclusion](https://academy.hackthebox.com/course/preview/file-inclusion)
   - [Hack The Box Academy - Abusing HTTP Misconfigurations](https://academy.hackthebox.com/course/preview/abusing-http-misconfigurations)
   - [Hack The Box Academy - HTTP Attacks](https://academy.hackthebox.com/course/preview/http-attacks)
   - [Hack The Box Academy - SQL Injection Fundamentals](https://academy.hackthebox.com/course/preview/sql-injection-fundamentals)
