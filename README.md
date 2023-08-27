@@ -23,7 +23,7 @@
 - [Active Directory](active_directory.md)
   
 ## Other Tips
-- [Linux Privilege Escalation - Hacktricks](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+- [Linux Privilege Escalation - HackTricks](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
 - [Windows Local Privilege Escalation - HackTricks](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
 - [Active Directory - HackTricks](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology)
 - [Wordpress - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/wordpress)
@@ -181,6 +181,7 @@ As you go through the list of machines, keep in mind the changes that occurred i
 ## Overview and Articles
 I decided to put only recent overviews, due to the changes that occurred in the exam.  
 "Since Buffer Overflows will no longer be a part of the course material, they will also be removed from the exam body of knowledge and no longer part of the exam." [PEN-200 (PWK): Updated for 2023](https://www.offsec.com/offsec/pen-200-2023/)  
+- [OSCP 2023 version — A Small write-up on preparation and my exam experience - Neelamegha Kannan S](https://medium.com/@kannnannmk/oscp-2023-version-a-small-write-up-on-preparation-and-my-exam-experience-55c31d543d17)
 - [Overview OSCP - rodolfomarianocy](https://rodolfomarianocy.medium.com/overview-oscp-9bb7c6609cb5)  
 - [The road to OSCP in 2023 - Thexssrat](https://thexssrat.medium.com/the-road-to-oscp-in-2023-ed88f695f349)
 - [Beginner's To OSCP 2023- Daniel Kula](https://infosecwriteups.com/guide-to-oscp-2023-37c0aea0dec0)  
