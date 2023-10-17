@@ -186,11 +186,11 @@ https://gchq.github.io/CyberChef/
 -> urlencoder  
 https://www.urlencoder.org/
 
--> octal
+-> octal  
 http://www.unit-conversion.info/texttools/octal/
 
--> hex
+-> hex  
 http://www.unit-conversion.info/texttools/octal/
 
--> IP converter
+-> IP converter  
 https://www.silisoftware.com/tools/ipconverter.php
