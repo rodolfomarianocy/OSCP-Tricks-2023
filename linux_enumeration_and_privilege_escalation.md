@@ -161,7 +161,6 @@ or
 ```
 id
 find / -perm -u=s -type f -group <group> 2>/dev/null
-
 ```
 
 -> Exploitation  
