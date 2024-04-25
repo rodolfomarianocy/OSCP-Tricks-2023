@@ -75,7 +75,10 @@ host -t ns megacorpone.com | cut -d " " -f 4
 ```
 host -l <domain name> <dns server address>
 ```
-
+-> Automation DNS Zone Transfer
+```
+for ns in $(host -t ns $1 | cut -d ' ' -f 4 | cut -d '.' -f 1); do host -l $1 $ns.$1; done
+```
 -> DNS Zone Transfer - dnsrecon
 ```
 dnsrecon -d <domain -t axfr
