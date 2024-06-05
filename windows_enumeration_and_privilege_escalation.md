@@ -30,6 +30,12 @@ ipconfig /all
 netstat -ant
 ```
 
+-> Firewall
+```
+netsh firewall show state
+netsh firewall show config
+```
+
 -> List running processes
 ```
 tasklist
