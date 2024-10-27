@@ -2,12 +2,12 @@
 ## Port Fowarding
 ### SSH Tunneling/Local Port Forwarding  
 ```bash
-ssh user@<ip> -p port -L 8001:127.0.0.1:8080 -fN
+ssh user@<IP> -p port -L 8001:127.0.0.1:8080 -fN
 ```
 
 ### SSH Remote Port Forwarding
 ```bash
-ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<ip>
+ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<IP>
 ```
 
 ### Socat - Port Forward
@@ -18,23 +18,23 @@ ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<ip>
 ### chisel  - Remote Port Forward 
 -> Your machine  
 ```bash
-./chisel server -p <LISTEN_PORT> --reverse &
+./chisel server -p <listen_port> --reverse &
 ```
 
 -> Compromised Host
 ```bash
-./chisel client <client_port>:<client_port> R:<LOCAL_PORT>:<TARGET_IP>:<TARGET_PORT> &
+./chisel client <client_port>:<client_port> R:<local_port>:<target_IP>:<target_port> &
 ```
 
 ### Chisel - Local Port Forward
 -> Compromised Host  
 ```bash
-./chisel server -p <LISTEN_PORT>
+./chisel server -p <listen_port>
 ```
 
 -> Your Machine  
 ```bash
-./chisel client <client_port>:<client_port> <LOCAL_PORT>:<TARGET_IP>:<TARGET_PORT>
+./chisel client <client_port>:<client_port> <local_port>:<target_IP>:<target_port>
 ```
 
 ### pklink - Remote Port Forward
@@ -57,21 +57,21 @@ ssh -N -D 127.0.0.1:8080 <user>@<ip> -p 2222
 ### chisel  - Reverse Proxy
 -> Your Machine  
 ```bash
-./chisel server -p LISTEN_PORT --reverse &
+./chisel server -p listen_port --reverse &
 ```
 -> Compromised Host  
 ```bash
-./chisel client <TARGET_IP>:<LISTEN_PORT> R:socks &
+./chisel client <target_IP>:<listen_port> R:socks &
 ```
 
 ### chisel - Forward Proxy  
 -> Compromised Host  
 ```bash
-./chisel server -p <LISTEN_PORT> --socks5
+./chisel server -p <listen_port> --socks5
 ```
 -> Your Machine  
 ```bash
-./chisel client <TARGET_IP>:<LISTEN_PORT> <PROXY_PORT>:socks
+./chisel client <target_P>:<listen_port> <proxy_port>:socks
 ```
 
 ### metasploit - proxying 
