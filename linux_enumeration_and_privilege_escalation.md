@@ -164,7 +164,7 @@ find / -perm -u=s -type f -group <group> 2>/dev/null
 ```
 
 -> Exploitation  
-https://gtfobins.github.io/
+- https://gtfobins.github.io/
 
 ### Capabilities [PrivEsc]
 -> Enumeration  
@@ -173,7 +173,7 @@ getcap -r / 2>/dev/null
 ```
 
 -> Exploitation  
-https://gtfobins.github.io/
+- https://gtfobins.github.io/
 
 ### Binary with Sudo [PrivEsc]
 ```bash
@@ -185,7 +185,7 @@ cat /etc/sudoers
 ```
 
 -> Exploitation  
-https://gtfobins.github.io/
+- https://gtfobins.github.io/
 
 #### Run commands as another user with permission through sudo [PrivEsc]
 ```bash
