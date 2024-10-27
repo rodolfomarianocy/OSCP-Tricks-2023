@@ -33,15 +33,15 @@ crunch 4 6 0123456789abcdef -o wordlist.txt
 ```bash
 john --wordlist=wordlist.txt --rules --stdout > mutated.txt
 ```
-https://www.openwall.com/john/doc/RULES.shtml
+- https://www.openwall.com/john/doc/RULES.shtml
 
 ## Cracking Password
 ### Identifying Hash Type
 ```bash
 hashid <hash>
 ```
-https://www.tunnelsup.com/hash-analyzer/
-https://hashes.com/en/tools/hash_identifier
+- https://www.tunnelsup.com/hash-analyzer/
+- https://hashes.com/en/tools/hash_identifier
 
 ### Hashing different file types for cracking with 2john
 - [ssh2john](https://github.com/piyushcse29/john-the-ripper/blob/master/src/ssh2john.c)  
