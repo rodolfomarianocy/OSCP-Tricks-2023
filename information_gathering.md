@@ -4,7 +4,7 @@
 ```bash
 nmap -sn 10.10.0.0/16
 ```
-https://github.com/andrew-d/static-binaries/tree/master/binaries  
+- https://github.com/andrew-d/static-binaries/tree/master/binaries  
 
 -> crackmapexec  
 ```bash
@@ -29,7 +29,7 @@ for i in {1..65535}; do (echo > /dev/tcp/192.168.1.1/$i) >/dev/null 2>&1 && echo
 ```bash
 nc -zvn <ip> 1-1000
 ```
-https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/ncat
+- https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/ncat
 
 ## Port Scanning
 ### nmap  
