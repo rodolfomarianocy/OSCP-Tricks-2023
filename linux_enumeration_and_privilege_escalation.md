@@ -265,13 +265,13 @@ docker run -it -v /:/host/ <image>:<tag> chroot /host/ bash
 ```bash
 ./linpeas.sh
 ```
-https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+- https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
 
 -> pspy (unprivileged Linux process snooping)  
 ```bash
 ./pspy64
 ```
-https://github.com/DominicBreuker/pspy
+- https://github.com/DominicBreuker/pspy
 
 -> linux-exploit-suggester
 ```bash
@@ -281,10 +281,10 @@ or
 ```bash
 ./linux-exploit-suiggester.sh --uname <uname-string>
 ```
-https://github.com/The-Z-Labs/linux-exploit-suggester
+- https://github.com/The-Z-Labs/linux-exploit-suggester
 
 -> Unix Privesc Check
 ```bash
 ./unix-privesc-check
 ```
-https://pentestmonkey.net/tools/audit/unix-privesc-check
+- https://pentestmonkey.net/tools/audit/unix-privesc-check
