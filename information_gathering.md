@@ -278,7 +278,7 @@ hydra smtp-enum://<IP>/vrfy -L "/usr/share/seclists/Usernames/top-usernames-shor
 
 ## Recon Web
 ### Wappalyzer
-https://www.wappalyzer.com/
+- https://www.wappalyzer.com/
 
 ### What is that Website
 ```bash
@@ -309,7 +309,7 @@ ffuf -u "https://site.com/index.php?FUZZ=ok" -w wordlist.txt -fs xxx
 ```bash
 ffuf -u "https://site.com/index.php" -X POST -d 'FUZZ=ok' -H 'Content-Type: application/x-www-form-urlencoded' -w wordlist.txt -fs xxx
 ```
-https://github.com/danielmiessler/SecLists
+- https://github.com/danielmiessler/SecLists
 
 ### Nikto - Web Server Scanner 
 ```bash
@@ -334,18 +334,18 @@ wpscan --url http://site.com/wordpress --api-token <your_token> --enumerate u,ap
 ```bash
 python main.py -u <target>
 ```
-https://github.com/oppsec/juumla
+- https://github.com/oppsec/juumla
 
 #### Drupal
 -> droopescan
 ```bash
 droopescan scan drupal -u <target> -t 32
 ```
-https://github.com/SamJoan/droopescan
+- https://github.com/SamJoan/droopescan
 
 #### Magento
 -> magescan
 ```bash
 php magescan.phar scan:all www.example.com
 ```
-https://github.com/steverobbins/magescan
+- https://github.com/steverobbins/magescan
