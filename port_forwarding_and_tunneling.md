@@ -44,7 +44,7 @@ cmd.exe /c echo y | plink.exe -ssh -l <user> -pw <password> -R 192.168.0.20:1234
 
 ## Proxying - Network Pivoting
 ### sshuttle (Unix) - proxying  
-```
+```bash
 sshuttle -r user@<ip> --ssh-cmd "ssh -i private_key" 172.16.0.0/24
 ```
 
