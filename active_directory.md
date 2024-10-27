@@ -302,7 +302,7 @@ or
 ```powershell
 .\Spray-Passwords.ps1 -Pass Qwerty09! -Admin
 ```
-https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
+- https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
 
 ## Enumeration - BloodHound
 -> Install - Attacker VM
