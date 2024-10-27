@@ -280,16 +280,19 @@ javascript:alert(1)
 
 ### JavaScript Encoding
 -> jjencode  
-- https://utf-8.jp/public/jjencode.html   
+- https://utf-8.jp/public/jjencode.html
+
 -> aaencode  
-- https://utf-8.jp/public/aaencode.html  
+- https://utf-8.jp/public/aaencode.html
+
 -> jsfuck  
-- http://www.jsfuck.com/  
+- http://www.jsfuck.com/
+
 -> Xchars.js  
 - https://syllab.fr/projets/experiments/xcharsjs/5chars.pipeline.html  
 
 ### Decoder - Obfuscation (Javascript Decoder and PHP)
-https://malwaredecoder.com/  
+- https://malwaredecoder.com/  
 
 ### XSS to LFI
 ```
