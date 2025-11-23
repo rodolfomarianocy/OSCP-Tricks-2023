@@ -136,7 +136,7 @@ nmap -n -sV --script "ldap* and not brute" <IP>
 ```
 
 ```bash
-ldapsearch -h <IP> -bx "DC=domain,DC=com"
+ldapsearch -H <IP> -bx "DC=domain,DC=com"
 ```
 
 ## SNMP Enumeration
