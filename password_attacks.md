@@ -81,7 +81,7 @@ hashcat -m 13400 keepass.hash
 ## Brute Force Attacks
 ### RDP Brute Force - Hydra
 ```powershell
-hydra -L /usr/share/wordlists/rockyou.txt t -p "<password" rdp://<IP>
+hydra -L /usr/share/wordlists/rockyou.txt t -p "<password>" rdp://<IP>
 ```
 
 ### RDP Brute Force - Crowbar
