@@ -16,6 +16,12 @@ ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<IP>
 ```
 
 ### chisel  - Remote Port Forward 
+-> Windows
+- https://github.com/jpillora/chisel/releases/download/v1.11.5/chisel_1.11.5_windows_arm64.zip
+
+- > Linux
+- https://github.com/jpillora/chisel/releases/download/v1.11.5/chisel_1.11.5_linux_amd64.deb
+
 -> Your machine  
 ```bash
 ./chisel server -p <listen_port> --reverse &
