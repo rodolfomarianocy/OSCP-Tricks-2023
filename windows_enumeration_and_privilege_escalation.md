@@ -61,6 +61,9 @@ C:\Program Files\My Program\My service\service.exe
 ```powershell
 Get-CimInstance -ClassName win32_service | Select Name,State,PathName
 ```
+```
+wmic service get name,pathname |  findstr /i /v "C:\Windows\\" | findstr /i /v """
+```
 ```powershell
 wmic service get Name,State,PathName | findstr "Program"  
 sc qc <service_name>  
