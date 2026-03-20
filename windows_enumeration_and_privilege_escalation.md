@@ -50,7 +50,17 @@ schtasks
 ## Privilege Escalation
 
 ### Unquoted Service Path
+-> Example
+```
+C:\Program.exe
+C:\Program Files\My.exe
+C:\Program Files\My Program\My.exe
+C:\Program Files\My Program\My service\service.exe
+```
 -> Detection 
+```powershell
+Get-CimInstance -ClassName win32_service | Select Name,State,PathName
+```
 ```powershell
 wmic service get Name,State,PathName | findstr "Program"  
 sc qc <service_name>  
