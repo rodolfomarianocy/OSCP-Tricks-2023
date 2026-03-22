@@ -23,14 +23,16 @@
 - [Active Directory](active_directory.md)
   
 ## Other Tips
-- [Linux Privilege Escalation - HackTricks](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
-- [Windows Local Privilege Escalation - HackTricks](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
-- [Active Directory - HackTricks](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology)
-- [Wordpress - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/wordpress)
-- [Drupal - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/drupal)
-- [Joomla - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/joomla)
-- [Tomcat - HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/tomcat)
-- [Jenkins - HackTricks](https://cloud.hacktricks.xyz/pentesting-ci-cd/jenkins-security)
+- [Checklist - Linux Privilege Escalation - HackTricks](https://hacktricks.wiki/en/linux-hardening/linux-privilege-escalation-checklist.html)
+- [Linux Privilege Escalation - HackTricks](https://hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html)
+- [Checklist Windows Local Privilege Escalation - HackTricks](https://hacktricks.wiki/en/windows-hardening/checklist-windows-privilege-escalation.html)
+- [Windows Local Privilege Escalation - HackTricks](https://hacktricks.wiki/en/windows-hardening/windows-local-privilege-escalation/index.html)
+- [Active Directory Methodology - HackTricks](https://hacktricks.wiki/en/windows-hardening/active-directory-methodology/index.html)
+- [Wordpress - HackTricks](https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/wordpress.html)
+- [Drupal - HackTricks](https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/drupal/index.html)
+- [Joomla - HackTricks](https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/joomla.html)
+- [Tomcat - HackTricks](https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/tomcat/index.html)
+- [Jenkins - HackTricks](https://cloud.hacktricks.wiki/en/pentesting-ci-cd/jenkins-security/index.html)
 
 ## Tutorials
 - Information Gathering
