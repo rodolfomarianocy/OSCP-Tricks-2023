@@ -218,6 +218,11 @@ ftp user@port
 ascii
 ```
 
+-> passive mode
+```
+passive; bin
+``` 
+
 ## RDP
 -> RDP enumeration
 ```bash
