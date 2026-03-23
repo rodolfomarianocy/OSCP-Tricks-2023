@@ -326,6 +326,35 @@ ffuf -u "https://site.com/index.php" -X POST -d 'FUZZ=ok' -H 'Content-Type: appl
 nikto -h http://site.com
 ```
 
+### Feroxbuster - Web Server Scanner 
+-> Install
+```
+sudo apt update && sudo apt install -y feroxbuster
+```
+
+-> Multiples values
+```bash
+./feroxbuster -u http://127.1 -x pdf -x js,html -x php txt json,docx
+```
+
+-> Proxy traffic through Burp
+```bash
+./feroxbuster -u http://127.1 --insecure --proxy http://127.0.0.1:8080
+```
+
+-> Pass auth token via query parameter
+```
+./feroxbuster -u http://127.1 --query token=0123456789ABCDEF
+```
+
+-> Brute-force attack on directories and filtering by status code.
+```bash
+./feroxbuster --url http://<ip> -w /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-small-words-lowercase.txt --depth 2 -s 200 301 302 --redirects 
+```
+- https://github.com/epi052/feroxbuster
+- https://github.com/danielmiessler/SecLists
+  
+
 ### HTTP Enum Nmap
 ```bash
 nmap -p80 --script=http-enum <IP>
