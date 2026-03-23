@@ -115,11 +115,11 @@
   - [Hack The Box - Shells & Payloads](https://academy.hackthebox.com/course/preview/shells--payloads)
   
 - Linux Enumeration and Privilege Escalation
-  - [Hack The Box Academy - Linux Privilege Escalation](https://academy.hackthebox.com/course/preview/linux-privilege-escalation) 
   - [Try Hack Me - Linux: Local Enumeration](https://tryhackme.com/room/lle)
   - [Try Hack Me - Enumeration](https://tryhackme.com/room/enumerationpe)
   - [Try Hack Me - Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
-  - [Try Hack Me - Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)  
+  - [Try Hack Me - Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)
+  - [Hack The Box Academy - Linux Privilege Escalation](https://academy.hackthebox.com/course/preview/linux-privilege-escalation) 
   
 - Windows Enumeration and Privilege Escalation
   - [Hack The Box Academy - Windows Privilege Escalation](https://academy.hackthebox.com/course/preview/windows-privilege-escalation)
