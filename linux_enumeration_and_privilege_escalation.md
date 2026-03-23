@@ -205,6 +205,9 @@ find / -perm -u=s -type f 2>/dev/null
 ```bash
 ls -l /usr/bin/passwdflag
 ```
+```
+-rwsr-xr-x 1 root root 68574 Jan  5 18:00 /usr/bin/passwdflag
+```
 
 -> Searching strings
 ```bash
