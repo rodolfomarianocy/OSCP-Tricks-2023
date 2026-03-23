@@ -431,5 +431,10 @@ grep Exploits /usr/share/nmap/scripts/*.nse
 -> CVEs PoC
 - https://github.com/trickest/cve
 
+### Exiftool
+-> Get information about files
+```
+exiftool -a <name>.docx | grep Creator
+```  
 ->  Fixing Exploits
 - https://pyinstaller.org/en/stable/
