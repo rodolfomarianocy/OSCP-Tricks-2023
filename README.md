@@ -1,4 +1,4 @@
-<h1 align=center> OSCP Tricks 2023 - Welcome and good journey!</h2>
+<h1 align=center> OSCP Tricks - Updated in 2026 - Welcome and good journey!</h2>
 
 ---
 
