@@ -409,7 +409,7 @@ hoaxshell -s <kali-ip> -p <port>
 
 ## Privilege Escalation Abusing Active Directory ACLs/ACEs
 
-| ID | Decription |
+| ID | Description |
 |----|------------|
 | GenericAll             |full rights to the object (add users to a group or reset user's password)  |
 | GenericWrite           | update object's attributes (i.e logon script)                             |
@@ -419,6 +419,7 @@ hoaxshell -s <kali-ip> -p <port>
 | ForceChangePassword    | ability to change user's password                                         |
 | Self (Self-Membership) | ability to add yourself to a group                                        |
 
+- https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/abusing-active-directory-acls-aces
 
 ### GenericALL permission
 
