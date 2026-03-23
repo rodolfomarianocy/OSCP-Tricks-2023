@@ -187,7 +187,7 @@ As you go through the list of machines, remember the changes that have occurred 
 - [OffSec OSCP Review & Tips (2023)- James Billingsley](https://www.linkedin.com/pulse/offsec-oscp-review-tips-2023-james-billingsley/)  
 - [2023 OSCP STUDY GUIDE (NEW EXAM FORMAT) - JOHN STAWINSKI IV](https://johnstawinski.com/2022/10/09/oscp-2023-study-guide-new-exam-format/)  
 - [The Journey to Becoming an OSCP - 0xBEN](https://benheater.com/journey-to-oscp/)  
-- [Exame OSCP - Jornada e Dicas - Jonatas Villa Flor](https://decriptosec.com/oscp-review/)  
+- [Exame OSCP - Jornada e Dicas - DECRIPTO SEC](https://decriptosec.com/exame-oscp-jornada-e-dicas/)  
 - [OSCP — Cracking The New Pattern - Jai Gupta](https://infosecwriteups.com/oscp-cracking-the-new-pattern-6c4f1c9e2409)  
 
 * For those who are old school and still don't know: Buffer Overflows have been removed from the PEN-200 material and the OSCP exam since 2023, making it no longer necessary to study them.
