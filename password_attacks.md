@@ -137,6 +137,13 @@ python firepwd.py -d /home/<user>/Desktop/.mozilla/firefox/<file>.default
 ```
 - https://github.com/lclevy/firepwd
 
+### Zip2john
+```bash
+Zip2john file.zip > hash.txt
+```
+```bash
+john hash.txt –wordlist=/usr/share/wordlists/rockyou.txt
+```
 
 ## Brute Force Attacks
 ### RDP Brute Force - Hydra
