@@ -179,8 +179,6 @@ As you go through the list of machines, remember the changes that have occurred 
 - [Vulnhub](https://www.vulnhub.com/)
 
 ## Overview and Articles
-I decided to put only recent overviews, due to the changes that occurred in the exam.  
-"Since Buffer Overflows will no longer be a part of the course material, they will also be removed from the exam body of knowledge and no longer part of the exam." [PEN-200 (PWK): Updated for 2023](https://www.offsec.com/offsec/pen-200-2023/)  
 - [OSCP 2023 version — A Small write-up on preparation and my exam experience - Neelamegha Kannan S](https://medium.com/@kannnannmk/oscp-2023-version-a-small-write-up-on-preparation-and-my-exam-experience-55c31d543d17)
 - [Overview OSCP - rodolfomarianocy](https://rodolfomarianocy.medium.com/overview-oscp-9bb7c6609cb5)  
 - [The road to OSCP in 2023 - Thexssrat](https://thexssrat.medium.com/the-road-to-oscp-in-2023-ed88f695f349)
@@ -192,6 +190,7 @@ I decided to put only recent overviews, due to the changes that occurred in the 
 - [Exame OSCP - Jornada e Dicas - Jonatas Villa Flor](https://decriptosec.com/oscp-review/)  
 - [OSCP — Cracking The New Pattern - Jai Gupta](https://infosecwriteups.com/oscp-cracking-the-new-pattern-6c4f1c9e2409)  
 
+* For those who are old school and still don't know: Buffer Overflows have been removed from the PEN-200 material and the OSCP exam since 2023, making it no longer necessary to study them.
 
 ## Template Report
 - [OSCP Exam Report - OffSec](https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx  )
@@ -199,7 +198,6 @@ I decided to put only recent overviews, due to the changes that occurred in the 
 
 ## Exam Guide
 - [OSCP Exam Guide - OffSec](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
-
 
 ---
 
