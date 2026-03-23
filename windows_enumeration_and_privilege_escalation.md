@@ -60,6 +60,9 @@ tasklist
 ```powershell
 schtasks
 ```
+```powershell
+schtasks /query /fo LIST /v
+```
 
 -> Location Files
 ```powershell
@@ -366,6 +369,29 @@ python2 mcafee_sitelist_pwd_decrypt.py <AUTH PASSWD VALUE>
 ```
 - https://raw.githubusercontent.com/funoverip/mcafee-sitelist-pwd-decryption/master/mcafee_sitelist_pwd_decrypt.py
 
+## Using Exploits
+
+-> Get System Version
+```powershell
+systeminfo
+```
+
+-> Get Security Update
+```powershell
+Get-CimInstance -Class win32_quickfixengineering | Where-Object { $_.Description -eq "Security Update" }
+```
+
+-> Exploit by CVE
+```powershell
+.\CVE-2021-1732.exe
+```
+```powershell
+.\CVE-2023-29360.exe
+```
+- https://github.com/sickn3ss/exploits/tree/master
+- https://github.com/sickn3ss/exploits/tree/master/CVE-2021-1732/CVE-2021-1732_20H2/x64/Release
+- https://github.com/sickn3ss/exploits/tree/master/CVE-2023-29360/x64/Release
+
 ## Windows Enumeration Tools
 -> PowerUp.ps1  
 ```powershell
@@ -385,3 +411,9 @@ winPEASany.exe
 windows-privesc-check2.exe --dump -G
 ```
 - https://github.com/pentestmonkey/windows-privesc-check
+
+-> Windapsearch
+```powershell
+./windapsearch.py -d <domain> --dc-ip <ip> -U
+```
+- https://github.com/ropnop/windapsearch 
