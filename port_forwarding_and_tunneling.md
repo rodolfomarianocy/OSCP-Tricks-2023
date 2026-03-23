@@ -155,3 +155,27 @@ ifconfig
 sudo ip route add <Internal_Network> dev ligolo
 start
 ```
+
+### Performing a Ligolo-ng Double Pivot
+
+-> Add a second TUN interface
+```bash
+sudo ip tuntap add user kali mode tun ligolo-double
+sudo ip link set ligolo-double up
+```
+
+-> Create a listener
+```bash
+listener_add --addr 0.0.0.0:11601 --to 127.0.0.1:11601 --tcp
+listener_list
+```
+
+-> Connect to the proxy server
+```bash
+./agent.exe -connect <IP of First Pivot Point>:11601 -ignore-cert
+```
+
+-> Start a tunnel and add a route
+```bash
+sudo ip add route <New_Network> dev ligolo-double
+```
