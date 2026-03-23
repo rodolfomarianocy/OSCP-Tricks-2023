@@ -427,8 +427,21 @@ windows-privesc-check2.exe --dump -G
 ```
 - https://github.com/pentestmonkey/windows-privesc-check
 
--> Windapsearch
+-> Windapsearch.py
 ```powershell
 ./windapsearch.py -d <domain> --dc-ip <ip> -U
 ```
 - https://github.com/ropnop/windapsearch 
+
+-> AdPEAS.ps1
+```powershell
+. .\adPEAS.ps1
+Invoke-adPEAS -Domain '<domain>' -Outputfile 'C:\Users\<user>\Desktop\adPEAS_outputfile' -NoColor
+```
+
+-> PrivEsc.ps1
+```powershell
+.\privesc.ps1
+Invoke-PrivEsc
+```
+- https://raw.githubusercontent.com/enjoiz/Privesc/master/privesc.ps1
