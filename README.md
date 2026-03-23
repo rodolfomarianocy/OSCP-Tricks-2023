@@ -197,7 +197,7 @@ As you go through the list of machines, remember the changes that have occurred 
 - [OSCP Exam Report Template Markdown - noraj](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown)
 
 ## Exam Guide
-- [OSCP Exam Guide - OffSec](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
+- [OSCP+ Exam Guide - OffSec](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
 
 ---
 
