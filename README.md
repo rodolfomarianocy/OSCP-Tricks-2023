@@ -180,6 +180,7 @@ As you go through the list of machines, remember the changes that have occurred 
 
 ## Overview and Articles
 - [My Journey to OSCP/OSCP+ exam - Bikram kharal](https://infosecwriteups.com/my-journey-to-oscp-oscp-exam-8f1b046f0edd)
+- [OSCP+ Preparation Guide 2026: Complete Roadmap to Pass First Try - Hackerdna](https://hackerdna.com/blog/oscp-preparation-guide)
 - [Conquering the OSCP+: A Guide to the Mental Marathon - Joshua Alwin](https://t3rminux.medium.com/conquering-the-oscp-a-guide-to-the-mental-marathon-a9ae235a523f)
 - [My OSCP+ Journey Through Try Harder Concept (Failed, Failed, then Passed) - Yoga Bayu Aji Pranawa](https://medium.com/@ybpranawa/my-oscp-journey-through-try-harder-concept-failed-failed-then-passed-cb659649f519)
 - [What the OSCP Really Tests (And What It Taught Me) - Payge W.](https://medium.com/@hacking_payges/what-the-oscp-really-tests-and-what-it-taught-me-50afd975b7fa)
