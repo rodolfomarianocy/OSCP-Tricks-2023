@@ -388,3 +388,43 @@ droopescan scan drupal -u <target> -t 32
 php magescan.phar scan:all www.example.com
 ```
 - https://github.com/steverobbins/magescan
+
+## Seaching Public Exploits
+### Seachsploit
+
+-> Getting information about applications
+```bash
+searchsploit Applications Manager
+```
+```bash
+searchsploit remote smb microsoft windows
+```
+```bash
+searchsploit WiFi Mouse
+```
+```bash
+searchsploit Apache 2.3
+```
+```
+searchsploit OpenSSH    
+```
+
+-> Getting information about kernel linux
+```bash
+searchsploit linux local kernel 5
+```
+
+-> Download script
+```bash
+searchsploit -m <script>
+```
+
+### NMAP
+```
+grep Exploits /usr/share/nmap/scripts/*.nse
+```
+-> CVEs PoC
+- https://github.com/trickest/cve
+
+->  Fixing Exploits
+- https://pyinstaller.org/en/stable/
