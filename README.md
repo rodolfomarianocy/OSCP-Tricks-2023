@@ -179,6 +179,7 @@ As you go through the list of machines, remember the changes that have occurred 
 - [Vulnhub](https://www.vulnhub.com/)
 
 ## Overview and Articles
+- [From Doubt to OSCP: My 5-Month Journey, First Failure, and Final Win - Omar Tamer](https://medium.com/@OmarTamer0/from-doubt-to-oscp-my-5-month-journey-first-failure-and-final-win-c20304eef6dc)
 - [My Journey to OSCP/OSCP+ exam - Bikram kharal](https://infosecwriteups.com/my-journey-to-oscp-oscp-exam-8f1b046f0edd)
 - [OSCP+ Preparation Guide 2026: Complete Roadmap to Pass First Try - Hackerdna](https://hackerdna.com/blog/oscp-preparation-guide)
 - [Conquering the OSCP+: A Guide to the Mental Marathon - Joshua Alwin](https://t3rminux.medium.com/conquering-the-oscp-a-guide-to-the-mental-marathon-a9ae235a523f)
