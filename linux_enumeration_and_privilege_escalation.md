@@ -4,6 +4,12 @@
 ```bash
 id
 ```
+```
+whoami
+```
+```
+sudo -i
+```
 
 -> Get system distribution and version
 ```bash
@@ -42,10 +48,19 @@ cat ~/.php_history
 ps aux
 ```
 
+-> Service Footprints
+```bash
+watch -n 1 "ps -aux | grep pass"
+```
+```bash
+sudo tcpdump -i lo -A | grep "pass"
+```
+
 -> View interfaces and network information 
 ```bash
 ifconfig
 ip addr
+ss -anp
 ```
 
 -> View all active TCP connections and the TCP and UDP ports the host is listening on.
@@ -150,7 +165,10 @@ SELECT * FROM <table>;
 ```bash
 cat /var/log/cron.log                                                                                                                                              
 cat /etc/crontab
+```
+```bash
 ls -lah /etc/cron*
+grep "CRON" /var/log/syslog
 ```
 ```bash
 crontab -l
