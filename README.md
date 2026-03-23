@@ -168,7 +168,7 @@ As you go through the list of machines, remember the changes that have occurred 
 - [Lainkusanagi OSCP Like](https://docs.google.com/spreadsheets/d/18weuz_Eeynr6sXFQ87Cd5F0slOj9Z6rt)
 - [TJ_Null's OSCP Prep - Youtube](https://www.youtube.com/watch?v=2DqdPcbYcy8&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)  
 - [HackTheBox - Active Directory machines (OSCP) - Youtube](https://www.youtube.com/watch?v=jUc1J31DNdw&list=PLIU37Kps3dWApq77TnChQ52clmau8DfZA)  
-- [Hack the Box - Active Directory - Youtube](https://www.youtube.com/watch?v=H9FcE_FMZio&list=PLrmSJpHp5WGg4sUndkYBg8B5qO2COSxS4)  
+- [Hack the Box - Forest - Active Directory - Youtube](https://www.youtube.com/watch?v=H9FcE_FMZio&list=PLrmSJpHp5WGg4sUndkYBg8B5qO2COSxS4)  
 - [Vulnhub OSCP pathway training - Youtube](https://www.youtube.com/watch?v=LRO9KIDv_DQ&list=PLV_npv_S1L938Gal4XNiUfmHjUFNLq4rc)  
 - [Beco do Exploit - Hack 30 machines in 30 days! - Youtube](https://www.youtube.com/watch?v=xnCS8fYfrjs&list=PLHBDBcFA_l_WBcUJWf8cp5BaPsUkquRQU)  
 
