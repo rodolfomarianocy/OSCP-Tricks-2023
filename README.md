@@ -164,7 +164,7 @@
   - [Hack The Box Academy - Documentation & Reporting](https://academy.hackthebox.com/course/preview/documentation--reporting)
 
 ## Machines List
-As you go through the list of machines, keep in mind the changes that occurred in the exam and disregard what came out of the exam recently. [PEN-200 (PWK): Updated for 2023](https://www.offsec.com/offsec/pen-200-2023/)  
+As you go through the list of machines, remember the changes that have occurred in the exam and disregard what has come out of the exam since the last relevant change. [PEN-200 (PWK): Updated for 2023](https://www.offsec.com/offsec/pen-200-2023/)
 - [Machine List - vulndev](https://vulndev.io/machine-list/)  
 - [TJ_Null's OSCP Prep - Youtube](https://www.youtube.com/watch?v=2DqdPcbYcy8&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf)  
 - [HackTheBox - Active Directory machines(OSCP) - Youtube](https://www.youtube.com/watch?v=jUc1J31DNdw&list=PLIU37Kps3dWApq77TnChQ52clmau8DfZA)  
