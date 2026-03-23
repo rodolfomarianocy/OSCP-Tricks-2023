@@ -410,6 +410,7 @@ hoaxshell -s <kali-ip> -p <port>
 ## Privilege Escalation Abusing Active Directory ACLs/ACEs
 
 | ID | Decription |
+|----|------------|
 | GenericAll             |full rights to the object (add users to a group or reset user's password)  |
 | GenericWrite           | update object's attributes (i.e logon script)                             |
 | WriteOwner             | change object owner to attacker controlled user take over the object      |
