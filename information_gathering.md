@@ -140,6 +140,12 @@ ldapsearch -H <IP> -bx "DC=domain,DC=com"
 ```
 
 ## SNMP Enumeration
+
+-> Donwload MIBS on kali
+```bash
+apt-get install snmp-mibs-downloader; download-mibs
+```
+
 ```bash
 sudo nmap -sU --open -p 161 10.11.1.1-254 -oG open-snmp.txt
 ```
@@ -181,6 +187,10 @@ snmpwalk -c public -v1 <ip> 1.3.6.1.2.1.6.13.1.3
 -> Enumerate installed software
 ```bash
 snmpwalk -c public -v1 <ip> 1.3.6.1.2.1.25.6.3.1.2
+```
+-> Enumerate Extended MIB
+```bash
+snmpwalk -c public -v1 <ip> NET-SNMP-EXTEND-MIB::nsExtendObjects
 ```
 
 ## FTP
