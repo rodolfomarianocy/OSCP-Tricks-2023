@@ -190,6 +190,27 @@ or
 id
 find / -perm -u=s -type f -group <group> 2>/dev/null
 ```
+
+-> Example 
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
+```bash
+/usr/bin/find
+/usr/bin/chsh
+/usr/bin/passwdflag
+```
+
+-> Permitions 
+```bash
+ls -l /usr/bin/passwdflag
+```
+
+-> Searching strings
+```bash
+strings /usr/bin/passwdflag | grep "pass"
+```
+
 -> Exploitation  
 - https://gtfobins.github.io/
 
