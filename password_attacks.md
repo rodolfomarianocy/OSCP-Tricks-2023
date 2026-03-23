@@ -78,6 +78,11 @@ hashcat --help | grep -i "KeePass"
 hashcat -m 13400 keepass.hash
 ```
 
+-> Cracking ASREP
+```bash
+hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+```  
+
 ## Brute Force Attacks
 ### RDP Brute Force - Hydra
 ```powershell
