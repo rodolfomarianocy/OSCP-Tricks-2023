@@ -1,14 +1,19 @@
 # Linux Enumeration and Privilege Escalation
 ## Enumeration
--> Information about user
+-> Basic System Enumeration
 ```bash
-id
-```
-```
-whoami
-```
-```
-sudo -i
+uname -a 
+hostname 
+lscpu 
+ls /home 
+ls /var/www/html 
+ls /var/www/
+ps aux | grep root 
+netstat -tulpn 
+ps -aux | grep root | grep mysql
+ifconfig 
+find . -type f -exec grep -i -I "PASSWORD=" {} /dev/null \;
+locate pass | more
 ```
 
 -> Get system distribution and version
@@ -165,6 +170,19 @@ SELECT * FROM <table>;
 ```bash
 cat /var/log/cron.log                                                                                                                                              
 cat /etc/crontab
+```
+```bash
+contab -l
+/etc/init.d
+/etc/cron*
+/etc/crontab
+/etc/cron.allow
+/etc/cron.d 
+/etc/cron.deny
+/etc/cron.daily
+/etc/cron.hourly
+/etc/cron.monthly
+/etc/cron.weekly
 ```
 ```bash
 ls -lah /etc/cron*
