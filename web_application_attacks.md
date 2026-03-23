@@ -331,6 +331,11 @@ git-dumper http://site.com/.git .
 ```
 - https://github.com/arthaud/git-dumper
 
+```bash
+git log
+git show <commit>
+```
+
 ### Tools
 - https://github.com/internetwache/GitTools
 
