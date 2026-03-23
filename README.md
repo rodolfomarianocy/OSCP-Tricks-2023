@@ -115,17 +115,17 @@
   - [Hack The Box - Shells & Payloads](https://academy.hackthebox.com/course/preview/shells--payloads)
   
 - Linux Enumeration and Privilege Escalation
+  - [Hack The Box Academy - Linux Privilege Escalation](https://academy.hackthebox.com/course/preview/linux-privilege-escalation) 
   - [Try Hack Me - Linux: Local Enumeration](https://tryhackme.com/room/lle)
   - [Try Hack Me - Enumeration](https://tryhackme.com/room/enumerationpe)
   - [Try Hack Me - Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
   - [Try Hack Me - Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)  
-  - [Hack The Box Academy - Linux Privilege Escalation](https://academy.hackthebox.com/course/preview/linux-privilege-escalation) 
   
 - Windows Enumeration and Privilege Escalation
+  - [Hack The Box Academy - Windows Privilege Escalation](https://academy.hackthebox.com/course/preview/windows-privilege-escalation)
   - [Try Hack Me - Enumeration](https://tryhackme.com/room/enumerationpe)
   - [Try Hack Me - Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
   - [Try Hack Me - Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
-  - [Hack The Box Academy - Windows Privilege Escalation](https://academy.hackthebox.com/course/preview/windows-privilege-escalation)
   
 - File Transfers
   - [Hack The Box Academy - File Transfers](https://academy.hackthebox.com/course/preview/file-transfers)
@@ -137,8 +137,8 @@
   - [Try Hack Me - Intro PoC Scripting](https://tryhackme.com/room/intropocscripting)
 
 - Port Forwarding and Tunneling
-  - [Try Hack Me - Wreath](https://tryhackme.com/room/wreath)
   - [Hack The Box Academy - Pivoting, Tunneling, and Port Forwarding](https://academy.hackthebox.com/course/preview/pivoting-tunneling-and-port-forwarding)
+  - [Try Hack Me - Wreath](https://tryhackme.com/room/wreath)
   
 - Active Directory
   - [Hack The Box Academy - Introduction to Active Directory](https://academy.hackthebox.com/course/preview/introduction-to-active-directory)
