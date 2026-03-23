@@ -81,7 +81,16 @@ hashcat -m 13400 keepass.hash
 -> Cracking ASREP
 ```bash
 hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
-```  
+```
+
+-> Cracking krbtgt (Kerberos)
+```bash
+hashcat -m 13100 hash.txt /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule
+```
+```bash
+john --format=krb5tgs hash.txt wordlist/wordlist.txt 
+```
+
 
 ## Brute Force Attacks
 ### RDP Brute Force - Hydra
